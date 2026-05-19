@@ -22,7 +22,7 @@ data/      # runtime only, ignored by Git
 - `modpack/` is the canonical packwiz source of truth.
 - GitHub Actions builds `dist/mc-create-aeronautics.mrpack` on every push to `master`.
 - The rolling GitHub Release tag is `master-latest`.
-- Manual GitHub Actions runs can create immutable `v*` releases such as `v0.1.0`.
+- Manual GitHub Actions runs can create immutable SemVer-style releases such as `0.1.0`.
 - The Docker server installs the published `.mrpack` through `itzg/minecraft-server`.
 - Players import the same `.mrpack` into Prism Launcher for first setup.
 - AutoModpack is included in the pack and handles later sync from server-visible files.
@@ -107,7 +107,7 @@ Use it when the server should track the current `master` build:
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
 ```
 
-For a pinned release, run the `Release mrpack` workflow manually and set `release_tag` to a new `v*` tag, for example `v0.1.0`. Manual releases are immutable in this repository policy: an existing `v*` tag is not overwritten.
+For a pinned release, run the `Release mrpack` workflow manually and set `release_tag` to a new SemVer-style tag without a `v` prefix, for example `0.1.0`. Manual releases are immutable in this repository policy: an existing tag is not overwritten.
 
 ## Adding Mods
 

@@ -25,7 +25,7 @@ The GitHub workflow publishes `mc-create-aeronautics.mrpack` to the rolling `mas
 
 `master-latest` is intentionally named after the source branch. It is separate from GitHub's own "Latest release" concept and makes it clear that the artifact is mutable.
 
-Manual workflow runs can create immutable `v*` releases, such as `v0.1.0`. Existing manual release tags are not overwritten.
+Manual workflow runs can create immutable SemVer-style releases without a `v` prefix, such as `0.1.0`. Existing manual release tags are not overwritten.
 
 Use this URL shape in VPS `.env`:
 
@@ -36,5 +36,5 @@ MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-late
 Use this URL shape to pin the VPS to an immutable release:
 
 ```sh
-MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/v0.1.0/mc-create-aeronautics.mrpack
+MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/0.1.0/mc-create-aeronautics.mrpack
 ```

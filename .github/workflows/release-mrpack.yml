@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: "Immutable release tag to create, for example v0.1.0. Leave empty to refresh master-latest."
+        description: "Immutable release tag to create, for example 0.1.0. Leave empty to refresh master-latest."
         required: false
         type: string
 
@@ -73,9 +73,9 @@ jobs:
           RELEASE_TAG: ${{ inputs.release_tag }}
         run: |
           case "$RELEASE_TAG" in
-            v*) ;;
+            [0-9]*.[0-9]*.[0-9]*) ;;
             *)
-              echo "Manual release tags must start with v, for example v0.1.0" >&2
+              echo "Manual release tags must look like 0.1.0, without a v prefix." >&2
               exit 1
               ;;
           esac
