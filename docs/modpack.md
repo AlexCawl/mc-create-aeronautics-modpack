@@ -21,10 +21,20 @@ The server publishes server-visible files through AutoModpack. Client-only QoL a
 
 ## Release Artifact
 
-The GitHub workflow publishes `mc-create-aeronautics.mrpack` to the rolling `master-latest` release.
+The GitHub workflow publishes `mc-create-aeronautics.mrpack` to the rolling `master-latest` release on every push to `master`.
+
+`master-latest` is intentionally named after the source branch. It is separate from GitHub's own "Latest release" concept and makes it clear that the artifact is mutable.
+
+Manual workflow runs can create immutable `v*` releases, such as `v0.1.0`. Existing manual release tags are not overwritten.
 
 Use this URL shape in VPS `.env`:
 
 ```sh
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
+```
+
+Use this URL shape to pin the VPS to an immutable release:
+
+```sh
+MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/v0.1.0/mc-create-aeronautics.mrpack
 ```
