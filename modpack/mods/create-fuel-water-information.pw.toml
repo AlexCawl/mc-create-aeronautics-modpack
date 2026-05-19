@@ -1,0 +1,13 @@
+name = "Create: Fuel & Water Information"
+filename = "cfwinfo-1.6.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/csA0cpEX/versions/YAxh0D9R/cfwinfo-1.6.0.jar"
+hash-format = "sha512"
+hash = "3243390af79e09bfd00707c0e6192db0918835cc3b142a424beacd532e1a6ee7f7a5a25e1d5f846aac2ee89902b3108bbc3f3f23ebd020787cd8e6cf4583a427"
+
+[update]
+[update.modrinth]
+mod-id = "csA0cpEX"
+version = "YAxh0D9R"
