@@ -15,7 +15,7 @@
 - Prefer KISS shell scripts: POSIX `sh`, short linear flow, no clever abstractions unless they remove real complexity.
 - Comment meaningful blocks of logic, not every command.
 - Fail early with `set -eu`.
-- Keep generated artifacts under ignored directories such as `dist/` or `.cache/`.
+- Keep generated artifacts and tool caches under ignored directories such as `dist/` or `.cache/`.
 
 ## Git Workflow
 

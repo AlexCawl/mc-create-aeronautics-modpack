@@ -72,16 +72,22 @@ If you do not use Homebrew, install the official macOS package from `go.dev/dl/`
 go version
 ```
 
-Install packwiz into the repository cache:
+Install packwiz:
 
 ```sh
-scripts/install-packwiz.sh
+go install github.com/packwiz/packwiz@latest
+```
+
+If `packwiz` is not found after installation, add Go's default binary directory to your shell profile:
+
+```sh
+export PATH="$HOME/go/bin:$PATH"
 ```
 
 Build the Modrinth pack:
 
 ```sh
-PACKWIZ_BIN=.cache/bin/packwiz scripts/build-mrpack.sh
+scripts/build-mrpack.sh
 ```
 
 The artifact is written to `dist/mc-create-aeronautics.mrpack`.

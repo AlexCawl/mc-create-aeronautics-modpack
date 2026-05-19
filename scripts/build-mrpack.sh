@@ -4,20 +4,18 @@ set -eu
 # Resolve the repository root so the script works from any current directory.
 ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 
-# Allow a repo-local packwiz binary, for example:
-# PACKWIZ_BIN=.cache/bin/packwiz scripts/build-mrpack.sh
+# Use packwiz from PATH by default. PACKWIZ_BIN can point to a custom binary.
 PACKWIZ_BIN="${PACKWIZ_BIN:-packwiz}"
 
-# Resolve repo-relative binary paths before changing directories.
-case "$PACKWIZ_BIN" in
-  /*) ;;
-  */*) PACKWIZ_BIN="$ROOT_DIR/$PACKWIZ_BIN" ;;
-esac
+# Fall back to Go's default install location when it is not on PATH yet.
+if ! command -v "$PACKWIZ_BIN" >/dev/null 2>&1 && [ -x "$HOME/go/bin/packwiz" ]; then
+  PACKWIZ_BIN="$HOME/go/bin/packwiz"
+fi
 
 # Write to dist/ by default, but allow an explicit output path as $1.
 OUTPUT="${1:-$ROOT_DIR/dist/mc-create-aeronautics.mrpack}"
 
-# Make sure the output directory exists before packwiz writes the artifact.
+# Make sure output and cache directories exist before packwiz writes files.
 mkdir -p "$(dirname "$OUTPUT")"
 mkdir -p "$ROOT_DIR/.cache/packwiz"
 cd "$ROOT_DIR/modpack"
