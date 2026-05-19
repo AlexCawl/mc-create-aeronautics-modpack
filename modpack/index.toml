@@ -1,0 +1,11 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/automodpack.pw.toml"
+hash = "231f1c1bf4a5cf19a14ff14d89811cd2a5b46599a539247ef6629673c4246ffe"
+metafile = true
+
+[[files]]
+file = "mods/jei.pw.toml"
+hash = "bdfcde80743d8e03ecfdc9b63895c5c447c925cc4b58e0d5d993124a217850d9"
+metafile = true

@@ -1,0 +1,58 @@
+name: Release mrpack
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Build mrpack
+        run: scripts/build-mrpack.sh dist/mc-create-aeronautics.mrpack
+
+      - name: Move rolling tag
+        run: |
+          git tag -f master-latest "$GITHUB_SHA"
+          git push -f origin refs/tags/master-latest
+
+      - name: Publish rolling release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes='Rolling bootstrap modpack built from `'"$GITHUB_SHA"'` on `master`.
+
+          Use the attached `mc-create-aeronautics.mrpack` in Prism Launcher and as the server `MODRINTH_MODPACK` URL.'
+
+          if gh release view master-latest >/dev/null 2>&1; then
+            gh release edit master-latest \
+              --title master-latest \
+              --notes "$notes" \
+              --prerelease \
+              --latest=false
+          else
+            gh release create master-latest \
+              --title master-latest \
+              --notes "$notes" \
+              --prerelease \
+              --latest=false
+          fi
+
+          gh release upload master-latest dist/mc-create-aeronautics.mrpack --clobber

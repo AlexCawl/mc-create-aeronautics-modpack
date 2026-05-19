@@ -1,0 +1,23 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:java21
+    restart: unless-stopped
+    ports:
+      - "${MC_PORT:-25565}:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "MODRINTH"
+      VERSION: "1.21.1"
+      MODRINTH_LOADER: "neoforge"
+      MODRINTH_MODPACK: "${MODRINTH_MODPACK:?Set MODRINTH_MODPACK to the GitHub Release .mrpack URL}"
+      MEMORY: "${MC_MEMORY:-6G}"
+      MOTD: "${MC_MOTD:-Create Aeronautics}"
+      ENABLE_RCON: "${ENABLE_RCON:-true}"
+      RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
+      USE_AIKAR_FLAGS: "true"
+      TZ: "${TZ:-Asia/Yekaterinburg}"
+    volumes:
+      - ./data:/data
+    stdin_open: true
+    tty: true
+
