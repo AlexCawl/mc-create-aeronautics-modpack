@@ -23,7 +23,9 @@ jobs:
           go-version: stable
 
       - name: Install packwiz
-        run: go install github.com/packwiz/packwiz@latest
+        run: |
+          go install github.com/packwiz/packwiz@latest
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
 
       - name: Build mrpack
         run: scripts/build-mrpack.sh dist/mc-create-aeronautics.mrpack

@@ -5,9 +5,9 @@
 /data/
 /dist/
 /.cache/
+/.idea/
 
 *.log
 *.tmp
 *.jar
 *.mrpack
-
