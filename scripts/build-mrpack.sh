@@ -15,6 +15,12 @@ fi
 # Write to dist/ by default, but allow an explicit output path as $1.
 OUTPUT="${1:-$ROOT_DIR/dist/mc-create-aeronautics.mrpack}"
 
+# Resolve repo-relative output paths before changing directories.
+case "$OUTPUT" in
+  /*) ;;
+  *) OUTPUT="$ROOT_DIR/$OUTPUT" ;;
+esac
+
 # Make sure output and cache directories exist before packwiz writes files.
 mkdir -p "$(dirname "$OUTPUT")"
 mkdir -p "$ROOT_DIR/.cache/packwiz"
