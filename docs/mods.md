@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 91.
+Total mods: 92.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -83,6 +83,7 @@ Total mods: 91.
 | Nature's Compass | `both` | Modrinth | `fPetb5Kh` | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` |
 | Ok Zoomer - It's Zoom! | `client` | Modrinth | `aXf2OSFU` | `ok_zoomer-neo-10.0.0-beta.13.jar` |
 | Polymorph | `both` | Modrinth | `tagwiZkJ` | `polymorph-neoforge-1.1.0+1.21.1.jar` |
+| Prometheus Exporter | `server` | GitHub | `cpburnz/minecraft-prometheus-exporter` | `Prometheus-Exporter-1.21.1-neoforge-1.2.1.jar` |
 | Rechiseled | `both` | Modrinth | `B0g2vT6l` | `rechiseled-1.2.4-neoforge-mc1.21.jar` |
 | Rechiseled: Create | `both` | Modrinth | `E6867niZ` | `rechiseledcreate-1.1.0-neoforge-mc1.21.jar` |
 | Resource Gamma Util / Fullbright | `client` | Modrinth | `X8jWsfhs` | `resource_gamma_util-neoforge-1.21.1-1.4.0.jar` |

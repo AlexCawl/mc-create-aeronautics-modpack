@@ -10,7 +10,7 @@ The repository owns reproducible configuration and pack metadata. Runtime state 
 - [Modpack Maintenance](modpack.md): packwiz workflow, mod sides, AutoModpack policy, and releases.
 - [Mods](mods.md): current pinned mod list from packwiz metadata.
 - [VPS Operations](vps.md): `.env`, Docker Compose commands, updates, and backups.
-- [Monitoring](monitoring.md): Grafana, Prometheus, cAdvisor, mc-monitor, and spark diagnostics.
+- [Monitoring](monitoring.md): Grafana, Prometheus, cAdvisor, mc-monitor, Prometheus Exporter, and spark diagnostics.
 - [Repository Onboarding](onboarding.md): local dependencies required to work with the repository.
 
 ## Runtime Model
@@ -20,7 +20,7 @@ The repository owns reproducible configuration and pack metadata. Runtime state 
 - The rolling GitHub Release tag is `master-latest`.
 - Manual GitHub Actions runs can create immutable SemVer-style releases such as `v0.1.0`.
 - The VPS server runs from the published `.mrpack` through `itzg/minecraft-server`.
-- Monitoring runs with `itzg/mc-monitor`, cAdvisor, Prometheus, and Grafana.
+- Monitoring runs with `itzg/mc-monitor`, Prometheus Exporter, cAdvisor, Prometheus, and Grafana.
 - Players import the same `.mrpack` into Prism Launcher for first setup.
 - AutoModpack is included for later client sync from server-visible files.
 - `data/` is runtime-only and ignored by Git.

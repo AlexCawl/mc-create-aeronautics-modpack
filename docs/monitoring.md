@@ -2,9 +2,10 @@
 
 Monitoring is part of the default Docker Compose stack.
 
-The setup follows the official `itzg/mc-monitor` Prometheus example:
+The setup combines the official `itzg/mc-monitor` Prometheus example with an in-server Prometheus exporter mod:
 
 - `monitor` runs `itzg/mc-monitor` and exports Minecraft status metrics.
+- `Prometheus Exporter` runs inside the NeoForge server and exports Minecraft tick, chunk, entity, and JVM metrics.
 - `cadvisor` exports Docker container metrics.
 - `prometheus` stores time-series data.
 - `grafana` provides dashboards.
@@ -58,6 +59,16 @@ Grafana update checks, usage reporting, and plugin preinstall behavior are disab
 - `minecraft_status_players_online_count`
 - `minecraft_status_players_max_count`
 
+The `Prometheus Exporter` mod exports:
+
+- `mc_server_tick_seconds`: server tick histogram, used for TPS and MSPT panels.
+- `mc_dimension_tick_seconds`: per-dimension tick histogram, used for per-dimension MSPT.
+- `mc_dimension_chunks_loaded`: loaded chunks by dimension.
+- `mc_entities_total`: entities by dimension and entity type.
+- JVM metrics such as `jvm_memory_bytes_used` and `jvm_memory_bytes_max`.
+
+The exporter listens on `minecraft:19565` inside the Compose network. This port is scraped by Prometheus but is not published on the VPS.
+
 `cadvisor` exports container CPU, memory, disk IO, and network metrics.
 
 cAdvisor mounts `/dev/kmsg` read-only so it can detect container OOM events when the host exposes that device. The repeated `There are no NVM devices!` message is harmless on hosts without persistent memory devices.
@@ -68,7 +79,7 @@ Grafana provisions three dashboards:
 
 - `Minecraft Container Metrics`: CPU, RAM usage, filesystem usage, network IO, and disk IO from cAdvisor.
 - `Minecraft Container Logs`: Docker logs for the `minecraft` container from Loki.
-- `Minecraft Server Metrics`: Minecraft-specific status, players online/max, and response time from `mc-monitor`.
+- `Minecraft Server Metrics`: Minecraft-specific status and ping from `mc-monitor`, plus TPS, MSPT, loaded chunks, entities, and JVM heap from `Prometheus Exporter`.
 
 Prometheus also scrapes itself, Loki, and Alloy for operator checks. These scrapes do not publish extra ports on the VPS.
 
@@ -117,6 +128,12 @@ Check the raw Minecraft metrics endpoint from the VPS:
 
 ```sh
 docker compose exec prometheus wget -qO- http://monitor:8080/metrics
+```
+
+Check the raw NeoForge exporter metrics endpoint from the VPS:
+
+```sh
+docker compose exec prometheus wget -qO- http://minecraft:19565/metrics
 ```
 
 Check Loki readiness from the VPS:
