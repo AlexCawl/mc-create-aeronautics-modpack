@@ -74,8 +74,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Minecraft Logs",
+  "title": "Minecraft Container Logs",
   "uid": "minecraft-logs",
-  "version": 1,
+  "version": 3,
   "weekStart": ""
 }

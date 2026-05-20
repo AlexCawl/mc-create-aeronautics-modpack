@@ -66,15 +66,15 @@ Loki stores logs for 7 days by default in the `loki-data` Docker volume. Alloy s
 
 Grafana provisions three dashboards:
 
-- `Minecraft Server Metrics`: status, players online/max, and response time from `mc-monitor`.
 - `Minecraft Container Metrics`: CPU, RAM usage, filesystem usage, network IO, and disk IO from cAdvisor.
-- `Minecraft Logs`: Docker logs for the `minecraft` container from Loki.
+- `Minecraft Container Logs`: Docker logs for the `minecraft` container from Loki.
+- `Minecraft Server Metrics`: Minecraft-specific status, players online/max, and response time from `mc-monitor`.
 
 Prometheus also scrapes itself, Loki, and Alloy for operator checks. These scrapes do not publish extra ports on the VPS.
 
 ## Logs
 
-Grafana provisions a Loki datasource and a `Minecraft Logs` dashboard.
+Grafana provisions a Loki datasource and a `Minecraft Container Logs` dashboard.
 
 Useful LogQL queries in Grafana Explore:
 

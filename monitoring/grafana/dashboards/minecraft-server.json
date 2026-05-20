@@ -480,7 +480,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "Minecraft Server Metrics",
-  "uid": "minecraft-server-metrics",
-  "version": 1,
+  "uid": "minecraft-server",
+  "version": 3,
   "weekStart": ""
 }
