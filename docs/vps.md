@@ -15,6 +15,7 @@ Create `.env` locally on the VPS. This file is intentionally ignored and no `.en
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
 RCON_PASSWORD=change-me
 GRAFANA_ADMIN_PASSWORD=change-me-too
+RCON_WEB_PASSWORD=change-me-too
 MC_MEMORY=6G
 MC_PORT=25565
 VOICE_CHAT_PORT=24454
@@ -55,13 +56,21 @@ ssh -L 3000:127.0.0.1:3000 <user>@<vps-host>
 
 Then open `http://localhost:3000`.
 
+Open RCON Web Admin through an SSH tunnel:
+
+```sh
+ssh -L 4326:127.0.0.1:4326 -L 4327:127.0.0.1:4327 <user>@<vps-host>
+```
+
+Then open `http://localhost:4326`.
+
 ## Runtime Data
 
 `data/` is mounted as `/data` in the container and contains world data, logs, crash reports, downloaded jars, generated configs, and AutoModpack runtime state.
 
 Do not commit `data/`.
 
-Prometheus and Grafana store runtime state in Docker named volumes.
+Prometheus, Grafana, Loki, Alloy, and RCON Web Admin store runtime state in Docker named volumes.
 
 ## Backups
 

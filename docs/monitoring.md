@@ -9,6 +9,7 @@ The setup combines the official `itzg/mc-monitor` Prometheus example with an in-
 - `cadvisor` exports Docker container metrics.
 - `prometheus` stores time-series data.
 - `grafana` provides dashboards.
+- `rcon` provides a localhost-bound RCON Web Admin for Minecraft commands.
 - `loki` stores recent container logs.
 - `alloy` collects Docker container logs and sends them to Loki.
 - `spark` remains a Minecraft diagnostics tool for profiling and health reports.
@@ -33,6 +34,25 @@ Then open:
 http://localhost:3000
 ```
 
+RCON Web Admin is also bound to VPS localhost only:
+
+```text
+127.0.0.1:4326
+127.0.0.1:4327
+```
+
+Open it through an SSH tunnel:
+
+```sh
+ssh -L 4326:127.0.0.1:4326 -L 4327:127.0.0.1:4327 <user>@<vps-host>
+```
+
+Then open:
+
+```text
+http://localhost:4326
+```
+
 ## Configuration
 
 Set these values in the VPS `.env`:
@@ -41,12 +61,17 @@ Set these values in the VPS `.env`:
 GRAFANA_ADMIN_PASSWORD=change-me
 GRAFANA_ADMIN_USER=admin
 GRAFANA_PORT=3000
+RCON_WEB_PASSWORD=change-me-too
+RCON_WEB_USER=admin
+RCON_WEB_PORT=4326
+RCON_WEB_SOCKET_PORT=4327
 PROMETHEUS_RETENTION=7d
 LOKI_VERSION=3.7.0
 ALLOY_VERSION=latest
+RCON_WEB_VERSION=latest
 ```
 
-Only `GRAFANA_ADMIN_PASSWORD` is required. The other values have defaults.
+`GRAFANA_ADMIN_PASSWORD` and `RCON_WEB_PASSWORD` are required. The other values have defaults.
 
 Grafana update checks, usage reporting, and plugin preinstall behavior are disabled in Compose to keep startup logs deterministic and avoid downloading unused bundled plugins.
 
@@ -73,7 +98,7 @@ The exporter listens on `minecraft:19565` inside the Compose network. This port 
 
 cAdvisor mounts `/dev/kmsg` read-only so it can detect container OOM events when the host exposes that device. The repeated `There are no NVM devices!` message is harmless on hosts without persistent memory devices.
 
-Loki stores logs for 7 days by default in the `loki-data` Docker volume. Alloy stores read offsets in the `alloy-data` Docker volume so it can resume log collection after restarts.
+Loki stores logs for 7 days by default in the `loki-data` Docker volume. Alloy stores read offsets in the `alloy-data` Docker volume so it can resume log collection after restarts. RCON Web Admin stores its database in the `rcon-data` Docker volume.
 
 Grafana provisions three dashboards:
 
@@ -82,6 +107,8 @@ Grafana provisions three dashboards:
 - `Minecraft Server Metrics`: Minecraft-specific status and ping from `mc-monitor`, plus TPS, MSPT, loaded chunks, entities, and JVM heap from `Prometheus Exporter`.
 
 Prometheus also scrapes itself, Loki, and Alloy for operator checks. These scrapes do not publish extra ports on the VPS.
+
+RCON Web Admin connects to the Minecraft service over the internal Compose network. Do not publish RCON Web Admin or the Minecraft RCON port directly to the internet.
 
 ## Logs
 
@@ -121,7 +148,7 @@ docker compose up -d
 Follow monitoring logs:
 
 ```sh
-docker compose logs -f monitor prometheus grafana cadvisor loki alloy
+docker compose logs -f monitor prometheus grafana rcon cadvisor loki alloy
 ```
 
 Check the raw Minecraft metrics endpoint from the VPS:

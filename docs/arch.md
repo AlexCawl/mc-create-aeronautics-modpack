@@ -12,6 +12,7 @@ This repository keeps reproducible Minecraft server inputs in Git and keeps runt
 - `itzg/minecraft-server` installs the published `.mrpack` through its Modrinth modpack flow.
 - AutoModpack is included in the pack for later client sync from server-visible files.
 - `itzg/mc-monitor`, Prometheus Exporter, cAdvisor, Prometheus, and Grafana provide always-on monitoring.
+- `itzg/rcon` provides a localhost-bound web console for Minecraft RCON commands.
 - `spark` stays in the modpack as an on-demand Minecraft diagnostics tool.
 
 ## Layout
