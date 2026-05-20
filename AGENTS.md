@@ -16,6 +16,7 @@
 - Comment meaningful blocks of logic, not every command.
 - Fail early with `set -eu`.
 - Keep generated artifacts and tool caches under ignored directories such as `dist/` or `.cache/`.
+- Repository scripts should work both locally and on CI: use `packwiz` from `PATH` first, then `$HOME/go/bin/packwiz` as the Go default install location.
 
 ## Git Workflow
 

@@ -4,13 +4,17 @@ set -eu
 # Resolve the repository root so the script works from any current directory.
 ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 
-# Use packwiz from PATH by default. PACKWIZ_BIN can point to a custom binary.
-PACKWIZ_BIN="${PACKWIZ_BIN:-packwiz}"
-
-# Fall back to Go's default install location when it is not on PATH yet.
-if ! command -v "$PACKWIZ_BIN" >/dev/null 2>&1 && [ -x "$HOME/go/bin/packwiz" ]; then
+# Prefer PATH, but also support Go's default install location in fresh CI shells.
+PACKWIZ_BIN="packwiz"
+if ! command -v "$PACKWIZ_BIN" >/dev/null 2>&1; then
   PACKWIZ_BIN="$HOME/go/bin/packwiz"
 fi
+
+command -v "$PACKWIZ_BIN" >/dev/null 2>&1 || {
+  printf '%s\n' 'packwiz is not available on PATH or at ~/go/bin/packwiz.' >&2
+  printf '%s\n' 'For local setup, see docs/onboarding.md.' >&2
+  exit 1
+}
 
 # Write to dist/ by default, but allow an explicit output path as $1.
 OUTPUT="${1:-$ROOT_DIR/dist/mc-create-aeronautics.mrpack}"
