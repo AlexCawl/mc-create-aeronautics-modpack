@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 93.
+Total mods: 91.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -54,7 +54,6 @@ Total mods: 93.
 | Create: Radars | `both` | Modrinth | `BLu2Yqfq` | `create_radar-0.4.8-1.21.1.jar` |
 | Create: Repackaged | `both` | Modrinth | `D6daOdv9` | `repackaged-0.0.7.jar` |
 | Create: Stock Market | `both` | Modrinth | `CnrVw3tZ` | `create-stockmarket-1.0.0+mc1.21.1.jar` |
-| Create: Tracks | `both` | CurseForge | `1519765` | `tracks-neoforge-1.21.1-1.0.1.jar` |
 | Create: Tradeworks | `both` | Modrinth | `gnOpd0sq` | `tradeworks-1.0.7.jar` |
 | Curios API | `both` | Modrinth | `vvuO3ImH` | `curios-neoforge-9.5.1+1.21.1.jar` |
 | Customizable Player Models | `both` | Modrinth | `h1E7sQNL` | `CustomPlayerModels-1.21-0.6.25a.jar` |
@@ -62,7 +61,6 @@ Total mods: 93.
 | DragonLib | `both` | Modrinth | `sbIsGaOV` | `dragonlib-neoforge-1.21.1-beta-3.0.26.jar` |
 | Drink Beer Refill | `both` | Modrinth | `RZwVw5iA` | `drinkbeer-refill-1.21.1-1.2.0.jar` |
 | Drive-By-Wire with Sable | `both` | Modrinth | `KsqvI0hD` | `drivebywire-0.2.9.jar` |
-| EMI | `both` | Modrinth | `fRiHVvU7` | `emi-1.1.24+1.21.1+neoforge.jar` |
 | Entity Culling | `client` | Modrinth | `NNAgCjsB` | `entityculling-neoforge-1.10.2-mc1.21.1.jar` |
 | Explorify | `both` | Modrinth | `HSfsxuTo` | `Explorify v1.6.5.mod.jar` |
 | Farmer's Delight | `both` | Modrinth | `R2OftAxM` | `FarmersDelight-1.21.1-1.3.2.jar` |
@@ -71,8 +69,8 @@ Total mods: 93.
 | Fusion (Connected Textures) | `client` | Modrinth | `p19vrgc2` | `fusion-1.2.12-neoforge-mc1.21.1.jar` |
 | GraveStone Mod | `both` | Modrinth | `RYtXKJPr` | `gravestone-neoforge-1.21.1-1.0.37.jar` |
 | Inventory Profiles Next | `client` | Modrinth | `O7RBXm3n` | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` |
-| Jade Addons (Neo/Forge) | `both` | Modrinth | `xuDOzCLy` | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Jade 🔍 | `both` | Modrinth | `nvQzSEkH` | `Jade-1.21.1-NeoForge-15.10.5.jar` |
+| Jade Addons (Neo/Forge) | `both` | Modrinth | `xuDOzCLy` | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | JourneyMap | `both` | Modrinth | `lfHFW1mp` | `journeymap-neoforge-1.21.1-6.0.0-beta.74.jar` |
 | Just Enough Items | `both` | Modrinth | `u6dRKJwZ` | `jei-1.21.1-neoforge-19.27.0.340.jar` |
 | Kotlin for Forge | `both` | Modrinth | `ordsPcFz` | `kotlinforforge-5.11.0-all.jar` |

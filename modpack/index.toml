@@ -201,11 +201,6 @@ hash = "5d7c434f746d615ea78adfdc4ba6e96452c93b2a68dc939c2ff3611a061e0b21"
 metafile = true
 
 [[files]]
-file = "mods/create-tracks.pw.toml"
-hash = "6652073f815bed51608dc9d6a9e769ec783a131526054b35e8de6f47c8745fa2"
-metafile = true
-
-[[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
@@ -243,11 +238,6 @@ metafile = true
 [[files]]
 file = "mods/drive-by-wire-sable.pw.toml"
 hash = "e7e2ab6ae7389062a2d1b733a0a5bfa59932a07c533110a8fd83e5bd89cf996b"
-metafile = true
-
-[[files]]
-file = "mods/emi.pw.toml"
-hash = "67bb77eae0b644960be3b1074178ceb5d54facbb42f326981b9d94625238a54a"
 metafile = true
 
 [[files]]
