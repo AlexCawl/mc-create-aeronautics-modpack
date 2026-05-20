@@ -43,6 +43,8 @@ PROMETHEUS_RETENTION=7d
 
 Only `GRAFANA_ADMIN_PASSWORD` is required. The other values have defaults.
 
+Grafana update checks, usage reporting, and plugin preinstall behavior are disabled in Compose to keep startup logs deterministic and avoid downloading unused bundled plugins.
+
 ## Metrics
 
 `mc-monitor` exports:
@@ -53,6 +55,18 @@ Only `GRAFANA_ADMIN_PASSWORD` is required. The other values have defaults.
 - `minecraft_status_players_max_count`
 
 `cadvisor` exports container CPU, memory, disk IO, and network metrics.
+
+cAdvisor mounts `/dev/kmsg` read-only so it can detect container OOM events when the host exposes that device. The repeated `There are no NVM devices!` message is harmless on hosts without persistent memory devices.
+
+## Voice Chat
+
+Simple Voice Chat uses UDP `24454` by default:
+
+```sh
+VOICE_CHAT_PORT=24454
+```
+
+Compose publishes `${VOICE_CHAT_PORT:-24454}:24454/udp`. Allow UDP `24454` in the VPS firewall and provider firewall if players should use voice chat.
 
 ## Commands
 

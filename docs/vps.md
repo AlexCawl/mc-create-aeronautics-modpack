@@ -17,11 +17,14 @@ RCON_PASSWORD=change-me
 GRAFANA_ADMIN_PASSWORD=change-me-too
 MC_MEMORY=6G
 MC_PORT=25565
+VOICE_CHAT_PORT=24454
 MC_MOTD=Create Aeronautics
 TZ=Asia/Yekaterinburg
 ```
 
 Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v0.1.0` when the server should stay pinned.
+
+`MC_PORT` publishes the Minecraft TCP port. `VOICE_CHAT_PORT` publishes the Simple Voice Chat UDP port, so the VPS firewall and provider firewall must allow UDP `24454` when voice chat should work outside the container host.
 
 ## Server Commands
 

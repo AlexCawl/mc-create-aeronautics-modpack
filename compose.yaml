@@ -4,6 +4,7 @@ services:
     restart: unless-stopped
     ports:
       - "${MC_PORT:-25565}:25565"
+      - "${VOICE_CHAT_PORT:-24454}:24454/udp"
     environment:
       EULA: "TRUE"
       TYPE: "MODRINTH"
@@ -40,6 +41,7 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
+      - /dev/kmsg:/dev/kmsg:ro
 
   prometheus:
     image: prom/prometheus:${PROMETHEUS_VERSION:-latest}
@@ -64,6 +66,10 @@ services:
       GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER:-admin}"
       GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD before starting monitoring}"
       GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_PLUGINS_PREINSTALL_DISABLED: "true"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_ANALYTICS_CHECK_FOR_PLUGIN_UPDATES: "false"
     volumes:
       - grafana-data:/var/lib/grafana
       - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
