@@ -11,6 +11,8 @@ This repository keeps reproducible Minecraft server inputs in Git and keeps runt
 - GitHub Actions exports the packwiz pack as a Modrinth `.mrpack`.
 - `itzg/minecraft-server` installs the published `.mrpack` through its Modrinth modpack flow.
 - AutoModpack is included in the pack for later client sync from server-visible files.
+- `itzg/mc-monitor`, cAdvisor, Prometheus, and Grafana provide always-on monitoring.
+- `spark` stays in the modpack as an on-demand Minecraft diagnostics tool.
 
 ## Layout
 
@@ -20,8 +22,13 @@ README.md
 docs/
   arch.md
   modpack.md
+  monitoring.md
   onboarding.md
   vps.md
+monitoring/
+  prometheus/prometheus.yml
+  grafana/provisioning/
+  grafana/dashboards/
 scripts/
   build-mrpack.sh
 modpack/
@@ -40,6 +47,7 @@ Tracked in Git:
 - helper scripts.
 - documentation.
 - GitHub Actions release workflow.
+- monitoring configuration.
 
 Not tracked in Git:
 
@@ -49,12 +57,15 @@ Not tracked in Git:
 - generated `.mrpack` files.
 - `dist/`
 - `.cache/`
+- `site/`
 
 ## Runtime Model
 
-The VPS runs Docker Compose from a cloned repository checkout. The server container mounts `./data:/data`, so worlds, logs, crash reports, generated configs, downloaded jars, and AutoModpack runtime state stay on the VPS.
+The VPS runs Docker Compose from a cloned repository checkout. The default stack starts Minecraft and monitoring together. The server container mounts `./data:/data`, so worlds, logs, crash reports, generated configs, downloaded jars, and AutoModpack runtime state stay on the VPS.
 
 The server is bootstrapped from a GitHub Release `.mrpack` URL. Players import the same `.mrpack` into Prism Launcher for first setup.
+
+Grafana is bound to `127.0.0.1` and is intended to be opened through an SSH tunnel.
 
 ## Release Model
 

@@ -14,6 +14,7 @@ Create `.env` locally on the VPS. This file is intentionally ignored and no `.en
 ```sh
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
 RCON_PASSWORD=change-me
+GRAFANA_ADMIN_PASSWORD=change-me-too
 MC_MEMORY=6G
 MC_PORT=25565
 MC_MOTD=Create Aeronautics
@@ -43,11 +44,21 @@ Follow logs:
 docker compose logs -f minecraft
 ```
 
+Open Grafana through an SSH tunnel:
+
+```sh
+ssh -L 3000:127.0.0.1:3000 <user>@<vps-host>
+```
+
+Then open `http://localhost:3000`.
+
 ## Runtime Data
 
 `data/` is mounted as `/data` in the container and contains world data, logs, crash reports, downloaded jars, generated configs, and AutoModpack runtime state.
 
 Do not commit `data/`.
+
+Prometheus and Grafana store runtime state in Docker named volumes.
 
 ## Backups
 
