@@ -1,0 +1,15 @@
+site_name: MC Create Aeronautics
+site_description: Git-first NeoForge Minecraft server infrastructure.
+repo_url: https://github.com/AlexCawl/mc-create-aeronautics
+
+nav:
+  - Home: index.md
+  - Architecture: arch.md
+  - Modpack: modpack.md
+  - VPS: vps.md
+  - Onboarding: onboarding.md
+
+theme:
+  name: mkdocs
+
+strict: true

@@ -6,14 +6,12 @@ The repository owns reproducible configuration and pack metadata. Runtime state 
 
 ## Documentation
 
-- [Repository Architecture](docs/arch.md): repository structure, stack, and state boundaries.
-- [Modpack Maintenance](docs/modpack.md): packwiz workflow, mod sides, AutoModpack policy, and releases.
-- [VPS Operations](docs/vps.md): `.env`, Docker Compose commands, updates, and backups.
-- [Repository Onboarding](docs/onboarding.md): local dependencies required to work with the repository.
+- [Repository Architecture](arch.md): repository structure, stack, and state boundaries.
+- [Modpack Maintenance](modpack.md): packwiz workflow, mod sides, AutoModpack policy, and releases.
+- [VPS Operations](vps.md): `.env`, Docker Compose commands, updates, and backups.
+- [Repository Onboarding](onboarding.md): local dependencies required to work with the repository.
 
-The same Markdown documentation is published to GitHub Pages with MkDocs when Pages is configured to use GitHub Actions.
-
-## Short Version
+## Runtime Model
 
 - `modpack/` is the canonical packwiz source of truth.
 - GitHub Actions builds `mc-create-aeronautics.mrpack` on every push to `master`.

@@ -8,6 +8,7 @@ This page covers local dependencies for working with the repository.
 - Docker with Compose support
 - Go
 - packwiz
+- Python 3 for local documentation preview
 
 Docker is required to run the server locally or on the VPS. Go is required to install packwiz.
 
@@ -58,3 +59,20 @@ scripts/build-mrpack.sh
 ```
 
 The result is written to `dist/mc-create-aeronautics.mrpack`. The `dist/` directory is ignored by Git.
+
+## Preview Documentation
+
+GitHub Actions publishes the Markdown documentation with MkDocs. To preview it locally:
+
+```sh
+python3 -m pip install mkdocs
+python3 -m mkdocs serve
+```
+
+The generated `site/` directory is ignored by Git.
+
+## Enable GitHub Pages
+
+In the GitHub repository settings, open `Settings -> Pages` and set `Build and deployment -> Source` to `GitHub Actions`.
+
+After that, pushes to `master` that change `docs/**`, `mkdocs.yml`, or the docs workflow publish the documentation site automatically.

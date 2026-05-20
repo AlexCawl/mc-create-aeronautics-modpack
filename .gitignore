@@ -6,6 +6,7 @@
 # Runtime state and generated artifacts
 /data/
 /dist/
+/site/
 /.cache/
 
 # Editor state
