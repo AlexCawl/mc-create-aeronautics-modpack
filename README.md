@@ -8,6 +8,7 @@ The repository owns reproducible configuration and pack metadata. Runtime state 
 
 - [Repository Architecture](docs/arch.md): repository structure, stack, and state boundaries.
 - [Modpack Maintenance](docs/modpack.md): packwiz workflow, mod sides, AutoModpack policy, and releases.
+- [Mods](docs/mods.md): current pinned mod list from packwiz metadata.
 - [VPS Operations](docs/vps.md): `.env`, Docker Compose commands, updates, and backups.
 - [Monitoring](docs/monitoring.md): Grafana, Prometheus, cAdvisor, mc-monitor, and spark diagnostics.
 - [Repository Onboarding](docs/onboarding.md): local dependencies required to work with the repository.

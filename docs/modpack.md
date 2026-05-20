@@ -2,6 +2,8 @@
 
 `modpack/` is the only mod metadata source. Commit `pack.toml`, `index.toml`, and `mods/*.pw.toml`; never commit downloaded `.jar` files.
 
+The current mod list is tracked in [Mods](mods.md). Update that table in the same commit as any mod metadata change.
+
 ## Local Build
 
 Build the Modrinth pack from the repository root:

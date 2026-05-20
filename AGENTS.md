@@ -35,3 +35,4 @@
 - Use `side = "client"`, `side = "server"`, or `side = "both"` deliberately in each `mods/*.pw.toml`.
 - Mark a mod as `both` only when the exact version supports dedicated server loading or has been manually verified.
 - Keep AutoModpack pinned in `modpack/` while the repository uses AutoModpack for post-bootstrap client sync.
+- When adding, removing, updating, or changing the side of a mod, update `docs/mods.md` in the same commit.
