@@ -32,33 +32,17 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": {
-                  "text": "Down"
-                },
-                "1": {
-                  "text": "Up"
-                }
-              }
-            }
-          ],
+          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
-                "value": null
-              },
-              {
                 "color": "green",
-                "value": 1
+                "value": null
               }
             ]
           },
-          "unit": "none"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -70,7 +54,7 @@
       },
       "id": 1,
       "options": {
-        "colorMode": "background",
+        "colorMode": "value",
         "graphMode": "area",
         "justifyMode": "center",
         "orientation": "auto",
@@ -90,12 +74,12 @@
             "type": "prometheus",
             "uid": "Prometheus"
           },
-          "expr": "minecraft_status_healthy",
-          "legendFormat": "server",
+          "expr": "sum(rate(container_cpu_usage_seconds_total{name=~\".*minecraft.*\"}[5m]))",
+          "legendFormat": "cpu",
           "refId": "A"
         }
       ],
-      "title": "Status",
+      "title": "CPU Usage",
       "type": "stat"
     },
     {
@@ -118,7 +102,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "bytes"
         },
         "overrides": []
       },
@@ -150,12 +134,12 @@
             "type": "prometheus",
             "uid": "Prometheus"
           },
-          "expr": "minecraft_status_players_online_count",
-          "legendFormat": "online",
+          "expr": "sum(container_memory_working_set_bytes{name=~\".*minecraft.*\"})",
+          "legendFormat": "ram",
           "refId": "A"
         }
       ],
-      "title": "Players Online",
+      "title": "RAM Usage",
       "type": "stat"
     },
     {
@@ -178,7 +162,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "bytes"
         },
         "overrides": []
       },
@@ -210,12 +194,12 @@
             "type": "prometheus",
             "uid": "Prometheus"
           },
-          "expr": "minecraft_status_players_max_count",
-          "legendFormat": "max",
+          "expr": "sum(container_fs_usage_bytes{name=~\".*minecraft.*\"})",
+          "legendFormat": "fs",
           "refId": "A"
         }
       ],
-      "title": "Players Max",
+      "title": "Filesystem Usage",
       "type": "stat"
     },
     {
@@ -270,12 +254,12 @@
             "type": "prometheus",
             "uid": "Prometheus"
           },
-          "expr": "minecraft_status_response_time_seconds",
-          "legendFormat": "response",
+          "expr": "time() - max(container_start_time_seconds{name=~\".*minecraft.*\"})",
+          "legendFormat": "uptime",
           "refId": "A"
         }
       ],
-      "title": "Response Time",
+      "title": "Container Uptime",
       "type": "stat"
     },
     {
@@ -327,7 +311,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -359,20 +343,11 @@
             "uid": "Prometheus"
           },
           "refId": "A",
-          "expr": "minecraft_status_players_online_count",
-          "legendFormat": "online"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "Prometheus"
-          },
-          "refId": "B",
-          "expr": "minecraft_status_players_max_count",
-          "legendFormat": "max"
+          "expr": "sum(rate(container_cpu_usage_seconds_total{name=~\".*minecraft.*\"}[5m]))",
+          "legendFormat": "minecraft"
         }
       ],
-      "title": "Players",
+      "title": "CPU",
       "type": "timeseries"
     },
     {
@@ -424,7 +399,7 @@
               }
             ]
           },
-          "unit": "s"
+          "unit": "bytes"
         },
         "overrides": []
       },
@@ -456,11 +431,302 @@
             "uid": "Prometheus"
           },
           "refId": "A",
-          "expr": "minecraft_status_response_time_seconds",
-          "legendFormat": "response"
+          "expr": "sum(container_memory_working_set_bytes{name=~\".*minecraft.*\"})",
+          "legendFormat": "working set"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "B",
+          "expr": "sum(container_memory_usage_bytes{name=~\".*minecraft.*\"})",
+          "legendFormat": "usage"
         }
       ],
-      "title": "Response Time",
+      "title": "RAM Usage",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "bytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "A",
+          "expr": "sum(container_fs_usage_bytes{name=~\".*minecraft.*\"})",
+          "legendFormat": "filesystem"
+        }
+      ],
+      "title": "Filesystem Usage",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Bps"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "A",
+          "expr": "sum(rate(container_network_receive_bytes_total{name=~\".*minecraft.*\", interface!=\"lo\"}[5m]))",
+          "legendFormat": "receive"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "B",
+          "expr": "sum(rate(container_network_transmit_bytes_total{name=~\".*minecraft.*\", interface!=\"lo\"}[5m]))",
+          "legendFormat": "transmit"
+        }
+      ],
+      "title": "Network IO",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Bps"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "A",
+          "expr": "sum(rate(container_fs_reads_bytes_total{name=~\".*minecraft.*\"}[5m]))",
+          "legendFormat": "read"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "Prometheus"
+          },
+          "refId": "B",
+          "expr": "sum(rate(container_fs_writes_bytes_total{name=~\".*minecraft.*\"}[5m]))",
+          "legendFormat": "write"
+        }
+      ],
+      "title": "Disk IO",
       "type": "timeseries"
     }
   ],
@@ -468,7 +734,8 @@
   "schemaVersion": 38,
   "style": "dark",
   "tags": [
-    "minecraft"
+    "minecraft",
+    "container"
   ],
   "templating": {
     "list": []
@@ -479,8 +746,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Minecraft Server Metrics",
-  "uid": "minecraft-server-metrics",
+  "title": "Minecraft Container Metrics",
+  "uid": "minecraft-container-metrics",
   "version": 1,
   "weekStart": ""
 }
