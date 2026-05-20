@@ -1,12 +1,17 @@
+# Local environment
 .env
 .env.*
 !.envrc
 
+# Runtime state and generated artifacts
 /data/
 /dist/
 /.cache/
+
+# Editor state
 /.idea/
 
+# Generated files
 *.log
 *.tmp
 *.jar

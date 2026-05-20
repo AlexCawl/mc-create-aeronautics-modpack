@@ -1,13 +1,15 @@
 # VPS Operations
 
-Clone the repository on the VPS and keep the server rooted in that checkout.
+Clone the repository on the VPS and keep the server rooted in that checkout:
 
 ```sh
 git clone <repo-url> mc-create-aeronautics
 cd mc-create-aeronautics
 ```
 
-Create `.env` locally:
+## Configuration
+
+Create `.env` locally on the VPS. This file is intentionally ignored and no `.env.example` is committed.
 
 ```sh
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
@@ -18,12 +20,36 @@ MC_MOTD=Create Aeronautics
 TZ=Asia/Yekaterinburg
 ```
 
-Start or update:
+Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v0.1.0` when the server should stay pinned.
+
+## Server Commands
+
+Start or update the server:
 
 ```sh
 docker compose pull
 docker compose up -d
 ```
+
+Stop it:
+
+```sh
+docker compose down
+```
+
+Follow logs:
+
+```sh
+docker compose logs -f minecraft
+```
+
+## Runtime Data
+
+`data/` is mounted as `/data` in the container and contains world data, logs, crash reports, downloaded jars, generated configs, and AutoModpack runtime state.
+
+Do not commit `data/`.
+
+## Backups
 
 Runtime state is in `data/`. Back up at least:
 
@@ -35,6 +61,3 @@ data/server.properties
 data/ops.json
 data/whitelist.json
 ```
-
-Do not commit `data/`.
-

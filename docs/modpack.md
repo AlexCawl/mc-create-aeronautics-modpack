@@ -2,6 +2,44 @@
 
 `modpack/` is the only mod metadata source. Commit `pack.toml`, `index.toml`, and `mods/*.pw.toml`; never commit downloaded `.jar` files.
 
+## Local Build
+
+Build the Modrinth pack from the repository root:
+
+```sh
+scripts/build-mrpack.sh
+```
+
+The artifact is written to `dist/mc-create-aeronautics.mrpack`.
+
+To choose another output path:
+
+```sh
+scripts/build-mrpack.sh dist/custom-name.mrpack
+```
+
+`dist/` is ignored by Git.
+
+## Adding Mods
+
+Run packwiz commands from `modpack/`:
+
+```sh
+cd modpack
+packwiz modrinth add <mod-slug>
+packwiz refresh
+```
+
+For CurseForge-only mods:
+
+```sh
+cd modpack
+packwiz curseforge add <project-slug-or-id>
+packwiz refresh
+```
+
+Prefer Modrinth metadata when the exact file is available there. CurseForge metadata is acceptable for mods that are not available on Modrinth.
+
 ## Sides
 
 - `both`: installed on client and dedicated server.
@@ -9,6 +47,14 @@
 - `server`: installed only for dedicated server installs.
 
 Prefer the narrowest side that works. A mod may be marked `both` only when its project/version explicitly supports dedicated server loading or manual testing has proven it safe.
+
+Set side metadata deliberately in each `mods/*.pw.toml`:
+
+```toml
+side = "both"
+side = "client"
+side = "server"
+```
 
 ## AutoModpack Policy
 
