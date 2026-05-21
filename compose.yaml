@@ -12,13 +12,14 @@ services:
       ONLINE_MODE: "${ONLINE_MODE}"
       MODRINTH_LOADER: "neoforge"
       MODRINTH_MODPACK: "${MODRINTH_MODPACK:?Set MODRINTH_MODPACK to the GitHub Release .mrpack URL}"
-      MODRINTH_FORCE_SYNCHRONIZE: "${MODRINTH_FORCE_SYNCHRONIZE}"
       MEMORY: "${MC_MEMORY}"
       MOTD: "${MC_MOTD}"
       ENABLE_RCON: "${ENABLE_RCON}"
       RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
       USE_AIKAR_FLAGS: "${USE_AIKAR_FLAGS}"
       TZ: "${TZ}"
+      UID: "${MC_UID}"
+      GID: "${MC_GID}"
     volumes:
       - ./data:/data
     stdin_open: true

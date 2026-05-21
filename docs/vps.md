@@ -35,8 +35,13 @@ Use `master-latest` when the server should track the current `master` build. Use
 Start or update the server:
 
 ```sh
-docker compose pull
-docker compose up -d
+scripts/run_minecraft.sh
+```
+
+Reinstall the server mod jars from the configured `.mrpack` after mod removals or large modpack changes:
+
+```sh
+scripts/run_minecraft.sh --reinstall-mods
 ```
 
 Stop it:
