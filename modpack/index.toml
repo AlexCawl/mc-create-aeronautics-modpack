@@ -1,9 +1,8 @@
 hash-format = "sha256"
 
 [[files]]
-file = "mods/analog-audio.pw.toml"
-hash = "7a002da9523d1fb204454508b25d7f9de93dbf752660034a61715d0b4614198d"
-metafile = true
+file = "config/servercore/config.yml"
+hash = "20485ccae873ee790e5eaf2407df01eee68ed3d36b26311dc3aebe5f9f2398a8"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
@@ -43,6 +42,11 @@ metafile = true
 [[files]]
 file = "mods/clumps.pw.toml"
 hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
+metafile = true
+
+[[files]]
+file = "mods/configurable.pw.toml"
+hash = "0869e78231ca67e18ebdc14af839af47fb046f100f3622a06fc099fce33eee17"
 metafile = true
 
 [[files]]
@@ -106,11 +110,6 @@ hash = "67a405e6307f900d168deaa954a4309c3b44a6025e4efd7b8e774b6f9d3a69cd"
 metafile = true
 
 [[files]]
-file = "mods/create-design-n-decor.pw.toml"
-hash = "bc4ef8bd7d32506703dcc175a62a12766addc393434ddbe8d17f01b071701943"
-metafile = true
-
-[[files]]
 file = "mods/create-diesel-generators.pw.toml"
 hash = "d31fbf89364ee8130adca0dfba3d6aa774d1771632aa60f3f13e1b4ed9e073e5"
 metafile = true
@@ -158,11 +157,6 @@ metafile = true
 [[files]]
 file = "mods/create-nowheel.pw.toml"
 hash = "5bd0db93c8b1974b23bb1fe7651562e658ab121a496f0dbe49685eded211092c"
-metafile = true
-
-[[files]]
-file = "mods/create-numismatics-advancement-seeker.pw.toml"
-hash = "5befabadc40e3831737e96146d8e1327c875cc7e6e6388f81014bae9c1925069"
 metafile = true
 
 [[files]]
@@ -331,8 +325,18 @@ hash = "337093b94742d334ad349d4fbfe1b74a9b885784ac6d43432896b3dc527260a9"
 metafile = true
 
 [[files]]
+file = "mods/lmft.pw.toml"
+hash = "faed2d9ae09b810b385180a3c20e598ff4d43da75f324b0320649ea4eeb78e29"
+metafile = true
+
+[[files]]
 file = "mods/midnightlib.pw.toml"
 hash = "73aba17132f267dd76ff682aa84abfb7c09d25a93b9220ee261a1e25337bebc7"
+metafile = true
+
+[[files]]
+file = "mods/modernfix.pw.toml"
+hash = "1b0bcb6b0739ac51a706398c6f3765e1875e95490a9284603ee5628c259a4f63"
 metafile = true
 
 [[files]]
@@ -346,8 +350,8 @@ hash = "35acdf433fe8f8599f59975e848efdb717663c2c471d3a5dc18743799795a736"
 metafile = true
 
 [[files]]
-file = "mods/numismatics.pw.toml"
-hash = "f0a5a2604c8d733222a25e9c19dcf443d853864ed76a388b26982be97fdea71f"
+file = "mods/neruina.pw.toml"
+hash = "c8416fe79c21e4d747cb9a4a955e185981a298653fd89c2ff73410b3280af35e"
 metafile = true
 
 [[files]]
@@ -356,13 +360,13 @@ hash = "413494b5ba534461e22545173a8cc6e98b04962a0ee9514498b830b99d4acabe"
 metafile = true
 
 [[files]]
-file = "mods/polymorph.pw.toml"
-hash = "152769b5dfbb92a836634e315898b23b6a555c60b6f05ddf38c00085f2b784f6"
+file = "mods/packet-fixer.pw.toml"
+hash = "84cb0dcad9ac46d22adba4fb7924951affa6ac5e46027a3b25fa9a0db8d91b2b"
 metafile = true
 
 [[files]]
-file = "mods/power-grid.pw.toml"
-hash = "1c5522db3b8327e889b0ec6fe8569c4f864b8515a5f1cf439c4bae86a86234e2"
+file = "mods/polymorph.pw.toml"
+hash = "152769b5dfbb92a836634e315898b23b6a555c60b6f05ddf38c00085f2b784f6"
 metafile = true
 
 [[files]]
@@ -401,8 +405,18 @@ hash = "e4c43e944439f4941ba1c417ab3ac1ec3dbd9c95a8456a2069641d031317e142"
 metafile = true
 
 [[files]]
+file = "mods/servercore.pw.toml"
+hash = "333658569a76adc35989f791a6c0b5d4745eeec2fd273631a1e22907bf1cd0c1"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "82e2c1ac8875303b3dfc70ce7cfe8ca08ca1c1629c34f986441ea203f5fb645c"
+metafile = true
+
+[[files]]
+file = "mods/skinrestorer.pw.toml"
+hash = "ff8556cebae2ed386522c043a5bbcd475e4bf8befde4bfadbe53ee565128e96d"
 metafile = true
 
 [[files]]
@@ -438,16 +452,6 @@ metafile = true
 [[files]]
 file = "mods/supermartijn642s-core-lib.pw.toml"
 hash = "3c08d6331ca871abdfa7a185011d2a6349a1125cc6b2cf87f9c89ca4043dbe70"
-metafile = true
-
-[[files]]
-file = "mods/tiny-redstone.pw.toml"
-hash = "504ac6fa178eb7af705b5b9be4607a687d01eb20327162a411ff5fd03bf5180e"
-metafile = true
-
-[[files]]
-file = "mods/tinycreate.pw.toml"
-hash = "d8cbe78541504a1fbf22694a29ed20ed4290de3ae31fdcc10bcb520172134902"
 metafile = true
 
 [[files]]
