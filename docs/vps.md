@@ -26,7 +26,7 @@ MC_MEMORY=6G
 USE_AIKAR_FLAGS=true
 ```
 
-Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v0.1.0` when the server should stay pinned.
+Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v1` when the server should stay pinned.
 
 `MC_MEMORY` controls the Minecraft JVM heap size. `USE_AIKAR_FLAGS=true` enables itzg's bundled Aikar JVM flags.
 
@@ -49,6 +49,8 @@ scripts/run_minecraft.sh --reinstall-mods
 ```
 
 This deletes `data/mods/*.jar` before starting the container. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
+
+The compose configuration also force-includes `configurable` from the Modrinth pack because Neruina needs it during dedicated server startup.
 
 Stop it:
 

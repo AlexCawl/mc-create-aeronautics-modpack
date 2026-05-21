@@ -5,11 +5,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-    inputs:
-      release_tag:
-        description: "Immutable release tag to create, for example v0.1.0. Leave empty to refresh master-latest."
-        required: false
-        type: string
 
 permissions:
   contents: write
@@ -35,13 +30,13 @@ jobs:
         run: scripts/build-mrpack.sh dist/mc-create-aeronautics.mrpack
 
       - name: Move rolling tag
-        if: github.event_name == 'push' || inputs.release_tag == ''
+        if: github.event_name == 'push'
         run: |
           git tag -f master-latest "$GITHUB_SHA"
           git push -f origin refs/tags/master-latest
 
       - name: Publish rolling release
-        if: github.event_name == 'push' || inputs.release_tag == ''
+        if: github.event_name == 'push'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -65,25 +60,47 @@ jobs:
 
           gh release upload master-latest dist/mc-create-aeronautics.mrpack --clobber
 
-      - name: Publish immutable release
-        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ inputs.release_tag }}
+      - name: Resolve next immutable release tag
+        if: github.event_name == 'workflow_dispatch'
+        id: next-tag
         run: |
-          case "$RELEASE_TAG" in
-            v[0-9]*.[0-9]*.[0-9]*) ;;
-            *)
-              echo "Manual release tags must look like v0.1.0." >&2
-              exit 1
-              ;;
-          esac
+          max=0
+          tags="$(git ls-remote --tags origin 'refs/tags/v*' | awk '
+            {
+              sub(/^refs\/tags\//, "", $2)
+              sub(/\^\{\}$/, "", $2)
+              if ($2 ~ /^v[0-9]+$/) print $2
+            }
+          ')"
 
-          if git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
-            echo "Tag $RELEASE_TAG already exists; immutable releases are not overwritten." >&2
+          for tag in $tags; do
+            case "$tag" in
+              v*[!0-9]*|'') continue ;;
+              v*) number="${tag#v}" ;;
+              *) continue ;;
+            esac
+
+            if [ "$number" -gt "$max" ]; then
+              max="$number"
+            fi
+          done
+
+          next=$((max + 1))
+          immutable_tag="v$next"
+
+          if git ls-remote --exit-code --tags origin "refs/tags/$immutable_tag" >/dev/null 2>&1; then
+            echo "Tag $immutable_tag already exists; immutable releases are not overwritten." >&2
             exit 1
           fi
 
+          echo "immutable_tag=$immutable_tag" >> "$GITHUB_OUTPUT"
+
+      - name: Publish immutable release
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.next-tag.outputs.immutable_tag }}
+        run: |
           git tag "$RELEASE_TAG" "$GITHUB_SHA"
           git push origin "refs/tags/$RELEASE_TAG"
 

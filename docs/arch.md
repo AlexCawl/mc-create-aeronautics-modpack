@@ -70,6 +70,6 @@ Grafana is bound to `127.0.0.1` and is intended to be opened through an SSH tunn
 
 ## Release Model
 
-Every push to `master` refreshes the mutable `master-latest` release. Manual workflow runs can create immutable releases with tags such as `v0.1.0`.
+Every push to `master` refreshes the mutable `master-latest` release. Manual workflow runs create immutable incremental releases with tags such as `v1`, `v2`, and `v3`.
 
 Use `master-latest` for a server that follows the branch. Use immutable release URLs for a pinned server.

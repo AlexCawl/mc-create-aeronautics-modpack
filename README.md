@@ -20,7 +20,7 @@ The same Markdown documentation is published to GitHub Pages with MkDocs when Pa
 - `modpack/` is the canonical packwiz source of truth.
 - GitHub Actions builds `mc-create-aeronautics.mrpack` on every push to `master`.
 - The rolling GitHub Release tag is `master-latest`.
-- Manual GitHub Actions runs can create immutable SemVer-style releases such as `v0.1.0`.
+- Manual GitHub Actions runs create immutable incremental releases such as `v1`, `v2`, and `v3`.
 - The VPS server runs from the published `.mrpack` through `itzg/minecraft-server`.
 - Monitoring runs with `itzg/mc-monitor`, Prometheus Exporter, cAdvisor, Prometheus, and Grafana.
 - RCON Web Admin is available over an SSH tunnel for server commands.
