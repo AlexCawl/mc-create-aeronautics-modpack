@@ -12,6 +12,7 @@ services:
       ONLINE_MODE: "false"
       MODRINTH_LOADER: "neoforge"
       MODRINTH_MODPACK: "${MODRINTH_MODPACK:?Set MODRINTH_MODPACK to the GitHub Release .mrpack URL}"
+      MODRINTH_FORCE_SYNCHRONIZE: "true"
       MEMORY: "${MC_MEMORY}"
       MOTD: "Create Aeronautics"
       ENABLE_RCON: "true"

@@ -48,6 +48,8 @@ Reinstall the server mod jars from the configured `.mrpack` after mod removals o
 scripts/run_minecraft.sh --reinstall-mods
 ```
 
+This deletes `data/mods/*.jar` before starting the container. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
+
 Stop it:
 
 ```sh
