@@ -6,6 +6,10 @@ ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 ENV_FILE="$ROOT_DIR/.env"
 REINSTALL_MODS=false
 
+log() {
+  printf '[run_minecraft] %s\n' "$*"
+}
+
 while [ "$#" -gt 0 ]; do
   case "$1" in
     --reinstall-mods)
@@ -31,18 +35,35 @@ if [ ! -f "$ENV_FILE" ]; then
   exit 1
 fi
 
+log "Using repository root: $ROOT_DIR"
+log "Found .env"
+
 cd "$ROOT_DIR"
 
 MC_UID="$(id -u)"
 MC_GID="$(id -g)"
 export MC_UID MC_GID
 
+log "Using UID=$MC_UID GID=$MC_GID"
+log "Stopping existing Docker Compose stack if present"
 docker compose down
 
 if [ "$REINSTALL_MODS" = true ]; then
+  log "Reinstall requested: removing downloaded mod jars"
   if [ -d "$ROOT_DIR/data/mods" ]; then
     find "$ROOT_DIR/data/mods" -maxdepth 1 -type f -name '*.jar' -delete
+  else
+    log "No data/mods directory found"
   fi
+
+  log "Removing cached Modrinth modpack files"
+  rm -f "$ROOT_DIR/data/modpack.mrpack"
+  rm -f "$ROOT_DIR/data/.modrinth-modpack-manifest.json"
+  rm -f "$ROOT_DIR/data/.install-modrinth.env"
+else
+  log "Reinstall not requested: keeping existing mod jars and Modrinth cache"
 fi
 
+log "Starting Docker Compose stack"
 docker compose up -d
+log "Docker Compose stack started"

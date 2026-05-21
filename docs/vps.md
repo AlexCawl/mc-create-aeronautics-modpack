@@ -48,7 +48,7 @@ Reinstall the server mod jars from the configured `.mrpack` after mod removals o
 scripts/run_minecraft.sh --reinstall-mods
 ```
 
-This deletes `data/mods/*.jar` before starting the container. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
+This deletes `data/mods/*.jar` and the cached Modrinth modpack files before starting the container, forcing the configured `.mrpack` URL to be downloaded again. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
 
 The compose configuration also force-includes `configurable` from the Modrinth pack because Neruina needs it during dedicated server startup.
 
