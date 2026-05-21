@@ -3,27 +3,28 @@ services:
     image: itzg/minecraft-server:java21
     restart: unless-stopped
     ports:
-      - "${MC_PORT:-25565}:25565"
-      - "${VOICE_CHAT_PORT:-24454}:24454/udp"
+      - "${MC_PORT}:25565"
+      - "${VOICE_CHAT_PORT}:24454/udp"
     environment:
       EULA: "TRUE"
       TYPE: "MODRINTH"
       VERSION: "1.21.1"
+      ONLINE_MODE: "${ONLINE_MODE}"
       MODRINTH_LOADER: "neoforge"
       MODRINTH_MODPACK: "${MODRINTH_MODPACK:?Set MODRINTH_MODPACK to the GitHub Release .mrpack URL}"
-      MEMORY: "${MC_MEMORY:-6G}"
-      MOTD: "${MC_MOTD:-Create Aeronautics}"
-      ENABLE_RCON: "${ENABLE_RCON:-true}"
+      MEMORY: "${MC_MEMORY}"
+      MOTD: "${MC_MOTD}"
+      ENABLE_RCON: "${ENABLE_RCON}"
       RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
-      USE_AIKAR_FLAGS: "true"
-      TZ: "${TZ:-Asia/Yekaterinburg}"
+      USE_AIKAR_FLAGS: "${USE_AIKAR_FLAGS}"
+      TZ: "${TZ}"
     volumes:
       - ./data:/data
     stdin_open: true
     tty: true
 
   monitor:
-    image: itzg/mc-monitor:${MC_MONITOR_VERSION:-latest}
+    image: itzg/mc-monitor:${MC_MONITOR_VERSION}
     restart: unless-stopped
     command: export-for-prometheus
     environment:
@@ -34,27 +35,27 @@ services:
       - minecraft
 
   rcon:
-    image: itzg/rcon:${RCON_WEB_VERSION:-latest}
+    image: itzg/rcon:${RCON_WEB_VERSION}
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${RCON_WEB_PORT:-4326}:4326"
-      - "127.0.0.1:${RCON_WEB_SOCKET_PORT:-4327}:4327"
+      - "127.0.0.1:${RCON_WEB_PORT}:4326"
+      - "127.0.0.1:${RCON_WEB_SOCKET_PORT}:4327"
     environment:
-      RWA_USERNAME: "${RCON_WEB_USER:-admin}"
+      RWA_USERNAME: "${RCON_WEB_USER}"
       RWA_PASSWORD: "${RCON_WEB_PASSWORD:?Set RCON_WEB_PASSWORD before starting RCON web admin}"
       RWA_ADMIN: "TRUE"
       RWA_RCON_HOST: "minecraft"
       RWA_RCON_PORT: "25575"
       RWA_RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
       RWA_GAME: "minecraft"
-      RWA_SERVER_NAME: "${RCON_WEB_SERVER_NAME:-Create Aeronautics}"
+      RWA_SERVER_NAME: "${RCON_WEB_SERVER_NAME}"
     volumes:
       - rcon-data:/opt/rcon-web-admin/db
     depends_on:
       - minecraft
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION:-v0.47.1}
+    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION}
     restart: unless-stopped
     volumes:
       - /:/rootfs:ro
@@ -64,12 +65,12 @@ services:
       - /dev/kmsg:/dev/kmsg:ro
 
   prometheus:
-    image: prom/prometheus:${PROMETHEUS_VERSION:-latest}
+    image: prom/prometheus:${PROMETHEUS_VERSION}
     restart: unless-stopped
     command:
       - --config.file=/etc/prometheus/prometheus.yml
       - --storage.tsdb.path=/prometheus
-      - --storage.tsdb.retention.time=${PROMETHEUS_RETENTION:-7d}
+      - --storage.tsdb.retention.time=${PROMETHEUS_RETENTION}
     volumes:
       - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus-data:/prometheus
@@ -80,7 +81,7 @@ services:
       - alloy
 
   loki:
-    image: grafana/loki:${LOKI_VERSION:-3.7.0}
+    image: grafana/loki:${LOKI_VERSION}
     restart: unless-stopped
     command: -config.file=/etc/loki/loki-config.yaml
     volumes:
@@ -88,7 +89,7 @@ services:
       - loki-data:/loki
 
   alloy:
-    image: grafana/alloy:${ALLOY_VERSION:-latest}
+    image: grafana/alloy:${ALLOY_VERSION}
     restart: unless-stopped
     command:
       - run
@@ -103,12 +104,12 @@ services:
       - loki
 
   grafana:
-    image: grafana/grafana-oss:${GRAFANA_VERSION:-latest}
+    image: grafana/grafana-oss:${GRAFANA_VERSION}
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${GRAFANA_PORT:-3000}:3000"
+      - "127.0.0.1:${GRAFANA_PORT}:3000"
     environment:
-      GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER:-admin}"
+      GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER}"
       GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD before starting monitoring}"
       GF_USERS_ALLOW_SIGN_UP: "false"
       GF_PLUGINS_PREINSTALL_DISABLED: "true"

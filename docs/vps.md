@@ -9,23 +9,26 @@ cd mc-create-aeronautics
 
 ## Configuration
 
-Create `.env` locally on the VPS. This file is intentionally ignored and no `.env.example` is committed.
+Create `.env` locally on the VPS from the committed defaults. This file is intentionally ignored and should contain the real release URL and passwords.
 
 ```sh
+cp .env.defaults .env
+```
+
+Then edit the required values:
+
+```dotenv
 MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
 RCON_PASSWORD=change-me
 GRAFANA_ADMIN_PASSWORD=change-me-too
 RCON_WEB_PASSWORD=change-me-too
-MC_MEMORY=6G
-MC_PORT=25565
-VOICE_CHAT_PORT=24454
-MC_MOTD=Create Aeronautics
-TZ=Asia/Yekaterinburg
 ```
 
 Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v0.1.0` when the server should stay pinned.
 
 `MC_PORT` publishes the Minecraft TCP port. `VOICE_CHAT_PORT` publishes the Simple Voice Chat UDP port, so the VPS firewall and provider firewall must allow UDP `24454` when voice chat should work outside the container host.
+
+`ONLINE_MODE=false` allows players without a licensed Microsoft/Mojang session to join. Use a whitelist and ops list intentionally because Minecraft account identity is no longer verified by Mojang.
 
 ## Server Commands
 

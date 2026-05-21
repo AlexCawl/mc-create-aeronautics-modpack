@@ -2,6 +2,7 @@
 .env
 .env.*
 !.envrc
+!.env.defaults
 
 # Runtime state and generated artifacts
 /data/
