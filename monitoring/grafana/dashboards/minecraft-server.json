@@ -641,7 +641,7 @@
           },
           "expr": "(rate(mc_dimension_tick_seconds_sum[1m]) / rate(mc_dimension_tick_seconds_count[1m])) * 1000",
           "legendFormat": "{{name}}",
-          "refId": "A"
+          "refId": "B"
         }
       ],
       "title": "MSPT",
@@ -742,7 +742,7 @@
           },
           "expr": "jvm_memory_bytes_max{area=\"heap\"}",
           "legendFormat": "max",
-          "refId": "A"
+          "refId": "B"
         }
       ],
       "title": "JVM Heap",
@@ -1119,7 +1119,7 @@
           },
           "expr": "minecraft_status_players_max_count",
           "legendFormat": "max",
-          "refId": "A"
+          "refId": "B"
         }
       ],
       "title": "Players",
