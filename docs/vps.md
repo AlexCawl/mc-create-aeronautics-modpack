@@ -9,7 +9,7 @@ cd mc-create-aeronautics
 
 ## Configuration
 
-Create `.env` locally on the VPS from the committed defaults. This file is intentionally ignored and should contain the real release URL and passwords.
+Create `.env` locally on the VPS from the committed defaults. This file is intentionally ignored and should contain the real passwords and local tuning.
 
 ```sh
 cp .env.defaults .env
@@ -18,7 +18,6 @@ cp .env.defaults .env
 Then edit the required values:
 
 ```dotenv
-MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
 RCON_PASSWORD=change-me
 GRAFANA_ADMIN_PASSWORD=change-me-too
 RCON_WEB_PASSWORD=change-me-too
@@ -26,7 +25,7 @@ MC_MEMORY=6G
 USE_AIKAR_FLAGS=true
 ```
 
-Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v1` when the server should stay pinned.
+The Compose file uses `ghcr.io/alexcawl/mc-create-aeronautics-server:master-latest` when the server should track the current `master` build. Change the Minecraft service image to an immutable tag such as `ghcr.io/alexcawl/mc-create-aeronautics-server:v1` when the server should stay pinned.
 
 `MC_MEMORY` controls the Minecraft JVM heap size. `USE_AIKAR_FLAGS=true` enables itzg's bundled Aikar JVM flags.
 
@@ -42,15 +41,13 @@ Start or update the server:
 scripts/run_minecraft.sh
 ```
 
-Reinstall the server mod jars from the configured `.mrpack` after mod removals or large modpack changes:
+Force reinstall the server mod jars from the packwiz metadata bundled in the server image:
 
 ```sh
 scripts/run_minecraft.sh --reinstall-mods
 ```
 
-This deletes `data/mods/*.jar` and the cached Modrinth modpack files before starting the container, forcing the configured `.mrpack` URL to be downloaded again. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
-
-The compose configuration also force-includes `configurable` from the Modrinth pack because Neruina needs it during dedicated server startup.
+This deletes `data/mods/*.jar` before starting the container. The server image also sets `REMOVE_OLD_MODS=TRUE`, so normal starts synchronize `/data/mods` with the packwiz server install. `docker compose down -v` does not delete `data/`, because `data/` is a bind-mounted directory in the repository, not a Docker named volume.
 
 Stop it:
 

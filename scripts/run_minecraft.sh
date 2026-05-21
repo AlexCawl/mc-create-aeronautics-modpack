@@ -45,6 +45,9 @@ MC_GID="$(id -g)"
 export MC_UID MC_GID
 
 log "Using UID=$MC_UID GID=$MC_GID"
+log "Pulling Minecraft image"
+docker compose pull minecraft
+
 log "Stopping existing Docker Compose stack if present"
 docker compose down
 
@@ -56,12 +59,12 @@ if [ "$REINSTALL_MODS" = true ]; then
     log "No data/mods directory found"
   fi
 
-  log "Removing cached Modrinth modpack files"
+  log "Removing legacy cached Modrinth modpack files if present"
   rm -f "$ROOT_DIR/data/modpack.mrpack"
   rm -f "$ROOT_DIR/data/.modrinth-modpack-manifest.json"
   rm -f "$ROOT_DIR/data/.install-modrinth.env"
 else
-  log "Reinstall not requested: keeping existing mod jars and Modrinth cache"
+  log "Reinstall not requested: relying on container startup synchronization"
 fi
 
 log "Starting Docker Compose stack"

@@ -16,10 +16,10 @@ The repository owns reproducible configuration and pack metadata. Runtime state 
 ## Runtime Model
 
 - `modpack/` is the canonical packwiz source of truth.
-- GitHub Actions builds `mc-create-aeronautics.mrpack` on every push to `master`.
+- GitHub Actions builds `mc-create-aeronautics-client.mrpack` and a matching server Docker image on every push to `master`.
 - The rolling GitHub Release tag is `master-latest`.
 - Manual GitHub Actions runs create immutable incremental releases such as `v1`, `v2`, and `v3`.
-- The VPS server runs from the published `.mrpack` through `itzg/minecraft-server`.
+- The VPS server runs from `ghcr.io/alexcawl/mc-create-aeronautics-server`, which contains the pinned packwiz metadata.
 - Monitoring runs with `itzg/mc-monitor`, Prometheus Exporter, cAdvisor, Prometheus, and Grafana.
 - RCON Web Admin is available over an SSH tunnel for server commands.
 - Players import the same `.mrpack` into Prism Launcher for first setup.

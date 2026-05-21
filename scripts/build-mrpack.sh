@@ -17,7 +17,7 @@ command -v "$PACKWIZ_BIN" >/dev/null 2>&1 || {
 }
 
 # Write to dist/ by default, but allow an explicit output path as $1.
-OUTPUT="${1:-$ROOT_DIR/dist/mc-create-aeronautics.mrpack}"
+OUTPUT="${1:-$ROOT_DIR/dist/mc-create-aeronautics-client.mrpack}"
 
 # Resolve repo-relative output paths before changing directories.
 case "$OUTPUT" in

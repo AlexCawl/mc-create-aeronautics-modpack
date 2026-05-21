@@ -12,7 +12,7 @@ Build the Modrinth pack from the repository root:
 scripts/build-mrpack.sh
 ```
 
-The artifact is written to `dist/mc-create-aeronautics.mrpack`.
+The artifact is written to `dist/mc-create-aeronautics-client.mrpack`.
 
 To choose another output path:
 
@@ -69,20 +69,20 @@ The server publishes server-visible files through AutoModpack. Client-only QoL a
 
 ## Release Artifact
 
-The GitHub workflow publishes `mc-create-aeronautics.mrpack` to the rolling `master-latest` release on every push to `master`.
+The GitHub workflow publishes `mc-create-aeronautics-client.mrpack` to the rolling `master-latest` release and publishes a matching `ghcr.io/alexcawl/mc-create-aeronautics-server:master-latest` Docker image on every push to `master`.
 
 `master-latest` is intentionally named after the source branch. It is separate from GitHub's own "Latest release" concept and makes it clear that the artifact is mutable.
 
-Manual workflow runs create immutable incremental releases with a `v` prefix and a monotonically increasing number, such as `v1`, `v2`, and `v3`. Existing manual release tags are not overwritten.
+Manual workflow runs create immutable incremental releases with a `v` prefix and a monotonically increasing number, such as `v1`, `v2`, and `v3`. Existing manual release tags are not overwritten. The server image is pushed with the same tag as the GitHub Release.
 
-Use this URL shape in VPS `.env`:
+Use this image shape in VPS Compose for the rolling server:
 
 ```sh
-MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-latest/mc-create-aeronautics.mrpack
+ghcr.io/alexcawl/mc-create-aeronautics-server:master-latest
 ```
 
-Use this URL shape to pin the VPS to an immutable release:
+Use this image shape to pin the VPS to an immutable release:
 
 ```sh
-MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/v1/mc-create-aeronautics.mrpack
+ghcr.io/alexcawl/mc-create-aeronautics-server:v1
 ```

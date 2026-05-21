@@ -1,0 +1,13 @@
+.cache/
+.env
+.env.*
+!.env.defaults
+.git/
+.idea/
+data/
+dist/
+site/
+*.jar
+*.log
+*.mrpack
+*.tmp

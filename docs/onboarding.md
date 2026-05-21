@@ -58,7 +58,7 @@ Build the `.mrpack` artifact:
 scripts/build-mrpack.sh
 ```
 
-The result is written to `dist/mc-create-aeronautics.mrpack`. The `dist/` directory is ignored by Git.
+The result is written to `dist/mc-create-aeronautics-client.mrpack`. The `dist/` directory is ignored by Git.
 
 ## Preview Documentation
 
