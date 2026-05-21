@@ -3,21 +3,20 @@ services:
     image: itzg/minecraft-server:java21
     restart: unless-stopped
     ports:
-      - "${MC_PORT}:25565"
-      - "${VOICE_CHAT_PORT}:24454/udp"
+      - "25565:25565"
+      - "24454:24454/udp"
     environment:
       EULA: "TRUE"
       TYPE: "MODRINTH"
       VERSION: "1.21.1"
-      ONLINE_MODE: "${ONLINE_MODE}"
+      ONLINE_MODE: "false"
       MODRINTH_LOADER: "neoforge"
       MODRINTH_MODPACK: "${MODRINTH_MODPACK:?Set MODRINTH_MODPACK to the GitHub Release .mrpack URL}"
       MEMORY: "${MC_MEMORY}"
-      MOTD: "${MC_MOTD}"
-      ENABLE_RCON: "${ENABLE_RCON}"
+      MOTD: "Create Aeronautics"
+      ENABLE_RCON: "true"
       RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
       USE_AIKAR_FLAGS: "${USE_AIKAR_FLAGS}"
-      TZ: "${TZ}"
       UID: "${MC_UID}"
       GID: "${MC_GID}"
     volumes:
@@ -26,7 +25,7 @@ services:
     tty: true
 
   monitor:
-    image: itzg/mc-monitor:${MC_MONITOR_VERSION}
+    image: itzg/mc-monitor:latest
     restart: unless-stopped
     command: export-for-prometheus
     environment:
@@ -37,27 +36,27 @@ services:
       - minecraft
 
   rcon:
-    image: itzg/rcon:${RCON_WEB_VERSION}
+    image: itzg/rcon:latest
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${RCON_WEB_PORT}:4326"
-      - "127.0.0.1:${RCON_WEB_SOCKET_PORT}:4327"
+      - "127.0.0.1:4326:4326"
+      - "127.0.0.1:4327:4327"
     environment:
-      RWA_USERNAME: "${RCON_WEB_USER}"
+      RWA_USERNAME: "admin"
       RWA_PASSWORD: "${RCON_WEB_PASSWORD:?Set RCON_WEB_PASSWORD before starting RCON web admin}"
       RWA_ADMIN: "TRUE"
       RWA_RCON_HOST: "minecraft"
       RWA_RCON_PORT: "25575"
       RWA_RCON_PASSWORD: "${RCON_PASSWORD:?Set RCON_PASSWORD before starting the server}"
       RWA_GAME: "minecraft"
-      RWA_SERVER_NAME: "${RCON_WEB_SERVER_NAME}"
+      RWA_SERVER_NAME: "Create Aeronautics"
     volumes:
       - rcon-data:/opt/rcon-web-admin/db
     depends_on:
       - minecraft
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:${CADVISOR_VERSION}
+    image: gcr.io/cadvisor/cadvisor:v0.47.1
     restart: unless-stopped
     volumes:
       - /:/rootfs:ro
@@ -67,12 +66,12 @@ services:
       - /dev/kmsg:/dev/kmsg:ro
 
   prometheus:
-    image: prom/prometheus:${PROMETHEUS_VERSION}
+    image: prom/prometheus:latest
     restart: unless-stopped
     command:
       - --config.file=/etc/prometheus/prometheus.yml
       - --storage.tsdb.path=/prometheus
-      - --storage.tsdb.retention.time=${PROMETHEUS_RETENTION}
+      - --storage.tsdb.retention.time=7d
     volumes:
       - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus-data:/prometheus
@@ -83,7 +82,7 @@ services:
       - alloy
 
   loki:
-    image: grafana/loki:${LOKI_VERSION}
+    image: grafana/loki:3.7.0
     restart: unless-stopped
     command: -config.file=/etc/loki/loki-config.yaml
     volumes:
@@ -91,7 +90,7 @@ services:
       - loki-data:/loki
 
   alloy:
-    image: grafana/alloy:${ALLOY_VERSION}
+    image: grafana/alloy:latest
     restart: unless-stopped
     command:
       - run
@@ -106,12 +105,12 @@ services:
       - loki
 
   grafana:
-    image: grafana/grafana-oss:${GRAFANA_VERSION}
+    image: grafana/grafana-oss:latest
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${GRAFANA_PORT}:3000"
+      - "127.0.0.1:3000:3000"
     environment:
-      GF_SECURITY_ADMIN_USER: "${GRAFANA_ADMIN_USER}"
+      GF_SECURITY_ADMIN_USER: "admin"
       GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD before starting monitoring}"
       GF_USERS_ALLOW_SIGN_UP: "false"
       GF_PLUGINS_PREINSTALL_DISABLED: "true"

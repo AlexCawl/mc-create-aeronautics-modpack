@@ -22,13 +22,17 @@ MODRINTH_MODPACK=https://github.com/<owner>/<repo>/releases/download/master-late
 RCON_PASSWORD=change-me
 GRAFANA_ADMIN_PASSWORD=change-me-too
 RCON_WEB_PASSWORD=change-me-too
+MC_MEMORY=6G
+USE_AIKAR_FLAGS=true
 ```
 
 Use `master-latest` when the server should track the current `master` build. Use an immutable release URL such as `v0.1.0` when the server should stay pinned.
 
-`MC_PORT` publishes the Minecraft TCP port. `VOICE_CHAT_PORT` publishes the Simple Voice Chat UDP port, so the VPS firewall and provider firewall must allow UDP `24454` when voice chat should work outside the container host.
+`MC_MEMORY` controls the Minecraft JVM heap size. `USE_AIKAR_FLAGS=true` enables itzg's bundled Aikar JVM flags.
 
-`ONLINE_MODE=false` allows players without a licensed Microsoft/Mojang session to join. Use a whitelist and ops list intentionally because Minecraft account identity is no longer verified by Mojang.
+Minecraft is published on TCP `25565`. Simple Voice Chat is published on UDP `24454`, so the VPS firewall and provider firewall must allow UDP `24454` when voice chat should work outside the container host.
+
+The server runs with `online-mode=false`, so players without a licensed Microsoft/Mojang session can join. Use a whitelist and ops list intentionally because Minecraft account identity is no longer verified by Mojang.
 
 ## Server Commands
 
