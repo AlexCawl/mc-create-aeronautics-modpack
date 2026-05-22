@@ -4,10 +4,8 @@ repo_url: https://github.com/AlexCawl/mc-create-aeronautics
 
 nav:
   - Home: index.md
-  - Architecture: arch.md
   - Modpack: modpack.md
   - Mods: mods.md
-  - Onboarding: onboarding.md
 
 theme:
   name: mkdocs
