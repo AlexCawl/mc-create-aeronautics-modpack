@@ -39,7 +39,9 @@ jobs:
           file: docker/minecraft/Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ${{ env.SERVER_IMAGE }}:${{ inputs.release_tag }}
+          tags: |
+            ${{ env.SERVER_IMAGE }}:${{ inputs.release_tag }}
+            ${{ env.SERVER_IMAGE }}:latest
           labels: |
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
             org.opencontainers.image.revision=${{ github.sha }}
