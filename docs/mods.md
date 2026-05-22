@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 92.
+Total mods: 94.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -50,6 +50,7 @@ Total mods: 92.
 | Create: Radars | `both` | Modrinth | `BLu2Yqfq` | `create_radar-0.4.8-1.21.1.jar` |
 | Create: Repackaged | `both` | Modrinth | `D6daOdv9` | `repackaged-0.0.7.jar` |
 | Create: Stock Market | `both` | Modrinth | `CnrVw3tZ` | `create-stockmarket-1.0.0+mc1.21.1.jar` |
+| Create: Threaded Trains | `server` | Modrinth | `RYJzdkDr` | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` |
 | Create: Tradeworks | `both` | Modrinth | `gnOpd0sq` | `tradeworks-1.0.7.jar` |
 | Curios API | `both` | Modrinth | `vvuO3ImH` | `curios-neoforge-9.5.1+1.21.1.jar` |
 | Customizable Player Models | `both` | Modrinth | `h1E7sQNL` | `CustomPlayerModels-1.21-0.6.25a.jar` |
@@ -99,4 +100,5 @@ Total mods: 92.
 | Structory | `both` | Modrinth | `aKCwCJlY` | `Structory_26.1_v1.3.16.jar` |
 | SuperMartijn642's Config Lib | `both` | Modrinth | `LN9BxssP` | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` |
 | SuperMartijn642's Core Lib | `both` | Modrinth | `rOUBggPv` | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` |
+| TrafficCraft | `both` | Modrinth | `Y1PXWvWn` | `trafficcraft-neoforge-1.21.1-1.1.3.jar` |
 | Traveler's Backpack | `both` | Modrinth | `rlloIFEV` | `travelersbackpack-neoforge-1.21.1-10.1.35.jar` |
