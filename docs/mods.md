@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 94.
+Total mods: 93.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -55,7 +55,6 @@ Total mods: 94.
 | Curios API | `both` | Modrinth | `vvuO3ImH` | `curios-neoforge-9.5.1+1.21.1.jar` |
 | Customizable Player Models | `both` | Modrinth | `h1E7sQNL` | `CustomPlayerModels-1.21-0.6.25a.jar` |
 | Distant Horizons | `both` | Modrinth | `uCdwusMi` | `DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar` |
-| DragonLib | `both` | Modrinth | `sbIsGaOV` | `dragonlib-neoforge-1.21.1-beta-3.0.26.jar` |
 | Drink Beer Refill | `both` | Modrinth | `RZwVw5iA` | `drinkbeer-refill-1.21.1-1.2.0.jar` |
 | Drive-By-Wire with Sable | `both` | Modrinth | `KsqvI0hD` | `drivebywire-0.2.9.jar` |
 | Entity Culling | `client` | Modrinth | `NNAgCjsB` | `entityculling-neoforge-1.10.2-mc1.21.1.jar` |
