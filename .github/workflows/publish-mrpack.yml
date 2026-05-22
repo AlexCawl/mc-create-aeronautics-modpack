@@ -40,9 +40,9 @@ jobs:
           git tag "$RELEASE_TAG" "$GITHUB_SHA"
           git push origin "refs/tags/$RELEASE_TAG"
 
-          notes='Modpack release built from `'"$GITHUB_SHA"'`.
+          notes="Modpack release built from \`$GITHUB_SHA\`.
 
-          Use the attached `mc-create-aeronautics-client.mrpack` in Prism Launcher. The matching server image is published with the same tag.'
+          Use the attached \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The matching server image is published with the same tag."
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_TAG" \
