@@ -10,6 +10,15 @@ scripts/build-mrpack.sh
 
 The client artifact is written to `dist/mc-create-aeronautics-client.mrpack`.
 
+To build the CurseForge-compatible export locally:
+
+```sh
+cd modpack
+packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
+```
+
+The CurseForge zip is an export artifact; publishing it on CurseForge may require checking non-CurseForge mod approvals and licenses.
+
 ## Add Or Update Mods
 
 Run packwiz from `modpack/`:
@@ -42,7 +51,10 @@ AutoModpack stays pinned in the pack for server-visible client sync.
 
 ## Release
 
-Run the `Release` GitHub Actions workflow manually. It creates the next `vN` GitHub Release, uploads `mc-create-aeronautics-client.mrpack`, and publishes the matching server image with the same tag:
+Run the `Release` GitHub Actions workflow manually. It creates the next `vN` GitHub Release, uploads both client pack artifacts, and publishes the matching server image with the same tag:
+
+- `mc-create-aeronautics-client.mrpack`
+- `mc-create-aeronautics-client-curseforge.zip`
 
 ```sh
 ghcr.io/alexcawl/mc-create-aeronautics-server:v1

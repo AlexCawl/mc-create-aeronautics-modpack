@@ -1,4 +1,4 @@
-name: Publish mrpack
+name: Publish client pack
 
 on:
   workflow_call:
@@ -12,9 +12,10 @@ permissions:
 
 env:
   MRPACK_ARTIFACT: mc-create-aeronautics-client.mrpack
+  CURSEFORGE_ARTIFACT: mc-create-aeronautics-client-curseforge.zip
 
 jobs:
-  publish-mrpack:
+  publish-client-pack:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,12 @@ jobs:
       - name: Build mrpack
         run: scripts/build-mrpack.sh "dist/${MRPACK_ARTIFACT}"
 
+      - name: Build CurseForge zip
+        run: |
+          mkdir -p dist .cache/packwiz
+          cd modpack
+          "$HOME/go/bin/packwiz" --cache "$GITHUB_WORKSPACE/.cache/packwiz" curseforge export -o "$GITHUB_WORKSPACE/dist/${CURSEFORGE_ARTIFACT}"
+
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -40,12 +47,13 @@ jobs:
           git tag "$RELEASE_TAG" "$GITHUB_SHA"
           git push origin "refs/tags/$RELEASE_TAG"
 
-          notes="Modpack release built from \`$GITHUB_SHA\`.
+          notes="Client pack release built from \`$GITHUB_SHA\`.
 
-          Use the attached \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The matching server image is published with the same tag."
+          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. The matching server image is published with the same tag."
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_TAG" \
             --notes "$notes" \
             --latest=false \
-            "dist/${MRPACK_ARTIFACT}"
+            "dist/${MRPACK_ARTIFACT}" \
+            "dist/${CURSEFORGE_ARTIFACT}"

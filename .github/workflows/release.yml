@@ -42,19 +42,19 @@ jobs:
 
           echo "release_tag=$release_tag" >> "$GITHUB_OUTPUT"
 
-  publish-mrpack:
+  publish-client-pack:
     needs:
       - metadata
     permissions:
       contents: write
-    uses: ./.github/workflows/publish-mrpack.yml
+    uses: ./.github/workflows/publish-client-pack.yml
     with:
       release_tag: ${{ needs.metadata.outputs.release_tag }}
 
   publish-server-image:
     needs:
       - metadata
-      - publish-mrpack
+      - publish-client-pack
     permissions:
       contents: read
       packages: write

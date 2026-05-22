@@ -12,7 +12,7 @@ fi
 
 command -v "$PACKWIZ_BIN" >/dev/null 2>&1 || {
   printf '%s\n' 'packwiz is not available on PATH or at ~/go/bin/packwiz.' >&2
-  printf '%s\n' 'For local setup, see docs/onboarding.md.' >&2
+  printf '%s\n' 'Install packwiz locally before building the client pack.' >&2
   exit 1
 }
 
