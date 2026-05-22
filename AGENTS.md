@@ -4,10 +4,10 @@
 
 ## Project Principles
 
-- Keep the repository Git-first: reproducible configuration and mod metadata live in Git, runtime state does not.
+- Keep the repository Git-first: reproducible mod metadata and build configuration live in Git, runtime state does not.
 - Treat `modpack/` as the canonical source of truth for the packwiz modpack.
 - Treat `data/` as disposable runtime state mounted to `/data`; never commit it.
-- Do not commit `.env`, downloaded `.jar` files, generated `.mrpack` files, `dist/`, or `.cache/`.
+- Do not commit downloaded `.jar` files, generated `.mrpack` files, `dist/`, or `.cache/`.
 - Keep v1 simple: no AutoModpack client-only overlay or deduplication unless explicitly requested.
 
 ## Shell Scripts

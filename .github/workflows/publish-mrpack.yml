@@ -1,0 +1,51 @@
+name: Publish mrpack
+
+on:
+  workflow_call:
+    inputs:
+      release_tag:
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  MRPACK_ARTIFACT: mc-create-aeronautics-client.mrpack
+
+jobs:
+  publish-mrpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Build mrpack
+        run: scripts/build-mrpack.sh "dist/${MRPACK_ARTIFACT}"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          git tag "$RELEASE_TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$RELEASE_TAG"
+
+          notes='Modpack release built from `'"$GITHUB_SHA"'`.
+
+          Use the attached `mc-create-aeronautics-client.mrpack` in Prism Launcher. The matching server image is published with the same tag.'
+
+          gh release create "$RELEASE_TAG" \
+            --title "$RELEASE_TAG" \
+            --notes "$notes" \
+            --latest=false \
+            "dist/${MRPACK_ARTIFACT}"

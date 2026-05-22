@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    outputs:
+      release_tag: ${{ steps.release.outputs.release_tag }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve release tag
+        id: release
+        run: |
+          latest_tag="$(git ls-remote --tags origin 'refs/tags/v*' | awk '
+            {
+              sub(/^refs\/tags\//, "", $2)
+              sub(/\^\{\}$/, "", $2)
+              if ($2 ~ /^v[0-9]+$/) print $2
+            }
+          ' | sort -V | tail -n 1)"
+
+          if [ -n "$latest_tag" ]; then
+            next=$((${latest_tag#v} + 1))
+          else
+            next=1
+          fi
+
+          release_tag="v$next"
+
+          if git ls-remote --exit-code --tags origin "refs/tags/$release_tag" >/dev/null 2>&1; then
+            echo "Tag $release_tag already exists; releases are not overwritten." >&2
+            exit 1
+          fi
+
+          echo "release_tag=$release_tag" >> "$GITHUB_OUTPUT"
+
+  publish-mrpack:
+    needs:
+      - metadata
+    permissions:
+      contents: write
+    uses: ./.github/workflows/publish-mrpack.yml
+    with:
+      release_tag: ${{ needs.metadata.outputs.release_tag }}
+
+  publish-server-image:
+    needs:
+      - metadata
+      - publish-mrpack
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/publish-server-image.yml
+    with:
+      release_tag: ${{ needs.metadata.outputs.release_tag }}

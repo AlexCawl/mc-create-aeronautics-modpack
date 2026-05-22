@@ -1,7 +1,6 @@
 .cache/
 .env
 .env.*
-!.env.defaults
 .git/
 .idea/
 data/

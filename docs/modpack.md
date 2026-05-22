@@ -69,19 +69,11 @@ The server publishes server-visible files through AutoModpack. Client-only QoL a
 
 ## Release Artifact
 
-The GitHub workflow publishes `mc-create-aeronautics-client.mrpack` to the rolling `master-latest` release and publishes a matching `ghcr.io/alexcawl/mc-create-aeronautics-server:master-latest` Docker image on every push to `master`.
+The GitHub release workflow runs manually. Each run publishes `mc-create-aeronautics-client.mrpack` to a new GitHub Release and publishes a matching server image with the same tag.
 
-`master-latest` is intentionally named after the source branch. It is separate from GitHub's own "Latest release" concept and makes it clear that the artifact is mutable.
+Release tags use a `v` prefix and a monotonically increasing number, such as `v1`, `v2`, and `v3`. Existing release tags are not overwritten.
 
-Manual workflow runs create immutable incremental releases with a `v` prefix and a monotonically increasing number, such as `v1`, `v2`, and `v3`. Existing manual release tags are not overwritten. The server image is pushed with the same tag as the GitHub Release.
-
-Use this image shape in VPS Compose for the rolling server:
-
-```sh
-ghcr.io/alexcawl/mc-create-aeronautics-server:master-latest
-```
-
-Use this image shape to pin the VPS to an immutable release:
+Use this image shape in deployment Compose:
 
 ```sh
 ghcr.io/alexcawl/mc-create-aeronautics-server:v1

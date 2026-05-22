@@ -1,9 +1,3 @@
-# Local environment
-.env
-.env.*
-!.envrc
-!.env.defaults
-
 # Runtime state and generated artifacts
 /data/
 /dist/
@@ -12,6 +6,7 @@
 
 # Editor state
 /.idea/
+.DS_Store
 
 # Generated files
 *.log

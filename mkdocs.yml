@@ -7,8 +7,6 @@ nav:
   - Architecture: arch.md
   - Modpack: modpack.md
   - Mods: mods.md
-  - VPS: vps.md
-  - Monitoring: monitoring.md
   - Onboarding: onboarding.md
 
 theme:
