@@ -225,6 +225,11 @@ hash = "a98dd7f86518a0de7bb3451bee7c8e1d7cec1b7fe00d97504ce7afd7e715ae2d"
 metafile = true
 
 [[files]]
+file = "mods/dragonlib.pw.toml"
+hash = "77109801093172dad01b0d62423eee91b317d23e094097760b065e980e8b10c2"
+metafile = true
+
+[[files]]
 file = "mods/drink-beer-refill.pw.toml"
 hash = "fe97e20f4ad93e53968cf4f186cfd8d3827bd8d3b064b53f3ce910d0d780b3f4"
 metafile = true
