@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 93.
+Total mods: 92.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -99,5 +99,4 @@ Total mods: 93.
 | Structory | `both` | Modrinth | `aKCwCJlY` | `Structory_26.1_v1.3.16.jar` |
 | SuperMartijn642's Config Lib | `both` | Modrinth | `LN9BxssP` | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` |
 | SuperMartijn642's Core Lib | `both` | Modrinth | `rOUBggPv` | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` |
-| TrafficCraft | `both` | Modrinth | `Y1PXWvWn` | `trafficcraft-neoforge-1.21.1-1.1.3.jar` |
 | Traveler's Backpack | `both` | Modrinth | `rlloIFEV` | `travelersbackpack-neoforge-1.21.1-10.1.35.jar` |

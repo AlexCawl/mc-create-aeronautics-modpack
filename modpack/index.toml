@@ -460,11 +460,6 @@ hash = "be1ac9fe5e8e36cf4f51f859fb31eb6c017d8031d09f5b15e922c8ee6691febd"
 metafile = true
 
 [[files]]
-file = "mods/trafficcraft.pw.toml"
-hash = "0a63ea363422acf220fe583ede09f705e240b6b7ca2b1f7b47fbac84ae1e17e1"
-metafile = true
-
-[[files]]
 file = "mods/travelersbackpack.pw.toml"
 hash = "e11060ffe4bfc83dd5094a05cfd1248728373c592226d9fc30877563232e0c22"
 metafile = true
