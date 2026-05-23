@@ -3,11 +3,11 @@ filename = "kotlinforforge-5.11.0-all.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/ordsPcFz/versions/6Oh3AFNo/kotlinforforge-5.11.0-all.jar"
+url = "https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar"
 hash-format = "sha512"
-hash = "f99bc662bb4c397ef7c241d6418e14446549b0735b2c718463ce626ef2f6456d5f151ee3445139dece3e31f15448bc41e1df2e2c3a2da58e659b16e4724d78f8"
+hash = "b32faa6d616511aff4f8b32197877c53b9f8bee103884ec37c632b5d017bb59a498ec971b68d8d94787043b0c5be666a330b61d285033c341bff83ac28a90992"
 
 [update]
 [update.modrinth]
 mod-id = "ordsPcFz"
-version = "6Oh3AFNo"
+version = "NrSebcsG"
