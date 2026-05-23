@@ -47,13 +47,13 @@ jobs:
           git tag "$RELEASE_TAG" "$GITHUB_SHA"
           git push origin "refs/tags/$RELEASE_TAG"
 
-          notes="Client pack release built from \`$GITHUB_SHA\`.
+          release_notes="Client pack release built from \`$GITHUB_SHA\`.
 
-          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. The matching server image is published with the same tag."
+          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. The matching server image is published with the same tag and as \`latest\`."
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_TAG" \
-            --notes "$notes" \
-            --latest=false \
+            --notes "$release_notes" \
+            --latest=true \
             "dist/${MRPACK_ARTIFACT}" \
             "dist/${CURSEFORGE_ARTIFACT}"

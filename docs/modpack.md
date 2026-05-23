@@ -51,11 +51,19 @@ AutoModpack stays pinned in the pack for server-visible client sync.
 
 ## Release
 
-Run the `Release` GitHub Actions workflow manually. It creates the next `vN` GitHub Release, uploads both client pack artifacts, and publishes the matching server image with the same tag:
+Run the `Release` GitHub Actions workflow manually. It creates the next immutable `vN` GitHub Release, uploads both client pack artifacts, marks the release as GitHub Latest, and publishes the matching server image with `vN` and `latest` Docker tags:
 
 - `mc-create-aeronautics-client.mrpack`
 - `mc-create-aeronautics-client-curseforge.zip`
 
+Stable latest-download links:
+
+- [Modrinth MrPack](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client.mrpack)
+- [CurseForge export](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client-curseforge.zip)
+
+Server image tags:
+
 ```sh
 ghcr.io/alexcawl/mc-create-aeronautics-server:v1
+ghcr.io/alexcawl/mc-create-aeronautics-server:latest
 ```

@@ -1,0 +1,35 @@
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.download-button {
+  border: 1px solid #2f6f9f;
+  border-radius: 6px;
+  color: #205375;
+  display: inline-flex;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+.download-button:hover,
+.download-button:focus {
+  background: #eef7fb;
+  color: #15384f;
+  text-decoration: none;
+}
+
+.download-button-primary {
+  background: #2f6f9f;
+  color: #fff;
+}
+
+.download-button-primary:hover,
+.download-button-primary:focus {
+  background: #235477;
+  color: #fff;
+}
