@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 87.
+Total mods: 88.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -67,6 +67,7 @@ Total mods: 87.
 | Jade 🔍 | `both` | Modrinth | `nvQzSEkH` | `Jade-1.21.1-NeoForge-15.10.5.jar` |
 | JourneyMap | `both` | Modrinth | `lfHFW1mp` | `journeymap-neoforge-1.21.1-6.0.0-beta.74.jar` |
 | Just Enough Items | `both` | Modrinth | `u6dRKJwZ` | `jei-1.21.1-neoforge-19.27.0.340.jar` |
+| Kotlin for Forge | `both` | Modrinth | `ordsPcFz` | `kotlinforforge-5.11.0-all.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | Modrinth | `yBW8D80W` | `lambdynamiclights-4.8.8+1.21.1.jar` |
 | LDLib | `both` | Modrinth | `B1CBVXHX` | `ldlib2-neoforge-1.21.1-2.2.10-all.jar` |
 | Lithosphere | `both` | Modrinth | `iv9jp2k9` | `lithosphere-1.7.jar` |
