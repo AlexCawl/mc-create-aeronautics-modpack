@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 88.
+Total mods: 89.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -14,6 +14,7 @@ Total mods: 88.
 | CC: Tweaked | `both` | Modrinth | `gu7yAYhd` | `cc-tweaked-1.21.1-forge-1.119.0.jar` |
 | Chat Heads | `client` | Modrinth | `Wb5oqrBJ` | `chat_heads-0.15.1-neoforge-1.21.jar` |
 | Clumps | `both` | Modrinth | `Wnxd13zP` | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
+| Concurrent Chunk Management Engine (NeoForge) | `both` | Modrinth | `COlSi5iR` | `c2me-neoforge-mc1.21.1-0.3.0+alpha.0.93.jar` |
 | Configurable | `both` | Modrinth | `lGffrQ3O` | `configurable-3.5.1+1.21.1-neoforge.jar` |
 | Copycats+ aeronautics weight | `both` | Modrinth | `wjpmYU1u` | `aerocopycats-1.1.1.jar` |
 | Create | `both` | Modrinth | `LNytGWDc` | `create-1.21.1-6.0.10.jar` |
