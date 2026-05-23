@@ -35,11 +35,6 @@ hash = "8f0d13cc7d1b993657aa32e4495b9d75cfdd2e7f93f9a10dec522866e18afc6f"
 metafile = true
 
 [[files]]
-file = "mods/chunky.pw.toml"
-hash = "1d5cc2b6dcfd1fc3adba4566b1c29b57ff1175316678c1f22e63cbc3e28a5ba0"
-metafile = true
-
-[[files]]
 file = "mods/clumps.pw.toml"
 hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
 metafile = true
@@ -270,18 +265,8 @@ hash = "9342bd3338c6fbb80f84625e2715a6c443b54daff11826f0dfb9ebb6ab411fd2"
 metafile = true
 
 [[files]]
-file = "mods/gravestone-mod.pw.toml"
-hash = "e88253c3633274c212b2c4628a26ba03ceba6afff561eb6f9488689fad4cad06"
-metafile = true
-
-[[files]]
 file = "mods/interiors.pw.toml"
 hash = "e7e6b3effe3022cf1fdb900c857111fdcbfd6b385c2d5bd28c914efaed436ecb"
-metafile = true
-
-[[files]]
-file = "mods/inventory-profiles-next.pw.toml"
-hash = "ab503e89461dff879ee793253e173625b6ab868f570a371323ef725e567cf5ea"
 metafile = true
 
 [[files]]
@@ -305,11 +290,6 @@ hash = "d883daca5b51602262e972c066ac1edfe35e6f01ab23564b203e2bf60b165507"
 metafile = true
 
 [[files]]
-file = "mods/kotlin-for-forge.pw.toml"
-hash = "27302b0087cf53570cd7a3b4eb550a208cbb6f6ba07210c604176155f39e0078"
-metafile = true
-
-[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "d77c41bf5a8dd470d65e7946d507657a910b54d2e76f4b3ced4fe4addc2d52d4"
 metafile = true
@@ -317,11 +297,6 @@ metafile = true
 [[files]]
 file = "mods/ldlib.pw.toml"
 hash = "5db4242e801a7c5a7debf01ed51495b35cc735668010ee4ec54ed8fdf0ea4520"
-metafile = true
-
-[[files]]
-file = "mods/libipn.pw.toml"
-hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
 metafile = true
 
 [[files]]
@@ -342,11 +317,6 @@ metafile = true
 [[files]]
 file = "mods/modernfix.pw.toml"
 hash = "1b0bcb6b0739ac51a706398c6f3765e1875e95490a9284603ee5628c259a4f63"
-metafile = true
-
-[[files]]
-file = "mods/mouse-tweaks.pw.toml"
-hash = "6bc414cc0f2d4c078fe83f384d786343f701f371d657c5279b5b0df1595804bd"
 metafile = true
 
 [[files]]

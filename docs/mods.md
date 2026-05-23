@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 93.
+Total mods: 87.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -13,7 +13,6 @@ Total mods: 93.
 | AutoModpack | `both` | Modrinth | `k68glP2e` | `automodpack-mc1.21.1-neoforge-4.0.5.jar` |
 | CC: Tweaked | `both` | Modrinth | `gu7yAYhd` | `cc-tweaked-1.21.1-forge-1.119.0.jar` |
 | Chat Heads | `client` | Modrinth | `Wb5oqrBJ` | `chat_heads-0.15.1-neoforge-1.21.jar` |
-| Chunky | `both` | Modrinth | `fALzjamp` | `Chunky-NeoForge-1.4.23.jar` |
 | Clumps | `both` | Modrinth | `Wnxd13zP` | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
 | Configurable | `both` | Modrinth | `lGffrQ3O` | `configurable-3.5.1+1.21.1-neoforge.jar` |
 | Copycats+ aeronautics weight | `both` | Modrinth | `wjpmYU1u` | `aerocopycats-1.1.1.jar` |
@@ -64,21 +63,16 @@ Total mods: 93.
 | FerriteCore | `both` | Modrinth | `uXXizFIs` | `ferritecore-7.0.3-neoforge.jar` |
 | Frequency Create | `both` | Modrinth | `RgoFrYci` | `frequency-1.21.1-neoforge-0.1.2.jar` |
 | Fusion (Connected Textures) | `client` | Modrinth | `p19vrgc2` | `fusion-1.2.12-neoforge-mc1.21.1.jar` |
-| GraveStone Mod | `both` | Modrinth | `RYtXKJPr` | `gravestone-neoforge-1.21.1-1.0.37.jar` |
-| Inventory Profiles Next | `client` | Modrinth | `O7RBXm3n` | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` |
 | Jade Addons (Neo/Forge) | `both` | Modrinth | `xuDOzCLy` | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Jade 🔍 | `both` | Modrinth | `nvQzSEkH` | `Jade-1.21.1-NeoForge-15.10.5.jar` |
 | JourneyMap | `both` | Modrinth | `lfHFW1mp` | `journeymap-neoforge-1.21.1-6.0.0-beta.74.jar` |
 | Just Enough Items | `both` | Modrinth | `u6dRKJwZ` | `jei-1.21.1-neoforge-19.27.0.340.jar` |
-| Kotlin for Forge | `both` | Modrinth | `ordsPcFz` | `kotlinforforge-5.11.0-all.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | Modrinth | `yBW8D80W` | `lambdynamiclights-4.8.8+1.21.1.jar` |
 | LDLib | `both` | Modrinth | `B1CBVXHX` | `ldlib2-neoforge-1.21.1-2.2.10-all.jar` |
-| libIPN | `client` | Modrinth | `onSQdWhM` | `libIPN-neoforge-1.21.1-6.6.3.jar` |
 | Lithosphere | `both` | Modrinth | `iv9jp2k9` | `lithosphere-1.7.jar` |
 | Load My F***ing Tags | `server` | Modrinth | `67kVxsaO` | `lmft-1.1.1+1.21.9-neoforge.jar` |
 | MidnightLib | `both` | Modrinth | `codAaoxh` | `midnightlib-neoforge-1.9.3+1.21.1.jar` |
 | ModernFix | `both` | Modrinth | `nmDcB62a` | `modernfix-neoforge-5.27.8+mc1.21.1.jar` |
-| Mouse Tweaks | `client` | Modrinth | `aC3cM3Vq` | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` |
 | Nature's Compass | `both` | Modrinth | `fPetb5Kh` | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` |
 | Neruina - Ticking Entity Fixer | `both` | Modrinth | `1s5x833P` | `neruina-3.3.1+1.21.1-neoforge.jar` |
 | Ok Zoomer - It's Zoom! | `client` | Modrinth | `aXf2OSFU` | `ok_zoomer-neo-10.0.0-beta.13.jar` |
