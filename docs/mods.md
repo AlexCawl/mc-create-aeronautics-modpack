@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 89.
+Total mods: 88.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -50,7 +50,6 @@ Total mods: 89.
 | Create: Radars | `both` | Modrinth | `BLu2Yqfq` | `create_radar-0.4.8-1.21.1.jar` |
 | Create: Repackaged | `both` | Modrinth | `D6daOdv9` | `repackaged-0.0.7.jar` |
 | Create: Stock Market | `both` | Modrinth | `CnrVw3tZ` | `create-stockmarket-1.0.0+mc1.21.1.jar` |
-| Create: Threaded Trains | `server` | Modrinth | `RYJzdkDr` | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` |
 | Create: Tradeworks | `both` | Modrinth | `gnOpd0sq` | `tradeworks-1.0.7.jar` |
 | Curios API | `both` | Modrinth | `vvuO3ImH` | `curios-neoforge-9.5.1+1.21.1.jar` |
 | Customizable Player Models | `both` | Modrinth | `h1E7sQNL` | `CustomPlayerModels-1.21-0.6.25a.jar` |

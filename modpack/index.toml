@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/servercore/config.yml"
-hash = "20485ccae873ee790e5eaf2407df01eee68ed3d36b26311dc3aebe5f9f2398a8"
+hash = "051aaabb29852b1958f8e8d69d56f5b41bb1357ee50d0d2956c52f5ad2b46a97"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
@@ -192,11 +192,6 @@ metafile = true
 [[files]]
 file = "mods/create-stuff-additions.pw.toml"
 hash = "5d7c434f746d615ea78adfdc4ba6e96452c93b2a68dc939c2ff3611a061e0b21"
-metafile = true
-
-[[files]]
-file = "mods/create-threaded-trains.pw.toml"
-hash = "cc05bcaec0e857c6a6f7de4bd09a22ad195b5b77a25e4adfe737915ac3be68db"
 metafile = true
 
 [[files]]

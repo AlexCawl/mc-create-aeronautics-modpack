@@ -14,7 +14,7 @@ features:
     tick-interval: 20
 
 dynamic:
-  enabled: true
+  enabled: false
   target-mspt: 35
   default-values:
     CHUNK_TICK_DISTANCE: 4
@@ -102,7 +102,7 @@ commands:
     tertiary: 'aqua'
 
 activation-range:
-  enabled: true
+  enabled: false
   tick-new-entities: true
   use-vertical-range: false
   skip-non-immune: true
