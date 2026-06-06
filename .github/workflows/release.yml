@@ -51,6 +51,16 @@ jobs:
     with:
       release_tag: ${{ needs.metadata.outputs.release_tag }}
 
+  publish-mod-zips:
+    needs:
+      - metadata
+      - publish-client-pack
+    permissions:
+      contents: write
+    uses: ./.github/workflows/publish-mod-zips.yml
+    with:
+      release_tag: ${{ needs.metadata.outputs.release_tag }}
+
   publish-server-image:
     needs:
       - metadata
