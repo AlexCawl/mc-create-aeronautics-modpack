@@ -1,29 +1,29 @@
-# Modpack Maintenance
+# Обслуживание модпака
 
-`modpack/` owns the packwiz metadata. Commit `pack.toml`, `index.toml`, and `mods/*.pw.toml`; do not commit downloaded `.jar` files.
+`modpack/` содержит packwiz-метаданные. Коммитьте `pack.toml`, `index.toml` и `mods/*.pw.toml`; не коммитьте скачанные `.jar` файлы.
 
-Server image baseline configs live under `server-config/config/` and are copied to `/config/` in the Docker image. They are applied by the itzg image during startup and are not indexed by packwiz.
+Базовые конфиги серверного образа лежат в `server-config/config/` и копируются в `/config/` внутри Docker-образа. Образ itzg применяет их при запуске; packwiz их не индексирует.
 
-## Build
+## Сборка
 
 ```sh
 scripts/build-mrpack.sh
 ```
 
-The client artifact is written to `dist/mc-create-aeronautics-client.mrpack`.
+Клиентский артефакт записывается в `dist/mc-create-aeronautics-client.mrpack`.
 
-To build the CurseForge-compatible export locally:
+Чтобы локально собрать CurseForge-compatible экспорт:
 
 ```sh
 cd modpack
 packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
 ```
 
-The CurseForge zip is an export artifact; publishing it on CurseForge may require checking non-CurseForge mod approvals and licenses.
+CurseForge zip — это экспортный артефакт. Перед публикацией на CurseForge может потребоваться проверить разрешения и лицензии модов не из CurseForge.
 
-## Add Or Update Mods
+## Добавление и обновление модов
 
-Run packwiz from `modpack/`:
+Запускайте packwiz из `modpack/`:
 
 ```sh
 cd modpack
@@ -31,7 +31,7 @@ packwiz modrinth add <mod-slug>
 packwiz refresh
 ```
 
-For CurseForge-only mods:
+Для модов, доступных только на CurseForge:
 
 ```sh
 cd modpack
@@ -39,31 +39,31 @@ packwiz curseforge add <project-slug-or-id>
 packwiz refresh
 ```
 
-When mod metadata changes, update [Pinned mods](mods.md) in the same commit.
+Когда меняются метаданные модов, обновляйте [список модов](mods.md) в том же коммите.
 
-## Sides
+## Стороны
 
-- `both`: installed on client and dedicated server.
-- `client`: installed only in the client pack.
-- `server`: installed only on the dedicated server.
+- `both`: устанавливается на клиент и выделенный сервер.
+- `client`: устанавливается только в клиентский пак.
+- `server`: устанавливается только на выделенный сервер.
 
-Use the narrowest side that works. Mark a mod `both` only when that exact version supports dedicated server loading or has been manually verified.
+Используйте самую узкую сторону, которая подходит для мода. Отмечайте мод как `both` только если конкретная версия поддерживает загрузку на выделенном сервере или была вручную проверена.
 
-AutoModpack stays pinned in the pack for server-visible client sync.
+AutoModpack остается закрепленным в паке для клиентской синхронизации, видимой серверу.
 
-## Release
+## Релиз
 
-Run the `Release` GitHub Actions workflow manually. It creates the next immutable `vN` GitHub Release, uploads both client pack artifacts, marks the release as GitHub Latest, and publishes the matching server image with `vN` and `latest` Docker tags:
+Запускайте рабочий процесс GitHub Actions `Release` вручную. Он создает следующий неизменяемый GitHub Release с тегом `vN`, загружает оба клиентских артефакта, помечает релиз как GitHub Latest и публикует соответствующий серверный образ с Docker-тегами `vN` и `latest`:
 
 - `mc-create-aeronautics-client.mrpack`
 - `mc-create-aeronautics-client-curseforge.zip`
 
-Stable latest-download links:
+Стабильные ссылки на последний релиз:
 
 - [Modrinth MrPack](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client.mrpack)
-- [CurseForge export](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client-curseforge.zip)
+- [Экспорт CurseForge](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client-curseforge.zip)
 
-Server image tags:
+Теги серверного образа:
 
 ```sh
 ghcr.io/alexcawl/mc-create-aeronautics-server:v1

@@ -1,12 +1,12 @@
-# Mods
+# Моды
 
-This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
+Эта таблица соответствует закрепленным packwiz-метаданным в `modpack/mods/*.pw.toml`.
 
-When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
+Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Total mods: 89.
+Всего модов: 89.
 
-| Mod | Side | Source | File |
+| Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
 | AppleSkin | `both` | [Modrinth](https://modrinth.com/mod/appleskin) | `appleskin-neoforge-mc1.21-3.0.9.jar` |
 | Architectury API | `both` | [Modrinth](https://modrinth.com/mod/architectury-api) | `architectury-13.0.8-neoforge.jar` |

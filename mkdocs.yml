@@ -1,12 +1,12 @@
 site_name: MC Create Aeronautics
-site_description: Git-first NeoForge Minecraft modpack and server image.
+site_description: NeoForge модпак Minecraft и серверный образ, сопровождаемые через Git.
 site_url: https://alexcawl.github.io/mc-create-aeronautics-modpack/
 repo_url: https://github.com/AlexCawl/mc-create-aeronautics-modpack
 
 nav:
-  - Home: index.md
-  - Modpack: modpack.md
-  - Mods: mods.md
+  - Главная: index.md
+  - Модпак: modpack.md
+  - Моды: mods.md
 
 theme:
   name: mkdocs
