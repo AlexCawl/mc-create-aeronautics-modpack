@@ -2,7 +2,9 @@
 
 `modpack/` содержит packwiz-метаданные. Коммитьте `pack.toml`, `index.toml` и `mods/*.pw.toml`; не коммитьте скачанные `.jar` файлы.
 
-Базовые конфиги серверного образа лежат в `server-config/config/` и копируются в `/config/` внутри Docker-образа. Образ itzg применяет их при запуске; packwiz их не индексирует.
+Базовые конфиги серверного образа лежат в `modconfig/` и копируются в `/config/` внутри Docker-образа. Образ itzg применяет их при запуске; packwiz их не индексирует.
+
+Deploy-time значения в конфигах подставляются через env-переменные с префиксом `CFG_`. Для TGBridge задайте `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID` и `CFG_TGBRIDGE_TOPIC_ID`.
 
 ## Сборка
 

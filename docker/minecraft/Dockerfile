@@ -7,7 +7,7 @@ ENV TYPE=NEOFORGE \
     VERSION=1.21.1 \
     PACKWIZ_URL=/packwiz/pack.toml \
     REMOVE_OLD_MODS=TRUE \
-    REMOVE_OLD_MODS_DEPTH=1 \
+    REPLACE_ENV_VARIABLES=TRUE \
     MOTD="Create Aeronautics"
 
 COPY modpack/ /packwiz/

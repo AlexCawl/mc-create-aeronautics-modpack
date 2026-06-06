@@ -1,9 +1,9 @@
-botToken: "${TGBRIDGE_BOT_TOKEN}"
+botToken: "${CFG_TGBRIDGE_BOT_TOKEN}"
 chats:
   - name: "global"
     isDefault: true
-    chatId: ${TGBRIDGE_CHAT_ID}
-    topicId: ${TGBRIDGE_TOPIC_ID}
+    chatId: ${CFG_TGBRIDGE_CHAT_ID}
+    topicId: ${CFG_TGBRIDGE_TOPIC_ID}
 
 messages:
   mergeWindow: 10
