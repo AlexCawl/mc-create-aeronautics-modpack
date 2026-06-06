@@ -11,3 +11,4 @@ ENV TYPE=NEOFORGE \
     MOTD="Create Aeronautics"
 
 COPY modpack/ /packwiz/
+COPY modconfig/ /config/

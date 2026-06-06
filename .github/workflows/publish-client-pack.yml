@@ -13,6 +13,8 @@ permissions:
 env:
   MRPACK_ARTIFACT: mc-create-aeronautics-client.mrpack
   CURSEFORGE_ARTIFACT: mc-create-aeronautics-client-curseforge.zip
+  CLIENT_MODS_ARTIFACT: client-mods.zip
+  SERVER_MODS_ARTIFACT: server-mods.zip
 
 jobs:
   publish-client-pack:
@@ -21,6 +23,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -39,6 +47,9 @@ jobs:
           cd modpack
           "$HOME/go/bin/packwiz" --cache "$GITHUB_WORKSPACE/.cache/packwiz" curseforge export -o "$GITHUB_WORKSPACE/dist/${CURSEFORGE_ARTIFACT}"
 
+      - name: Build raw mod zips
+        run: scripts/build-mod-zips.sh "dist/${CLIENT_MODS_ARTIFACT}" "dist/${SERVER_MODS_ARTIFACT}"
+
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -49,11 +60,13 @@ jobs:
 
           release_notes="Client pack release built from \`$GITHUB_SHA\`.
 
-          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. The matching server image is published with the same tag and as \`latest\`."
+          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. Raw mod jar zips are attached as \`client-mods.zip\` and \`server-mods.zip\`. The matching server image is published with the same tag and as \`latest\`."
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_TAG" \
             --notes "$release_notes" \
             --latest=true \
             "dist/${MRPACK_ARTIFACT}" \
-            "dist/${CURSEFORGE_ARTIFACT}"
+            "dist/${CURSEFORGE_ARTIFACT}" \
+            "dist/${CLIENT_MODS_ARTIFACT}" \
+            "dist/${SERVER_MODS_ARTIFACT}"

@@ -1,14 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/servercore/config.yml"
-hash = "051aaabb29852b1958f8e8d69d56f5b41bb1357ee50d0d2956c52f5ad2b46a97"
-
-[[files]]
-file = "config/tgbridge/config.yml"
-hash = "7db018ec4b0d2d2229d91f317ac4a8f9d48f631af4d21cf0390860d6551e6086"
-
-[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "716d930feff599bf9ce732e05979fbae8025dc8a3c13ccf4f1cb207a70883bc6"
 metafile = true
