@@ -49,7 +49,7 @@ jobs:
 
           release_notes="Client pack release built from \`$GITHUB_SHA\`.
 
-          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. Raw mod jar zips are attached as \`client-mods.zip\` and \`server-mods.zip\`. The matching server image is published with the same tag and as \`latest\`."
+          Use \`mc-create-aeronautics-client.mrpack\` in Prism Launcher. The CurseForge-compatible export is attached as \`mc-create-aeronautics-client-curseforge.zip\`. The matching server image is published with the same tag and as \`latest\`."
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_TAG" \
