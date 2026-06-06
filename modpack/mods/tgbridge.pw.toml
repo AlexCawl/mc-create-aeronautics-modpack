@@ -1,0 +1,13 @@
+name = "vanutp's Telegram Bridge"
+filename = "tgbridge-0.9.8-neoforge-1.21.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/QI59B2cO/versions/e8Sa0L23/tgbridge-0.9.8-neoforge-1.21.jar"
+hash-format = "sha512"
+hash = "21fa72d0c29c3a7a81699d180d60ba16d4a2af67f5d2e1bdb24a18c9d3154ed93d361085fe86453de6da73b641dc2dd000ea72480782a3ab8df5b8ebb1358a6c"
+
+[update]
+[update.modrinth]
+mod-id = "QI59B2cO"
+version = "e8Sa0L23"

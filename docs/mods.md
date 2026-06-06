@@ -4,7 +4,7 @@ This table mirrors the pinned packwiz metadata in `modpack/mods/*.pw.toml`.
 
 When a mod is added, removed, updated, or moved between sides, update this table in the same commit.
 
-Total mods: 88.
+Total mods: 89.
 
 | Mod | Side | Source | Project ID | File |
 | --- | --- | --- | --- | --- |
@@ -96,3 +96,4 @@ Total mods: 88.
 | SuperMartijn642's Config Lib | `both` | Modrinth | `LN9BxssP` | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` |
 | SuperMartijn642's Core Lib | `both` | Modrinth | `rOUBggPv` | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` |
 | Traveler's Backpack | `both` | Modrinth | `rlloIFEV` | `travelersbackpack-neoforge-1.21.1-10.1.35.jar` |
+| vanutp's Telegram Bridge | `server` | Modrinth | `QI59B2cO` | `tgbridge-0.9.8-neoforge-1.21.jar` |

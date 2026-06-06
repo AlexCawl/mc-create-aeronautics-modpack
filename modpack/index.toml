@@ -5,6 +5,10 @@ file = "config/servercore/config.yml"
 hash = "051aaabb29852b1958f8e8d69d56f5b41bb1357ee50d0d2956c52f5ad2b46a97"
 
 [[files]]
+file = "config/tgbridge/config.yml"
+hash = "7db018ec4b0d2d2229d91f317ac4a8f9d48f631af4d21cf0390860d6551e6086"
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "716d930feff599bf9ce732e05979fbae8025dc8a3c13ccf4f1cb207a70883bc6"
 metafile = true
@@ -432,6 +436,11 @@ metafile = true
 [[files]]
 file = "mods/supermartijn642s-core-lib.pw.toml"
 hash = "3c08d6331ca871abdfa7a185011d2a6349a1125cc6b2cf87f9c89ca4043dbe70"
+metafile = true
+
+[[files]]
+file = "mods/tgbridge.pw.toml"
+hash = "5041b27f624e835b77639366aaa56dbbb899145618aba54a03dfc34bc6b55a64"
 metafile = true
 
 [[files]]

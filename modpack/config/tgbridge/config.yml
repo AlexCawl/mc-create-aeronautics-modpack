@@ -1,0 +1,20 @@
+botToken: "${TGBRIDGE_BOT_TOKEN}"
+chats:
+  - name: "global"
+    isDefault: true
+    chatId: ${TGBRIDGE_CHAT_ID}
+    topicId: ${TGBRIDGE_TOPIC_ID}
+
+messages:
+  mergeWindow: 10
+  useRealUsername: true
+
+events:
+  enableDeathMessages: true
+  joinMessages: "true"
+  enableLeaveMessages: true
+  leaveJoinMergeWindow: 10
+  enableStartMessages: true
+  enableStopMessages: true
+
+version: 4
