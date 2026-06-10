@@ -1,13 +1,13 @@
 name = "Create: Stock Market"
-filename = "create-stockmarket-1.0.0+mc1.21.1.jar"
+filename = "create-stockmarket-1.0.2+mc1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/CnrVw3tZ/versions/C564UW9E/create-stockmarket-1.0.0%2Bmc1.21.1.jar"
+url = "https://cdn.modrinth.com/data/CnrVw3tZ/versions/RsQ7uH5G/create-stockmarket-1.0.2%2Bmc1.21.1.jar"
 hash-format = "sha512"
-hash = "2c4cc753d74baa403815a81eb57bb33e69c701862b022cd1e4114707add9bf69a56c683054fa08908c3467c1b5de68e48924042c5a79c91c1a258401d6b927a6"
+hash = "2d9fa92683616fbffb234e36234774f7d1496f86d750c763304f5f580218f12bb9454f62e668c30b59f5aea753926d9d305bcaa88b91c4a64c742b074b318c26"
 
 [update]
 [update.modrinth]
 mod-id = "CnrVw3tZ"
-version = "C564UW9E"
+version = "RsQ7uH5G"
