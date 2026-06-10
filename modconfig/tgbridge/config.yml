@@ -17,4 +17,7 @@ events:
   enableStartMessages: true
   enableStopMessages: true
 
+integrations:
+  bluemapUrl: "${CFG_TGBRIDGE_BLUEMAP_URL}"
+
 version: 4

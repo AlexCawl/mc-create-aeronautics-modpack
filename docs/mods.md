@@ -4,13 +4,14 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 89.
+Всего модов: 91.
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
 | AppleSkin | `both` | [Modrinth](https://modrinth.com/mod/appleskin) | `appleskin-neoforge-mc1.21-3.0.9.jar` |
 | Architectury API | `both` | [Modrinth](https://modrinth.com/mod/architectury-api) | `architectury-13.0.8-neoforge.jar` |
 | AutoModpack | `both` | [Modrinth](https://modrinth.com/mod/automodpack) | `automodpack-mc1.21.1-neoforge-4.0.5.jar` |
+| BlueMap | `server` | [Modrinth](https://modrinth.com/mod/bluemap) | `bluemap-5.7-neoforge.jar` |
 | CC: Tweaked | `both` | [Modrinth](https://modrinth.com/mod/cc-tweaked) | `cc-tweaked-1.21.1-forge-1.119.0.jar` |
 | Chat Heads | `client` | [Modrinth](https://modrinth.com/mod/chat-heads) | `chat_heads-0.15.1-neoforge-1.21.jar` |
 | Clumps | `both` | [Modrinth](https://modrinth.com/mod/clumps) | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
@@ -65,7 +66,6 @@
 | Fusion (Connected Textures) | `client` | [Modrinth](https://modrinth.com/mod/fusion-connected-textures) | `fusion-1.2.12-neoforge-mc1.21.1.jar` |
 | Jade Addons (Neo/Forge) | `both` | [Modrinth](https://modrinth.com/mod/jade-addons-forge) | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Jade 🔍 | `both` | [Modrinth](https://modrinth.com/mod/jade) | `Jade-1.21.1-NeoForge-15.10.5.jar` |
-| JourneyMap | `both` | [Modrinth](https://modrinth.com/mod/journeymap) | `journeymap-neoforge-1.21.1-6.0.0-beta.74.jar` |
 | Just Enough Items | `both` | [Modrinth](https://modrinth.com/mod/jei) | `jei-1.21.1-neoforge-19.27.0.340.jar` |
 | Kotlin for Forge | `both` | [Modrinth](https://modrinth.com/mod/kotlin-for-forge) | `kotlinforforge-5.11.0-all.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.8+1.21.1.jar` |
@@ -97,3 +97,5 @@
 | SuperMartijn642's Core Lib | `both` | [Modrinth](https://modrinth.com/mod/supermartijn642s-core-lib) | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` |
 | Traveler's Backpack | `both` | [Modrinth](https://modrinth.com/mod/travelersbackpack) | `travelersbackpack-neoforge-1.21.1-10.1.35.jar` |
 | vanutp's Telegram Bridge | `server` | [Modrinth](https://modrinth.com/mod/tgbridge) | `tgbridge-0.9.8-neoforge-1.21.jar` |
+| Xaero's Minimap | `both` | [Modrinth](https://modrinth.com/mod/xaeros-minimap) | `xaerominimap-neoforge-1.21.1-25.3.13.jar` |
+| Xaero's World Map | `both` | [Modrinth](https://modrinth.com/mod/xaeros-world-map) | `xaeroworldmap-neoforge-1.21.1-1.40.16.jar` |

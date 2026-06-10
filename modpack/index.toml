@@ -21,6 +21,11 @@ hash = "e1f4a53e3e52b534add5dd018597fefd345d9bd6350b9c46ef0ec281fc62af8e"
 metafile = true
 
 [[files]]
+file = "mods/bluemap.pw.toml"
+hash = "f33a4720ef4f315b6d1f778039e9f7bdb8f5ef1b58a57d565c30fd1d8adee207"
+metafile = true
+
+[[files]]
 file = "mods/c2me-neoforge.pw.toml"
 hash = "17cf45aaab6d4964d4d851cfcbe4b5e6db539a2329216392bec4aea1c90b83a7"
 metafile = true
@@ -281,11 +286,6 @@ hash = "bdfcde80743d8e03ecfdc9b63895c5c447c925cc4b58e0d5d993124a217850d9"
 metafile = true
 
 [[files]]
-file = "mods/journeymap.pw.toml"
-hash = "d883daca5b51602262e972c066ac1edfe35e6f01ab23564b203e2bf60b165507"
-metafile = true
-
-[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "27302b0087cf53570cd7a3b4eb550a208cbb6f6ba07210c604176155f39e0078"
 metafile = true
@@ -443,4 +443,14 @@ metafile = true
 [[files]]
 file = "mods/travelersbackpack.pw.toml"
 hash = "e11060ffe4bfc83dd5094a05cfd1248728373c592226d9fc30877563232e0c22"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "d609fad21021c5578750019bbe247515af55b0d1284ef838e42ef4ad0d5fbff4"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "ac287f392613eddfa285620dcecb3fea25ee6232a201009cde5c5511b6a39fb9"
 metafile = true

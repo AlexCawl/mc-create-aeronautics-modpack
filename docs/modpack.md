@@ -4,7 +4,9 @@
 
 Базовые конфиги серверного образа лежат в `modconfig/` и копируются в `/config/` внутри Docker-образа. Образ itzg применяет их при запуске; packwiz их не индексирует.
 
-Deploy-time значения в конфигах подставляются через env-переменные с префиксом `CFG_`. Для TGBridge задайте `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID` и `CFG_TGBRIDGE_TOPIC_ID`.
+Deploy-time значения в конфигах подставляются через env-переменные с префиксом `CFG_`. Для TGBridge задайте `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID`, `CFG_TGBRIDGE_TOPIC_ID` и публичный URL BlueMap в `CFG_TGBRIDGE_BLUEMAP_URL`.
+
+BlueMap использует свои дефолтные runtime-конфиги и встроенный webserver на порту `8100`; публикуйте или проксируйте этот порт в deployment-репозитории.
 
 ## Сборка
 
