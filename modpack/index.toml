@@ -177,7 +177,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-railways-navigator.pw.toml"
-hash = "572ec7a57be68aa913863f4fa3be7208ae3dbb846043f3c5890a290976b41f90"
+hash = "2934e78d54d26a0b51916aa01e267d174411b009d737d81cf160108af0631c4b"
 metafile = true
 
 [[files]]
@@ -402,12 +402,12 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "1aad262000bea80b345a973a19a626bfbcb65b2ba78843843649e740168d04fd"
+hash = "96926b3c536668a886c6895565d8cbf06ec187c1efd4f0212ba12f8f97f7559e"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "e8964aa3252bc02d75abbeac52b4d8deb621e56bc6b549e3127b0f2bc4a76fc2"
+hash = "7a0545b3c17ba1e0856e271ab483f53a4376e8af76c1e36ba09b8805ca3a64b6"
 metafile = true
 
 [[files]]
