@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 91.
+Всего модов: 90.
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
@@ -24,7 +24,6 @@
 | Create Big Cannons | `both` | [Modrinth](https://modrinth.com/mod/create-big-cannons) | `createbigcannons-5.11.6+mc.1.21.1.jar` |
 | Create Cobblestone | `both` | [Modrinth](https://modrinth.com/mod/create-cobblestone) | `createcobblestone-1.4.10+neoforge-1.21.1-139.jar` |
 | Create Deco | `both` | [Modrinth](https://modrinth.com/mod/create-deco) | `createdeco-2.1.3.jar` |
-| Create Jetpack | `both` | [Modrinth](https://modrinth.com/mod/create-jetpack) | `create_jetpack-forge-5.1.2.jar` |
 | Create Propulsion: Simulated | `both` | [Modrinth](https://modrinth.com/mod/create-propulsion-simulated) | `createpropulsion-1.1.4.jar` |
 | Create Railways Navigator | `both` | [Modrinth](https://modrinth.com/mod/create-railways-navigator) | `createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar` |
 | Create Slice & Dice | `both` | [Modrinth](https://modrinth.com/mod/slice-and-dice) | `sliceanddice-forge-4.2.4.jar` |
