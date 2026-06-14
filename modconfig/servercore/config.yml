@@ -240,9 +240,9 @@ activation-range:
         - 'typeof:raider'
 
     - name: 'water'
-      activation-range: 16
-      tick-interval: 20
-      wakeup-interval: 60
+      activation-range: 12
+      tick-interval: 40
+      wakeup-interval: 120
       extra-height-up: false
       extra-height-down: false
       entity-matcher:
@@ -299,9 +299,9 @@ activation-range:
         - 'typeof:monster'
 
     - name: 'animal'
-      activation-range: 16
-      tick-interval: 20
-      wakeup-interval: 60
+      activation-range: 12
+      tick-interval: 40
+      wakeup-interval: 120
       extra-height-up: false
       extra-height-down: false
       entity-matcher:
