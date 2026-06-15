@@ -5,8 +5,8 @@ repo_url: https://github.com/AlexCawl/mc-create-aeronautics-modpack
 
 nav:
   - Главная: index.md
-  - Модпак: modpack.md
   - Моды: mods.md
+  - Конфиги: modpack.md
 
 theme:
   name: mkdocs

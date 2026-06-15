@@ -1,16 +1,61 @@
-# MC Create Aeronautics
+# mc-create-aeronautics-modpack
 
-Git-first source for the NeoForge 1.21.1 Create Aeronautics modpack and its server bootstrap image.
+Git-first repository for the NeoForge `1.21.1` Create Aeronautics modpack, client exports, and server bootstrap image.
 
-- `modpack/` is the canonical packwiz source.
-- `server-config/` contains server image baseline configs copied to `/config`.
-- Manual GitHub Actions releases build Modrinth `.mrpack` and CurseForge `.zip` client packs, plus a matching server image.
-- Release tags use auto-incremented `vN` values such as `v1`, `v2`, and `v3`.
-- The newest client pack is exposed through GitHub Latest release download links.
-- The server image is published as `ghcr.io/alexcawl/mc-create-aeronautics-server:<tag>` and `ghcr.io/alexcawl/mc-create-aeronautics-server:latest`.
-- Deployment files live in a separate repository.
+## Работа с модами
 
-Docs:
+`modpack/` является основным источником packwiz-модпака. Коммитьте `modpack/pack.toml`, `modpack/index.toml` и `modpack/mods/*.pw.toml`; не коммитьте скачанные `.jar`, `.mrpack`, CurseForge `.zip`, `dist/`, `site/` и `.cache/`.
 
-- [Modpack maintenance](docs/modpack.md)
-- [Pinned mods](docs/mods.md)
+Добавление Modrinth-мода:
+
+```sh
+cd modpack
+packwiz modrinth add <mod-slug>
+packwiz refresh
+```
+
+Добавление CurseForge-мода:
+
+```sh
+cd modpack
+packwiz curseforge add <project-slug-or-id>
+packwiz refresh
+```
+
+После добавления, удаления, обновления или смены стороны мода обновите [список модов](docs/mods.md). Значение `side` выбирайте явно:
+
+- `client` - только клиент.
+- `server` - только выделенный сервер.
+- `both` - клиент и выделенный сервер.
+
+## Работа с конфигами
+
+`modconfig/` содержит baseline-конфиги серверного образа. Dockerfile копирует их в `/config/`, а образ `itzg/minecraft-server` применяет их к runtime-данным сервера при запуске. Эти файлы не индексируются packwiz.
+
+Серверные runtime-конфиги храните в `modconfig/`. Клиентские конфиги, которые должны уехать в клиентский модпак, храните внутри `modpack/config/` и обновляйте `packwiz refresh`.
+
+Deploy-time секреты не коммитьте. Для значений, которые должны подставляться при запуске, используйте `${CFG_*}` placeholders и переменные окружения в deployment-репозитории.
+
+Список серверных baseline-конфигов описан в [разделе конфигов](docs/modpack.md).
+
+## Релизы
+
+Клиентский Modrinth `.mrpack` локально собирается так:
+
+```sh
+scripts/build-mrpack.sh
+```
+
+Клиентский CurseForge-compatible экспорт:
+
+```sh
+cd modpack
+packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
+```
+
+Релизы публикуются вручную через GitHub Actions `Release`. Workflow создает следующий неизменяемый тег `vN`, загружает клиентские артефакты и публикует серверный образ:
+
+- `mc-create-aeronautics-client.mrpack`
+- `mc-create-aeronautics-client-curseforge.zip`
+- `ghcr.io/alexcawl/mc-create-aeronautics-server:<tag>`
+- `ghcr.io/alexcawl/mc-create-aeronautics-server:latest`

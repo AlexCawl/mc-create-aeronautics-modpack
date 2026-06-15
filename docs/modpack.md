@@ -1,81 +1,42 @@
-# Обслуживание модпака
+# Конфиги
 
-`modpack/` содержит packwiz-метаданные. Коммитьте `pack.toml`, `index.toml` и `mods/*.pw.toml`; не коммитьте скачанные `.jar` файлы.
+`modconfig/` содержит baseline-конфиги серверного образа. Они копируются в `/config/` внутри Docker-образа и применяются к runtime-конфигам сервера при запуске.
 
-Базовые конфиги серверного образа лежат в `modconfig/` и копируются в `/config/` внутри Docker-образа. Образ itzg применяет их при запуске; packwiz их не индексирует.
+## BlueMap
 
-`modconfig/DistantHorizons.toml` сохраняет генерацию LOD для новых чанков, но ограничивает Distant Horizons двумя потоками и `threadRunTimeRatio = "0.6"`, чтобы снизить конкуренцию с основным серверным тиком.
+`modconfig/bluemap/core.conf`:
 
-`modconfig/servercore/` фиксирует runtime-конфиги ServerCore на базе official optimized-профиля: динамическое снижение дистанций, усиленный merge item/XP entities и безопасные chunk-оптимизации.
+- принимает загрузку web assets через `accept-download`;
+- ограничивает BlueMap одним render-thread, чтобы фоновый рендер меньше конкурировал с server thread.
 
-Deploy-time значения в конфигах подставляются через env-переменные с префиксом `CFG_`. Для TGBridge задайте `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID`, `CFG_TGBRIDGE_TOPIC_ID` и публичный URL BlueMap в `CFG_TGBRIDGE_BLUEMAP_URL`.
+`modconfig/bluemap/plugin.conf`:
 
-BlueMap ограничен одним render-thread и ставит рендер на паузу, пока на сервере есть игроки; встроенный webserver работает на порту `8100`, публикуйте или проксируйте этот порт в deployment-репозитории.
+- ставит рендер на паузу, пока на сервере есть хотя бы один игрок.
 
-## Сборка
+BlueMap webserver работает на порту `8100`; публикация или reverse proxy настраиваются в deployment-репозитории.
 
-```sh
-scripts/build-mrpack.sh
-```
+## C2ME
 
-Клиентский артефакт записывается в `dist/mc-create-aeronautics-client.mrpack`.
+`modconfig/c2me.toml`:
 
-Чтобы локально собрать CurseForge-compatible экспорт:
+- фиксирует сниженный `globalExecutorParallelism`, чтобы C2ME не забивал CPU при генерации и загрузке чанков;
+- остальные параметры оставляет на дефолтах C2ME.
 
-```sh
-cd modpack
-packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
-```
+## ServerCore
 
-CurseForge zip — это экспортный артефакт. Перед публикацией на CurseForge может потребоваться проверить разрешения и лицензии модов не из CurseForge.
+`modconfig/servercore/config.yml`:
 
-## Добавление и обновление модов
+- основан на official optimized-профиле ServerCore;
+- задает динамическое снижение `VIEW_DISTANCE`, `CHUNK_TICK_DISTANCE` и `SIMULATION_DISTANCE`;
+- усиливает merge item/XP entities.
 
-Запускайте packwiz из `modpack/`:
+`modconfig/servercore/optimizations.yml`:
 
-```sh
-cd modpack
-packwiz modrinth add <mod-slug>
-packwiz refresh
-```
+- включает official optimized-настройки ServerCore для chunk, command block, biome lookup и fluid tick оптимизаций.
 
-Для модов, доступных только на CurseForge:
+## TGBridge
 
-```sh
-cd modpack
-packwiz curseforge add <project-slug-or-id>
-packwiz refresh
-```
+`modconfig/tgbridge/config.yml`:
 
-Когда меняются метаданные модов, обновляйте [список модов](mods.md) в том же коммите.
-
-Обновления проверяйте от текущей версии Create, а не от общего latest. Для `Minecraft 1.21.1` базовая связка сейчас строится вокруг `Create 6.0.10` и `NeoForge 21.1.233`; моды `Sodium`, `Sodium Extra` и `Create Railways Navigator` закреплены через `packwiz pin`, потому что более новые версии ломают клиентский запуск в этой связке.
-
-## Стороны
-
-- `both`: устанавливается на клиент и выделенный сервер.
-- `client`: устанавливается только в клиентский пак.
-- `server`: устанавливается только на выделенный сервер.
-
-Используйте самую узкую сторону, которая подходит для мода. Отмечайте мод как `both` только если конкретная версия поддерживает загрузку на выделенном сервере или была вручную проверена.
-
-AutoModpack остается закрепленным в паке для клиентской синхронизации, видимой серверу.
-
-## Релиз
-
-Запускайте рабочий процесс GitHub Actions `Release` вручную. Он создает следующий неизменяемый GitHub Release с тегом `vN`, загружает оба клиентских артефакта, помечает релиз как GitHub Latest и публикует соответствующий серверный образ с Docker-тегами `vN` и `latest`:
-
-- `mc-create-aeronautics-client.mrpack`
-- `mc-create-aeronautics-client-curseforge.zip`
-
-Стабильные ссылки на последний релиз:
-
-- [Modrinth MrPack](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client.mrpack)
-- [Экспорт CurseForge](https://github.com/AlexCawl/mc-create-aeronautics-modpack/releases/latest/download/mc-create-aeronautics-client-curseforge.zip)
-
-Теги серверного образа:
-
-```sh
-ghcr.io/alexcawl/mc-create-aeronautics-server:v1
-ghcr.io/alexcawl/mc-create-aeronautics-server:latest
-```
+- настраивает Telegram bridge;
+- runtime-значения подставляются через `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID`, `CFG_TGBRIDGE_TOPIC_ID` и `CFG_TGBRIDGE_BLUEMAP_URL`.
