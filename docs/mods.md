@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 91.
+Всего модов: 92.
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
@@ -17,6 +17,7 @@
 | Clumps | `both` | [Modrinth](https://modrinth.com/mod/clumps) | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
 | Concurrent Chunk Management Engine (NeoForge) | `both` | [Modrinth](https://modrinth.com/mod/c2me-neoforge) | `c2me-neoforge-mc1.21.1-0.3.0+alpha.0.93.jar` |
 | Configurable | `both` | [Modrinth](https://modrinth.com/mod/configurable) | `configurable-3.5.1+1.21.1-neoforge.jar` |
+| Configured | `client` | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/configured) | `configured-neoforge-1.21.1-2.6.3.jar` |
 | Copycats+ aeronautics weight | `both` | [Modrinth](https://modrinth.com/mod/copycats+-aeronautics-weight) | `aerocopycats-1.1.1.jar` |
 | Create | `both` | [Modrinth](https://modrinth.com/mod/create) | `create-1.21.1-6.0.10.jar` |
 | Create Aeronautics | `both` | [Modrinth](https://modrinth.com/mod/create-aeronautics) | `create-aeronautics-bundled-1.21.1-1.2.1.jar` |
