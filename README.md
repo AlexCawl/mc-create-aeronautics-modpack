@@ -40,17 +40,13 @@ Deploy-time секреты не коммитьте. Для значений, к�
 
 ## Релизы
 
-Клиентский Modrinth `.mrpack` локально собирается так:
+Клиентские артефакты локально собираются так:
 
 ```sh
-scripts/build-mrpack.sh
-```
-
-Клиентский CurseForge-compatible экспорт:
-
-```sh
+mkdir -p dist
 cd modpack
-packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
+packwiz --cache ../.cache/packwiz modrinth export -o ../dist/mc-create-aeronautics-client.mrpack
+packwiz --cache ../.cache/packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip
 ```
 
 Релизы публикуются вручную через GitHub Actions `Release`. Workflow создает следующий неизменяемый тег `vN`, загружает клиентские артефакты и публикует серверный образ:

@@ -30,12 +30,16 @@ jobs:
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
 
+      - name: Prepare dist directory
+        run: mkdir -p dist
+
       - name: Build mrpack
-        run: scripts/build-mrpack.sh "dist/${MRPACK_ARTIFACT}"
+        run: |
+          cd modpack
+          "$HOME/go/bin/packwiz" --cache "$GITHUB_WORKSPACE/.cache/packwiz" modrinth export -o "$GITHUB_WORKSPACE/dist/${MRPACK_ARTIFACT}"
 
       - name: Build CurseForge zip
         run: |
-          mkdir -p dist .cache/packwiz
           cd modpack
           "$HOME/go/bin/packwiz" --cache "$GITHUB_WORKSPACE/.cache/packwiz" curseforge export -o "$GITHUB_WORKSPACE/dist/${CURSEFORGE_ARTIFACT}"
 

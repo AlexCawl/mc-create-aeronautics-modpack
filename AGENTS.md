@@ -15,7 +15,6 @@
 - `modpack/pack.toml`, `modpack/index.toml`, and `modpack/mods/*.pw.toml` are the reproducible packwiz source.
 - `modconfig/` contains server baseline config copied by `docker/minecraft/Dockerfile`; it is not indexed by packwiz.
 - `docker/minecraft/Dockerfile` builds the server bootstrap image from `itzg/minecraft-server:java21`.
-- `scripts/build-mrpack.sh` is the local Modrinth `.mrpack` export path.
 - `docs/` contains the MkDocs source; generated `site/` output is ignored.
 - `.github/workflows/release.yml` orchestrates manual `vN` releases, client exports, and GHCR server image publishing.
 
@@ -41,8 +40,9 @@
 
 ## Build and Release Workflow
 
-- Client artifacts are generated, not source. Build the Modrinth pack with `scripts/build-mrpack.sh`.
-- Build the CurseForge export from `modpack/` with `packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip`.
+- Client artifacts are generated, not source. Build local exports from `modpack/` into ignored `dist/`.
+- Build the Modrinth pack with `packwiz modrinth export -o ../dist/mc-create-aeronautics-client.mrpack`.
+- Build the CurseForge export with `packwiz curseforge export -o ../dist/mc-create-aeronautics-client-curseforge.zip`.
 - Keep release tags immutable and auto-incremented as `vN`; do not retag or overwrite releases unless explicitly requested.
 - Keep the server image name aligned with the deployment repository: `ghcr.io/alexcawl/mc-create-aeronautics-server:<tag>` and `latest`.
 - If the server image build context changes, check `.dockerignore` so secrets, runtime data, generated docs, caches, and artifacts stay out of the image context.
