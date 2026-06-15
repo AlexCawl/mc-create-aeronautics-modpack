@@ -6,11 +6,11 @@
 
 `modconfig/DistantHorizons.toml` сохраняет генерацию LOD для новых чанков, но ограничивает Distant Horizons двумя потоками и `threadRunTimeRatio = "0.6"`, чтобы снизить конкуренцию с основным серверным тиком.
 
-`modconfig/servercore/` фиксирует оба runtime-конфига ServerCore: динамическое снижение дистанций, редкий тик пассивных и водных мобов вне 12 блоков от игрока, усиленный merge item/XP entities и безопасные chunk-оптимизации.
+`modconfig/servercore/` фиксирует runtime-конфиги ServerCore на базе official optimized-профиля: динамическое снижение дистанций, усиленный merge item/XP entities и безопасные chunk-оптимизации.
 
 Deploy-time значения в конфигах подставляются через env-переменные с префиксом `CFG_`. Для TGBridge задайте `CFG_TGBRIDGE_BOT_TOKEN`, `CFG_TGBRIDGE_CHAT_ID`, `CFG_TGBRIDGE_TOPIC_ID` и публичный URL BlueMap в `CFG_TGBRIDGE_BLUEMAP_URL`.
 
-BlueMap использует свои дефолтные runtime-конфиги и встроенный webserver на порту `8100`; публикуйте или проксируйте этот порт в deployment-репозитории.
+BlueMap ограничен одним render-thread и ставит рендер на паузу, пока на сервере есть игроки; встроенный webserver работает на порту `8100`, публикуйте или проксируйте этот порт в deployment-репозитории.
 
 ## Сборка
 

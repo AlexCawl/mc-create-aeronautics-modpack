@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 90.
+Всего модов: 91.
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
@@ -69,6 +69,7 @@
 | Kotlin for Forge | `both` | [Modrinth](https://modrinth.com/mod/kotlin-for-forge) | `kotlinforforge-5.11.0-all.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.8+1.21.1.jar` |
 | LDLib | `both` | [Modrinth](https://modrinth.com/mod/ldlib) | `ldlib2-neoforge-1.21.1-2.2.18-all.jar` |
+| Lithium | `both` | [Modrinth](https://modrinth.com/mod/lithium) | `lithium-neoforge-0.15.3+mc1.21.1.jar` |
 | Lithosphere | `both` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
 | Load My F***ing Tags | `server` | [Modrinth](https://modrinth.com/mod/lmft) | `lmft-1.1.1+1.21.9-neoforge.jar` |
 | MidnightLib | `both` | [Modrinth](https://modrinth.com/mod/midnightlib) | `midnightlib-neoforge-1.9.3+1.21.1.jar` |
