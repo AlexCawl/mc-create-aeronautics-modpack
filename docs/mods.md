@@ -87,8 +87,8 @@
 | ServerCore | `server` | [Modrinth](https://modrinth.com/mod/servercore) | `servercore-neoforge-1.5.17+1.21.1.jar` |
 | Simple Voice Chat | `both` | [Modrinth](https://modrinth.com/mod/simple-voice-chat) | `voicechat-neoforge-1.21.1-2.6.18.jar` |
 | Skin Restorer | `server` | [Modrinth](https://modrinth.com/mod/skinrestorer) | `skinrestorer-2.8.1+1.21-neoforge.jar` |
-| Sodium | `client` | [Modrinth](https://modrinth.com/mod/sodium) | `sodium-neoforge-0.8.12-beta.1+mc1.21.1.jar` |
-| Sodium Extra | `client` | [Modrinth](https://modrinth.com/mod/sodium-extra) | `sodium-extra-neoforge-0.8.7+mc1.21.1.jar` |
+| Sodium | `client` | [Modrinth](https://modrinth.com/mod/sodium) | `sodium-neoforge-0.6.13+mc1.21.1.jar` |
+| Sodium Extra | `client` | [Modrinth](https://modrinth.com/mod/sodium-extra) | `sodium-extra-neoforge-0.6.0+mc1.21.1.jar` |
 | spark | `both` | [Modrinth](https://modrinth.com/mod/spark) | `spark-1.10.124-neoforge.jar` |
 | Steam 'n' Rails Neoforge | `both` | [Modrinth](https://modrinth.com/mod/create-steam-n-rails-1.21.1) | `railways-0.2.1+neoforge-mc1.21.1.jar` |
 | Structory | `both` | [Modrinth](https://modrinth.com/mod/structory) | `Structory_26.1_v1.3.16.jar` |
