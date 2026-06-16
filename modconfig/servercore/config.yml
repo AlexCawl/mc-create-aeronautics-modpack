@@ -40,9 +40,9 @@ dynamic:
   # Note: adding view / simulation distance here will override their value in server.properties.
   default-values:
     MOBCAP_PERCENTAGE: 100
-    VIEW_DISTANCE: 6
-    CHUNK_TICK_DISTANCE: 4
-    SIMULATION_DISTANCE: 4
+    VIEW_DISTANCE: 7
+    CHUNK_TICK_DISTANCE: 5
+    SIMULATION_DISTANCE: 5
 
   # The settings that will be decreased when the server is overloaded, in the specified order.
   # You can remove settings from the list that you don't want to be dynamically adjusted.
@@ -52,8 +52,8 @@ dynamic:
   # ► interval = The amount of seconds between each check to increase or decrease.
   dynamic-settings:
     - setting: 'CHUNK_TICK_DISTANCE'
-      max: 6
-      min: 2
+      max: 7
+      min: 3
       increment: 1
       interval: 30
 
@@ -64,8 +64,8 @@ dynamic:
       interval: 15
 
     - setting: 'SIMULATION_DISTANCE'
-      max: 6
-      min: 2
+      max: 7
+      min: 3
       increment: 1
       interval: 30
 
@@ -76,8 +76,8 @@ dynamic:
       interval: 15
 
     - setting: 'VIEW_DISTANCE'
-      max: 8
-      min: 4
+      max: 9
+      min: 5
       increment: 1
       interval: 120
 
