@@ -61,7 +61,7 @@
 | Super Bosses | `server` | [Modrinth](https://modrinth.com/mod/super-bosses) | `superbosses-2.0.0-1.21.1.jar` |
 | Supplementaries | `both` | [Modrinth](https://modrinth.com/mod/supplementaries) | `supplementaries-neoforge-1.21.1-3.6.8.jar` |
 
-## Генерация мира
+## Генерация мира и структуры
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
