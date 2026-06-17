@@ -147,7 +147,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-enchantment-industry.pw.toml"
-hash = "ff6a3d4bed914978aada4a059a16100cd2fd69a3cf19987c0d80160a7125e78b"
+hash = "9632e3a695f69473d879e285e46007fd5037cb5abc8db02a8bec79689864d0fc"
 metafile = true
 
 [[files]]
@@ -183,11 +183,6 @@ metafile = true
 [[files]]
 file = "mods/create-radars.pw.toml"
 hash = "c24712eb82bb29d7ed210d7bc175baeb3b022c3b365b2dd0275c25f690e98f52"
-metafile = true
-
-[[files]]
-file = "mods/create-rustic-structures.pw.toml"
-hash = "ee564898ada12be2660c3ece6a7433f46c13983cb183549310209116cb54742b"
 metafile = true
 
 [[files]]
@@ -298,6 +293,11 @@ metafile = true
 [[files]]
 file = "mods/gravestone-mod.pw.toml"
 hash = "e88253c3633274c212b2c4628a26ba03ceba6afff561eb6f9488689fad4cad06"
+metafile = true
+
+[[files]]
+file = "mods/hostile-mobs-improve-over-time.pw.toml"
+hash = "6221154a0872c156032adccca907d603fc3b35b757cd926ae6913adb12bed9cb"
 metafile = true
 
 [[files]]
@@ -433,11 +433,6 @@ metafile = true
 [[files]]
 file = "mods/tgbridge.pw.toml"
 hash = "5041b27f624e835b77639366aaa56dbbb899145618aba54a03dfc34bc6b55a64"
-metafile = true
-
-[[files]]
-file = "mods/towns-and-towers.pw.toml"
-hash = "5518dd2f6a5d88e4affb9df628604737893025206d7149579e4c24f909b130a3"
 metafile = true
 
 [[files]]

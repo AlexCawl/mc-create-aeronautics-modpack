@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 101.
+Всего модов: 100.
 
 ## Create и его аддоны
 
@@ -23,7 +23,7 @@
 | Create: Copycats+ | `both` | [Modrinth](https://modrinth.com/mod/copycats) | `copycats-3.0.4+mc.1.21.1-neoforge.jar` |
 | Create: Diesel Generators | `both` | [Modrinth](https://modrinth.com/mod/create-diesel-generators) | `createdieselgenerators-1.21.1-1.3.13.jar` |
 | Create: Dragons Plus | `both` | [Modrinth](https://modrinth.com/mod/create-dragons-plus) | `CreateDragonsPlus-1.11.2b.jar` |
-| Create: Enchantment Industry | `both` | [Modrinth](https://modrinth.com/mod/create-enchantment-industry) | `create-enchantment-industry-2.5.0-preview-alpha1.jar` |
+| Create: Enchantment Industry | `both` | [Modrinth](https://modrinth.com/mod/create-enchantment-industry) | `create-enchantment-industry-2.4.2.jar` |
 | Create: Fluid | `both` | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-fluid) | `fluid-2.1.3.jar` |
 | Create: Food | `both` | [Modrinth](https://modrinth.com/mod/create-food) | `createfood-neoforge-1.21.1-2.5.0.jar` |
 | Create: Fuel & Water Information | `both` | [Modrinth](https://modrinth.com/mod/create-fuel-water-information) | `cfwinfo-1.9.0.jar` |
@@ -57,6 +57,7 @@
 | Ciggycraft | `both` | [Modrinth](https://modrinth.com/mod/ciggycraft) | `ciggycraft-1.0.3.jar` |
 | Drink Beer Refill | `both` | [Modrinth](https://modrinth.com/mod/drink-beer-refill) | `drinkbeer-refill-1.21.1-1.2.0.jar` |
 | Farmer's Delight | `both` | [Modrinth](https://modrinth.com/mod/farmers-delight) | `FarmersDelight-1.21.1-1.3.2.jar` |
+| Hostile Mobs Improve Over Time | `both` | [Modrinth](https://modrinth.com/datapack/hostile-mobs-improve-over-time) | `hostile-mobs-improve-over-time-1.10.1b.jar` |
 | Rechiseled | `both` | [Modrinth](https://modrinth.com/mod/rechiseled) | `rechiseled-1.2.4-neoforge-mc1.21.jar` |
 | Super Bosses | `server` | [Modrinth](https://modrinth.com/mod/super-bosses) | `superbosses-2.0.0-1.21.1.jar` |
 
@@ -67,11 +68,9 @@
 | ATi Structures | `both` | [Modrinth](https://modrinth.com/datapack/ati-structures-fabricforge) | `ATi Structures V1.4.4 (1.21+).jar` |
 | Create: Dynamic Village | `both` | [Modrinth](https://modrinth.com/mod/dynamic-village) | `dynamicvillage-v0.5.1-1.21.1.jar` |
 | Create: Let The Adventure Begin | `both` | [Modrinth](https://modrinth.com/mod/create-let-the-adventure-begin) | `create_ltab-4.0.2.jar` |
-| Create: Rustic Structures | `both` | [Modrinth](https://modrinth.com/mod/create-rustic-structures) | `create_rustic_structures-1.0.1-neoforge-1.21.1.jar` |
 | Create: Structures Arise | `both` | [Modrinth](https://modrinth.com/mod/create-structures-arise) | `create_structures_arise-176.49.48 NeoForge 1.21.1.jar` |
 | Geophilic | `both` | [Modrinth](https://modrinth.com/datapack/geophilic) | `Geophilic v3.6.mod.jar` |
 | Lithosphere | `both` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
-| Towns and Towers | `both` | [Modrinth](https://modrinth.com/mod/towns-and-towers) | `t_and_t-neoforge-fabric-1.13.9+1.21.1.jar` |
 | Underwater Village | `both` | [Modrinth](https://modrinth.com/mod/underwater-village) | `underwater_village-1.0.2-neoforge-1.21.1.jar` |
 | YUNG's Better Dungeons | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-dungeons) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` |
 | YUNG's Better Jungle Temples | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-jungle-temples) | `YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar` |
