@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 104.
+Всего модов: 101.
 
 ## Create и его аддоны
 
@@ -59,7 +59,6 @@
 | Farmer's Delight | `both` | [Modrinth](https://modrinth.com/mod/farmers-delight) | `FarmersDelight-1.21.1-1.3.2.jar` |
 | Rechiseled | `both` | [Modrinth](https://modrinth.com/mod/rechiseled) | `rechiseled-1.2.4-neoforge-mc1.21.jar` |
 | Super Bosses | `server` | [Modrinth](https://modrinth.com/mod/super-bosses) | `superbosses-2.0.0-1.21.1.jar` |
-| Supplementaries | `both` | [Modrinth](https://modrinth.com/mod/supplementaries) | `supplementaries-neoforge-1.21.1-3.6.8.jar` |
 
 ## Генерация мира и структуры
 
@@ -67,7 +66,6 @@
 | --- | --- | --- | --- |
 | ATi Structures | `both` | [Modrinth](https://modrinth.com/datapack/ati-structures-fabricforge) | `ATi Structures V1.4.4 (1.21+).jar` |
 | Create: Dynamic Village | `both` | [Modrinth](https://modrinth.com/mod/dynamic-village) | `dynamicvillage-v0.5.1-1.21.1.jar` |
-| Create: Easy Structures | `both` | [Modrinth](https://modrinth.com/mod/create-easy-structures) | `create_easy_structures-0.2a-neoforge-1.21.1.jar` |
 | Create: Let The Adventure Begin | `both` | [Modrinth](https://modrinth.com/mod/create-let-the-adventure-begin) | `create_ltab-4.0.2.jar` |
 | Create: Rustic Structures | `both` | [Modrinth](https://modrinth.com/mod/create-rustic-structures) | `create_rustic_structures-1.0.1-neoforge-1.21.1.jar` |
 | Create: Structures Arise | `both` | [Modrinth](https://modrinth.com/mod/create-structures-arise) | `create_structures_arise-176.49.48 NeoForge 1.21.1.jar` |
@@ -120,7 +118,6 @@
 | Kotlin for Forge | `both` | [Modrinth](https://modrinth.com/mod/kotlin-for-forge) | `kotlinforforge-5.11.0-all.jar` |
 | LDLib | `both` | [Modrinth](https://modrinth.com/mod/ldlib) | `ldlib2-neoforge-1.21.1-2.2.20-all.jar` |
 | MidnightLib | `both` | [Modrinth](https://modrinth.com/mod/midnightlib) | `midnightlib-neoforge-1.9.3+1.21.1.jar` |
-| Moonlight Lib | `both` | [Modrinth](https://modrinth.com/mod/moonlight) | `moonlight-neoforge-1.21.1-3.0.18.jar` |
 | Ritchie's Projectile Library | `both` | [Modrinth](https://modrinth.com/mod/rpl) | `ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar` |
 | SuperMartijn642's Config Lib | `both` | [Modrinth](https://modrinth.com/mod/supermartijn642s-config-lib) | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` |
 | SuperMartijn642's Core Lib | `both` | [Modrinth](https://modrinth.com/mod/supermartijn642s-core-lib) | `supermartijn642corelib-1.1.21-neoforge-mc1.21.jar` |
