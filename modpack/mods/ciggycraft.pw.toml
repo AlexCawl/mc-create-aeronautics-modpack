@@ -1,0 +1,13 @@
+name = "Ciggycraft"
+filename = "ciggycraft-1.0.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/EqIpFduf/versions/9FEo8baS/ciggycraft-1.0.3.jar"
+hash-format = "sha512"
+hash = "ef0951d6cb7ab82f8faa47d428bc9ceba51a5c15d479a75a1ffc689e909d02497ec7997a83010f1f3b2fd6ec2a19f3c2609d66c230ce0fe7ab9a1714ec20139e"
+
+[update]
+[update.modrinth]
+mod-id = "EqIpFduf"
+version = "9FEo8baS"

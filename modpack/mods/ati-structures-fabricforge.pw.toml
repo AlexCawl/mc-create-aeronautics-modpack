@@ -1,0 +1,13 @@
+name = "ATi Structures"
+filename = "ATi Structures V1.4.4 (1.21+).jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/bii8qPSt/versions/aZbh5lAA/ATi%20Structures%20V1.4.4%20%281.21%2B%29.jar"
+hash-format = "sha512"
+hash = "bfaf66de064ac8d309950eee180bed58e668c2b77af0ba0484565f797a884fa6b7466568dddbe16498c7763e904f71ae006b0545c3bbe2862b243394f1f3a154"
+
+[update]
+[update.modrinth]
+mod-id = "bii8qPSt"
+version = "aZbh5lAA"

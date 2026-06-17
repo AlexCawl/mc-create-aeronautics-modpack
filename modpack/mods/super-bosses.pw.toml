@@ -1,0 +1,13 @@
+name = "Super Bosses"
+filename = "superbosses-2.0.0-1.21.1.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/PgsCak09/versions/8cKWzYtr/superbosses-2.0.0-1.21.1.jar"
+hash-format = "sha512"
+hash = "0050d44be4236715de0188ce9ab026fbfd04445732087663837c7c6e9e0a35c1c53ac707717d924b98112d1516c7963808d98ff52ed0b9f9bbf19170882a62f3"
+
+[update]
+[update.modrinth]
+mod-id = "PgsCak09"
+version = "8cKWzYtr"
