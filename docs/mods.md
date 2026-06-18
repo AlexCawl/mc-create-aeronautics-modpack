@@ -19,7 +19,7 @@
 | Create Stuff 'N Additions | `both` | [Modrinth](https://modrinth.com/mod/create-stuff-additions) | `create-stuff-additions1.21.1_v2.1.3.jar` |
 | Create: Bells & Whistles | `both` | [Modrinth](https://modrinth.com/mod/bellsandwhistles) | `bellsandwhistles-0.4.7-1.21.1.jar` |
 | Create: Connected | `both` | [Modrinth](https://modrinth.com/mod/create-connected) | `create_connected-1.2.2-mc1.21.1.jar` |
-| Create: Copper & Zinc | `both` | [Modrinth](https://modrinth.com/mod/create-copper-zinc) | `create_copper_and_zinc-2.0.0-neoforge-1.21.1.jar` |
+| Create Crafts & Additions | `both` | [Modrinth](https://modrinth.com/mod/createaddition) | `createaddition-1.6.0.jar` |
 | Create: Copycats+ | `both` | [Modrinth](https://modrinth.com/mod/copycats) | `copycats-3.0.4+mc.1.21.1-neoforge.jar` |
 | Create: Diesel Generators | `both` | [Modrinth](https://modrinth.com/mod/create-diesel-generators) | `createdieselgenerators-1.21.1-1.3.13.jar` |
 | Create: Dragons Plus | `both` | [Modrinth](https://modrinth.com/mod/create-dragons-plus) | `CreateDragonsPlus-1.11.2b.jar` |
