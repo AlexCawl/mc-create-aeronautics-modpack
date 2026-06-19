@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 100.
+Всего модов: 108.
 
 ## Create и его аддоны
 
@@ -18,15 +18,18 @@
 | Create Slice & Dice | `both` | [Modrinth](https://modrinth.com/mod/slice-and-dice) | `sliceanddice-forge-4.2.4.jar` |
 | Create Stuff 'N Additions | `both` | [Modrinth](https://modrinth.com/mod/create-stuff-additions) | `create-stuff-additions1.21.1_v2.1.3.jar` |
 | Create: Bells & Whistles | `both` | [Modrinth](https://modrinth.com/mod/bellsandwhistles) | `bellsandwhistles-0.4.7-1.21.1.jar` |
+| Create: Central Kitchen | `both` | [Modrinth](https://modrinth.com/mod/create-central-kitchen) | `create-central-kitchen-2.5.0.jar` |
 | Create: Connected | `both` | [Modrinth](https://modrinth.com/mod/create-connected) | `create_connected-1.2.2-mc1.21.1.jar` |
 | Create Crafts & Additions | `both` | [Modrinth](https://modrinth.com/mod/createaddition) | `createaddition-1.6.0.jar` |
 | Create: Copycats+ | `both` | [Modrinth](https://modrinth.com/mod/copycats) | `copycats-3.0.4+mc.1.21.1-neoforge.jar` |
 | Create: Diesel Generators | `both` | [Modrinth](https://modrinth.com/mod/create-diesel-generators) | `createdieselgenerators-1.21.1-1.3.13.jar` |
 | Create: Dragons Plus | `both` | [Modrinth](https://modrinth.com/mod/create-dragons-plus) | `CreateDragonsPlus-1.11.2b.jar` |
+| Create: Dynamic Lights | `both` | [Modrinth](https://modrinth.com/mod/create-dynamic-lights) | `create-dyn-light-forge-1.21.1-2.0.1.jar` |
 | Create: Enchantment Industry | `both` | [Modrinth](https://modrinth.com/mod/create-enchantment-industry) | `create-enchantment-industry-2.4.2.jar` |
 | Create: Fluid | `both` | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-fluid) | `fluid-2.1.3.jar` |
 | Create: Food | `both` | [Modrinth](https://modrinth.com/mod/create-food) | `createfood-neoforge-1.21.1-2.5.0.jar` |
 | Create: Fuel & Water Information | `both` | [Modrinth](https://modrinth.com/mod/create-fuel-water-information) | `cfwinfo-1.9.0.jar` |
+| Create: Integrated Farming | `both` | [Modrinth](https://modrinth.com/mod/create-integrated-farming) | `create-integrated-farming-1.2.6.jar` |
 | Create: Tradeworks | `both` | [Modrinth](https://modrinth.com/mod/tradeworks) | `tradeworks-1.0.7.jar` |
 | Frequency Create | `both` | [Modrinth](https://modrinth.com/mod/frequency-create) | `frequency-1.21.1-neoforge-0.1.5.jar` |
 | Rechiseled: Create | `both` | [Modrinth](https://modrinth.com/mod/rechiseled-create) | `rechiseledcreate-1.1.0-neoforge-mc1.21.jar` |
@@ -71,6 +74,7 @@
 | Create: Structures Arise | `both` | [Modrinth](https://modrinth.com/mod/create-structures-arise) | `create_structures_arise-176.49.48 NeoForge 1.21.1.jar` |
 | Geophilic | `both` | [Modrinth](https://modrinth.com/datapack/geophilic) | `Geophilic v3.6.mod.jar` |
 | Lithosphere | `both` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
+| Tidal Towns | `both` | [Modrinth](https://modrinth.com/datapack/tidal-towns) | `tidal-towns-1.3.4.jar` |
 | Underwater Village | `both` | [Modrinth](https://modrinth.com/mod/underwater-village) | `underwater_village-1.0.2-neoforge-1.21.1.jar` |
 | YUNG's Better Dungeons | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-dungeons) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` |
 | YUNG's Better Jungle Temples | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-jungle-temples) | `YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar` |
@@ -102,6 +106,9 @@
 | --- | --- | --- | --- |
 | Create: Nowheel | `client` | [Modrinth](https://modrinth.com/mod/create-nowheel) | `nowheel-1.0.6+1.21.1neoforge.jar` |
 | Entity Culling | `client` | [Modrinth](https://modrinth.com/mod/entityculling) | `entityculling-neoforge-1.10.3-mc1.21.1.jar` |
+| Sodium | `client` | [Modrinth](https://modrinth.com/mod/sodium) | `sodium-neoforge-0.8.12-beta.1+mc1.21.1.jar` |
+| Sodium Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/sodium-dynamic-lights) | `sodiumdynamiclights-neoforge-1.0.10-1.21.1.jar` |
+| Sodium Extra | `client` | [Modrinth](https://modrinth.com/mod/sodium-extra) | `sodium-extra-neoforge-0.8.7+mc1.21.1.jar` |
 
 ## Библиотеки
 
@@ -135,6 +142,7 @@
 | Jade Addons (Neo/Forge) | `both` | [Modrinth](https://modrinth.com/mod/jade-addons-forge) | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Just Enough Items | `both` | [Modrinth](https://modrinth.com/mod/jei) | `jei-1.21.1-neoforge-19.27.0.340.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.9+1.21.1.jar` |
+| Ok Zoomer - It's Zoom! | `client` | [Modrinth](https://modrinth.com/mod/ok-zoomer) | `ok_zoomer-neo-10.0.0-beta.13.jar` |
 | Polymorph | `both` | [Modrinth](https://modrinth.com/mod/polymorph) | `polymorph-neoforge-1.1.0+1.21.1.jar` |
 | Simple Voice Chat | `both` | [Modrinth](https://modrinth.com/mod/simple-voice-chat) | `voicechat-neoforge-1.21.1-2.6.18.jar` |
 | Traveler's Backpack | `both` | [Modrinth](https://modrinth.com/mod/travelersbackpack) | `travelersbackpack-neoforge-1.21.1-10.1.36.jar` |
