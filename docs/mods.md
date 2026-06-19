@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 110.
+Всего модов: 108.
 
 ## Create и его аддоны
 
@@ -107,8 +107,6 @@
 | --- | --- | --- | --- |
 | Create: Nowheel | `client` | [Modrinth](https://modrinth.com/mod/create-nowheel) | `nowheel-1.0.6+1.21.1neoforge.jar` |
 | Entity Culling | `client` | [Modrinth](https://modrinth.com/mod/entityculling) | `entityculling-neoforge-1.10.3-mc1.21.1.jar` |
-| Sodium | `client` | [Modrinth](https://modrinth.com/mod/sodium) | `sodium-neoforge-0.8.12-beta.1+mc1.21.1.jar` |
-| Sodium Extra | `client` | [Modrinth](https://modrinth.com/mod/sodium-extra) | `sodium-extra-neoforge-0.8.7+mc1.21.1.jar` |
 
 ## Библиотеки
 
