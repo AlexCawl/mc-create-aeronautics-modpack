@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 112.
+Всего модов: 111.
 
 ## Create и его аддоны
 
@@ -144,7 +144,6 @@
 | Jade 🔍 | `both` | [Modrinth](https://modrinth.com/mod/jade) | `Jade-1.21.1-NeoForge-15.10.5.jar` |
 | Jade Addons (Neo/Forge) | `both` | [Modrinth](https://modrinth.com/mod/jade-addons-forge) | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Just Enough Items | `both` | [Modrinth](https://modrinth.com/mod/jei) | `jei-1.21.1-neoforge-19.27.0.340.jar` |
-| LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.9+1.21.1.jar` |
 | Ok Zoomer - It's Zoom! | `client` | [Modrinth](https://modrinth.com/mod/ok-zoomer) | `ok_zoomer-neo-10.0.0-beta.13.jar` |
 | Polymorph | `both` | [Modrinth](https://modrinth.com/mod/polymorph) | `polymorph-neoforge-1.1.0+1.21.1.jar` |
 | Simple Voice Chat | `both` | [Modrinth](https://modrinth.com/mod/simple-voice-chat) | `voicechat-neoforge-1.21.1-2.6.18.jar` |
