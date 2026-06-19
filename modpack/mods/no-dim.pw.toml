@@ -1,0 +1,13 @@
+name = "NoDim"
+filename = "NoDim-1.3.1.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/PL5F9WAX/versions/wYxh2VyA/NoDim-1.3.1.jar"
+hash-format = "sha512"
+hash = "5084a7ce43f47f26c0588e6c98ed8f8d4d5559becc3b5989a087a749ca76ec273c0cf2135195263d7dfdc584fbaac22668fa64b62224c40acc856d79d3a252a9"
+
+[update]
+[update.modrinth]
+mod-id = "PL5F9WAX"
+version = "wYxh2VyA"
