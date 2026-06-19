@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 110.
+Всего модов: 113.
 
 ## Create и его аддоны
 
@@ -71,12 +71,13 @@
 | ATi Structures | `server` | [Modrinth](https://modrinth.com/datapack/ati-structures-fabricforge) | `ATi Structures V1.4.4 (1.21+).jar` |
 | Create: Dynamic Village | `both` | [Modrinth](https://modrinth.com/mod/dynamic-village) | `dynamicvillage-v0.5.1-1.21.1.jar` |
 | Create: Let The Adventure Begin | `server` | [Modrinth](https://modrinth.com/mod/create-let-the-adventure-begin) | `create_ltab-4.0.2.jar` |
+| Create: Rustic Structures | `both` | [Modrinth](https://modrinth.com/mod/create-rustic-structures) | `create_rustic_structures-1.0.1-neoforge-1.21.1.jar` |
 | Create: Structures Arise | `both` | [Modrinth](https://modrinth.com/mod/create-structures-arise) | `create_structures_arise-176.49.48 NeoForge 1.21.1.jar` |
 | Geophilic | `server` | [Modrinth](https://modrinth.com/datapack/geophilic) | `Geophilic v3.6.mod.jar` |
 | Lithosphere | `server` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
+| Sunken Spires | `server` | [Modrinth](https://modrinth.com/mod/sunken-spires) | `sunken-spires-1.0.jar` |
 | Tidal Towns | `server` | [Modrinth](https://modrinth.com/datapack/tidal-towns) | `tidal-towns-1.3.4.jar` |
 | Towns and Towers | `server` | [Modrinth](https://modrinth.com/mod/towns-and-towers) | `t_and_t-neoforge-fabric-1.13.9+1.21.1.jar` |
-| Underwater Village | `both` | [Modrinth](https://modrinth.com/mod/underwater-village) | `underwater_village-1.0.2-neoforge-1.21.1.jar` |
 | YUNG's Better Dungeons | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-dungeons) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` |
 | YUNG's Better Jungle Temples | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-jungle-temples) | `YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar` |
 | YUNG's Better Mineshafts | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-mineshafts) | `YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar` |
@@ -115,6 +116,7 @@
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
+| Access Denied API | `both` | [Modrinth](https://modrinth.com/mod/access-denied-api) | `access_denied_api-neoforge-1.21.1-1.0.1.jar` |
 | Architectury API | `both` | [Modrinth](https://modrinth.com/mod/architectury-api) | `architectury-13.0.8-neoforge.jar` |
 | Configurable | `both` | [Modrinth](https://modrinth.com/mod/configurable) | `configurable-3.5.1+1.21.1-neoforge.jar` |
 | Create: Deployer API | `both` | [Modrinth](https://modrinth.com/mod/deployer) | `deployer-0.1.2.jar` |
@@ -154,6 +156,7 @@
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
+| Access Denied | `both` | [Modrinth](https://modrinth.com/mod/accessdenied) | `access_denied-neoforge-1.21.1.jar` |
 | AutoModpack | `both` | [Modrinth](https://modrinth.com/mod/automodpack) | `automodpack-mc1.21.1-neoforge-4.0.5.jar` |
 | BlueMap | `server` | [Modrinth](https://modrinth.com/mod/bluemap) | `bluemap-5.7-neoforge.jar` |
 | Distant Horizons | `both` | [Modrinth](https://modrinth.com/mod/distanthorizons) | `DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar` |

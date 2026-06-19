@@ -1,6 +1,16 @@
 hash-format = "sha256"
 
 [[files]]
+file = "mods/access-denied-api.pw.toml"
+hash = "bb025d63fd734e1c3859d3cd8cbf077ff9e5d9baad41fba7121d601b2f114bca"
+metafile = true
+
+[[files]]
+file = "mods/accessdenied.pw.toml"
+hash = "eeaa1c8a20e00675ddc1c8adad9f42cda71e135a536f368403dd0953b31ee0b5"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "716d930feff599bf9ce732e05979fbae8025dc8a3c13ccf4f1cb207a70883bc6"
 metafile = true
@@ -193,6 +203,11 @@ metafile = true
 [[files]]
 file = "mods/create-radars.pw.toml"
 hash = "c24712eb82bb29d7ed210d7bc175baeb3b022c3b365b2dd0275c25f690e98f52"
+metafile = true
+
+[[files]]
+file = "mods/create-rustic-structures.pw.toml"
+hash = "ee564898ada12be2660c3ece6a7433f46c13983cb183549310209116cb54742b"
 metafile = true
 
 [[files]]
@@ -456,6 +471,11 @@ hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
 
 [[files]]
+file = "mods/sunken-spires.pw.toml"
+hash = "45b5b3b45e1b601e814b01c6622ba806aa1c8aad20f3ef047d47f4259ffea9e0"
+metafile = true
+
+[[files]]
 file = "mods/super-bosses.pw.toml"
 hash = "3c7e0a74291f309a53e3b2377a23c68f3d9405223157e17f18fe957266b13bf1"
 metafile = true
@@ -493,11 +513,6 @@ metafile = true
 [[files]]
 file = "mods/travelersbackpack.pw.toml"
 hash = "51792be52a28307d13f582e7791add6d5974a9fc18ad2679f715c3ab10a9bc8b"
-metafile = true
-
-[[files]]
-file = "mods/underwater-village.pw.toml"
-hash = "183b6911813421c59df2de77ae810a0c188ea8d6b5d4e465ff19859b900ebbf5"
 metafile = true
 
 [[files]]
