@@ -1,6 +1,6 @@
 name = "Create: Let The Adventure Begin"
 filename = "create_ltab-4.0.2.jar"
-side = "both"
+side = "server"
 
 [download]
 url = "https://cdn.modrinth.com/data/fUa6OtBG/versions/d3YuJ3s8/create_ltab-4.0.2.jar"

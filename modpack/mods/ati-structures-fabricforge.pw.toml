@@ -1,6 +1,6 @@
 name = "ATi Structures"
 filename = "ATi Structures V1.4.4 (1.21+).jar"
-side = "both"
+side = "server"
 
 [download]
 url = "https://cdn.modrinth.com/data/bii8qPSt/versions/aZbh5lAA/ATi%20Structures%20V1.4.4%20%281.21%2B%29.jar"

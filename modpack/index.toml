@@ -17,7 +17,7 @@ metafile = true
 
 [[files]]
 file = "mods/ati-structures-fabricforge.pw.toml"
-hash = "72ce4810423882d95b2cddd83039138e3c99889df0d1f7c252ba8ea090c94ea4"
+hash = "c3edeeec5c989ec57da84b46e3ba2b5d61fadcb142b9e3b3d4972746ce802f4c"
 metafile = true
 
 [[files]]
@@ -177,7 +177,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-let-the-adventure-begin.pw.toml"
-hash = "56954613096032cd272743122888506895a283615b82e22135e8f9608332c080"
+hash = "06043af0f2c0570bfbaf83cd6ae049ed107a5aaa1653146639690f9060982cde"
 metafile = true
 
 [[files]]
@@ -297,7 +297,7 @@ metafile = true
 
 [[files]]
 file = "mods/geophilic.pw.toml"
-hash = "e56f8bbfe55aa00d09e341913cba870fb6218fba8df4a136f2443705982bce1f"
+hash = "571e910607bd945d3fb7e1905a453fa9fd59777d8e5b3dcd2a6f994a2c22cfb5"
 metafile = true
 
 [[files]]
@@ -352,7 +352,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithosphere.pw.toml"
-hash = "337093b94742d334ad349d4fbfe1b74a9b885784ac6d43432896b3dc527260a9"
+hash = "c9d6e6d5fce0e5dd576410037ea87a9fccb4eaf67ca26c4691523912bc36cd61"
 metafile = true
 
 [[files]]
@@ -477,7 +477,12 @@ metafile = true
 
 [[files]]
 file = "mods/tidal-towns.pw.toml"
-hash = "0ccb1c696758d7935d02dd5160987cab8d3594ab24f89deb01c28f9e596094e7"
+hash = "acedf6b7dbf358351a251cd630e691750890753847819f4139312dcef6b1a6f1"
+metafile = true
+
+[[files]]
+file = "mods/towns-and-towers.pw.toml"
+hash = "229643443b0ac5e183d987eab58f44fa6f63674c179dcd9255dc38c3e5dc61d1"
 metafile = true
 
 [[files]]

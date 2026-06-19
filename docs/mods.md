@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 109.
+Всего модов: 110.
 
 ## Create и его аддоны
 
@@ -68,13 +68,14 @@
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
-| ATi Structures | `both` | [Modrinth](https://modrinth.com/datapack/ati-structures-fabricforge) | `ATi Structures V1.4.4 (1.21+).jar` |
+| ATi Structures | `server` | [Modrinth](https://modrinth.com/datapack/ati-structures-fabricforge) | `ATi Structures V1.4.4 (1.21+).jar` |
 | Create: Dynamic Village | `both` | [Modrinth](https://modrinth.com/mod/dynamic-village) | `dynamicvillage-v0.5.1-1.21.1.jar` |
-| Create: Let The Adventure Begin | `both` | [Modrinth](https://modrinth.com/mod/create-let-the-adventure-begin) | `create_ltab-4.0.2.jar` |
+| Create: Let The Adventure Begin | `server` | [Modrinth](https://modrinth.com/mod/create-let-the-adventure-begin) | `create_ltab-4.0.2.jar` |
 | Create: Structures Arise | `both` | [Modrinth](https://modrinth.com/mod/create-structures-arise) | `create_structures_arise-176.49.48 NeoForge 1.21.1.jar` |
-| Geophilic | `both` | [Modrinth](https://modrinth.com/datapack/geophilic) | `Geophilic v3.6.mod.jar` |
-| Lithosphere | `both` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
-| Tidal Towns | `both` | [Modrinth](https://modrinth.com/datapack/tidal-towns) | `tidal-towns-1.3.4.jar` |
+| Geophilic | `server` | [Modrinth](https://modrinth.com/datapack/geophilic) | `Geophilic v3.6.mod.jar` |
+| Lithosphere | `server` | [Modrinth](https://modrinth.com/mod/lithosphere) | `lithosphere-1.7.jar` |
+| Tidal Towns | `server` | [Modrinth](https://modrinth.com/datapack/tidal-towns) | `tidal-towns-1.3.4.jar` |
+| Towns and Towers | `server` | [Modrinth](https://modrinth.com/mod/towns-and-towers) | `t_and_t-neoforge-fabric-1.13.9+1.21.1.jar` |
 | Underwater Village | `both` | [Modrinth](https://modrinth.com/mod/underwater-village) | `underwater_village-1.0.2-neoforge-1.21.1.jar` |
 | YUNG's Better Dungeons | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-dungeons) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` |
 | YUNG's Better Jungle Temples | `server` | [Modrinth](https://modrinth.com/mod/yungs-better-jungle-temples) | `YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar` |
