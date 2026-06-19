@@ -391,11 +391,6 @@ hash = "8995c7dc69d3be56300278059e8ad5779050d3f1dadc341f069ecb401aa6c757"
 metafile = true
 
 [[files]]
-file = "mods/no-dim.pw.toml"
-hash = "2cdf00138f780d7969969d09998a997a753ec643ffedce3f1fadc1a04af01494"
-metafile = true
-
-[[files]]
 file = "mods/ok-zoomer.pw.toml"
 hash = "413494b5ba534461e22545173a8cc6e98b04962a0ee9514498b830b99d4acabe"
 metafile = true

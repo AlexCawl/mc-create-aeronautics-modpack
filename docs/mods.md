@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 113.
+Всего модов: 112.
 
 ## Create и его аддоны
 
@@ -160,6 +160,5 @@
 | AutoModpack | `both` | [Modrinth](https://modrinth.com/mod/automodpack) | `automodpack-mc1.21.1-neoforge-4.0.5.jar` |
 | BlueMap | `server` | [Modrinth](https://modrinth.com/mod/bluemap) | `bluemap-5.7-neoforge.jar` |
 | Distant Horizons | `both` | [Modrinth](https://modrinth.com/mod/distanthorizons) | `DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar` |
-| NoDim | `server` | [Modrinth](https://modrinth.com/plugin/no-dim) | `NoDim-1.3.1.jar` |
 | Prometheus Exporter | `server` | [GitHub](https://github.com/cpburnz/minecraft-prometheus-exporter) | `Prometheus-Exporter-1.21.1-neoforge-1.2.1.jar` |
 | vanutp's Telegram Bridge | `server` | [Modrinth](https://modrinth.com/mod/tgbridge) | `tgbridge-0.9.8-neoforge-1.21.jar` |
