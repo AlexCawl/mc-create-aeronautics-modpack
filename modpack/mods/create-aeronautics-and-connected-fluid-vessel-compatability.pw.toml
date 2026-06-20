@@ -1,0 +1,13 @@
+name = "Create Aeronautics and Connected Fluid Vessel Compatability"
+filename = "aeroconnectedfluidvessel-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/59EBKVqI/versions/IAyRzWB7/aeroconnectedfluidvessel-1.0.0.jar"
+hash-format = "sha512"
+hash = "c3e509644350e7028d5c6be057925f793cea5a16086d8896d21fc2fabe20a851286ee40dbf02503466fc5c8a17fb01b445e28f7dea006a22f6e8b1dd495b9ae7"
+
+[update]
+[update.modrinth]
+mod-id = "59EBKVqI"
+version = "IAyRzWB7"

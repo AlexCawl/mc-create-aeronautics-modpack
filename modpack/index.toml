@@ -62,7 +62,12 @@ metafile = true
 
 [[files]]
 file = "mods/chunky.pw.toml"
-hash = "1d5cc2b6dcfd1fc3adba4566b1c29b57ff1175316678c1f22e63cbc3e28a5ba0"
+hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
+metafile = true
+
+[[files]]
+file = "mods/chunkyborder.pw.toml"
+hash = "a850e8ecd6c32480b8369db9823af1ac200e62a8662b43c58ebb740cdac66387"
 metafile = true
 
 [[files]]
@@ -93,6 +98,11 @@ metafile = true
 [[files]]
 file = "mods/copycats.pw.toml"
 hash = "e002fab16a9b9ef0a35844030339612a38d3c58b0b93e97a34eb43ddc9108be7"
+metafile = true
+
+[[files]]
+file = "mods/create-aeronautics-and-connected-fluid-vessel-compatability.pw.toml"
+hash = "1b8faf01f728f9057496f0dbec4222b8d174854caaf67a5c03ce5e75f8964e20"
 metafile = true
 
 [[files]]
@@ -138,6 +148,11 @@ metafile = true
 [[files]]
 file = "mods/create-connected.pw.toml"
 hash = "19f3a244bf8ffca1aa53621524681f98c680e8395323e7fa50c93169a6851a74"
+metafile = true
+
+[[files]]
+file = "mods/create-crafts-additions-and-aeronautics-compat.pw.toml"
+hash = "a61af43db4bdd4f0d3567f50e33203abbf1d9e1f3c8c90b5c42dcd8b0686ca94"
 metafile = true
 
 [[files]]
@@ -223,6 +238,11 @@ metafile = true
 [[files]]
 file = "mods/create-stuff-additions.pw.toml"
 hash = "5d7c434f746d615ea78adfdc4ba6e96452c93b2a68dc939c2ff3611a061e0b21"
+metafile = true
+
+[[files]]
+file = "mods/create-stuff-n-additions-x-sable-aeronautics-compat.pw.toml"
+hash = "3124ff7b0beddb44ec981a35a149ced3e6a29f84b72a01a1d088932d61bdbdbb"
 metafile = true
 
 [[files]]
@@ -328,6 +348,11 @@ metafile = true
 [[files]]
 file = "mods/jade-addons-forge.pw.toml"
 hash = "8cd8400cb4e2c5ba60c8a359a7b6ff501078d2056eab0aba7f6b0ac77b7a0694"
+metafile = true
+
+[[files]]
+file = "mods/jade-sable-compat.pw.toml"
+hash = "9728776375b66d2b4a450238373072873ed0e50596e95fca857368726f38ecb3"
 metafile = true
 
 [[files]]
@@ -448,11 +473,6 @@ metafile = true
 [[files]]
 file = "mods/sunken-spires.pw.toml"
 hash = "45b5b3b45e1b601e814b01c6622ba806aa1c8aad20f3ef047d47f4259ffea9e0"
-metafile = true
-
-[[files]]
-file = "mods/super-bosses.pw.toml"
-hash = "3c7e0a74291f309a53e3b2377a23c68f3d9405223157e17f18fe957266b13bf1"
 metafile = true
 
 [[files]]

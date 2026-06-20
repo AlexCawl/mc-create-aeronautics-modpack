@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 108.
+Всего модов: 112.
 
 ## Create и его аддоны
 
@@ -40,14 +40,18 @@
 | --- | --- | --- | --- |
 | Copycats+ aeronautics weight | `both` | [Modrinth](https://modrinth.com/mod/copycats+-aeronautics-weight) | `aerocopycats-1.1.1.jar` |
 | Create Aeronautics | `both` | [Modrinth](https://modrinth.com/mod/create-aeronautics) | `create-aeronautics-bundled-1.21.1-1.3.0.jar` |
+| Create Aeronautics and Connected Fluid Vessel Compatability | `both` | [Modrinth](https://modrinth.com/mod/create-aeronautics-and-connected-fluid-vessel-compatability) | `aeroconnectedfluidvessel-1.0.0.jar` |
 | Create Aeronautics: Rechiseled Compatibility | `server` | [Modrinth](https://modrinth.com/mod/create-aeronautics-rechiseled-compatibility) | `create-aeronautics-rechiseled-compat-1.21.1-1.2.2.jar` |
+| Create: Crafts & Additions and Aeronautics Compat | `server` | [Modrinth](https://modrinth.com/mod/create-crafts-additions-and-aeronautics-compat) | `aeroadditionbridge-1.0.0.jar` |
 | Create Propulsion: Simulated | `both` | [Modrinth](https://modrinth.com/mod/create-propulsion-simulated) | `createpropulsion-1.1.4.jar` |
 | Create Simulated Additions | `both` | [Modrinth](https://modrinth.com/mod/create-simulated-additions) | `create_simulated_additions-0.2.3-neoforge-1.21.1.jar` |
+| Create Stuff 'N Additions x Sable & Aeronautics Compat | `both` | [Modrinth](https://modrinth.com/mod/create-stuff-n-additions-x-sable-aeronautics-compat) | `SableStuffAdditionsCompat v1.0.3-1.21.1.jar` |
 | Create: Aeroworks | `both` | [Modrinth](https://modrinth.com/mod/create-aeroworks) | `aeroworks-1.2.11.jar` |
 | Create: Avionics — ComputerCraft for Aeronautics | `both` | [Modrinth](https://modrinth.com/mod/create-avionics) | `create_avionics-neoforge-1.21.1-0.5.1.jar` |
 | Create: Radars | `both` | [Modrinth](https://modrinth.com/mod/create-radars) | `create_radar-0.4.9.4-1.21.1.jar` |
 | Drive-By-Wire with Sable | `both` | [Modrinth](https://modrinth.com/mod/drive-by-wire-sable) | `drivebywire-0.2.9.jar` |
 | Gravestone and Sable Compatibility Patch | `both` | [Modrinth](https://modrinth.com/mod/gravestone-and-sable-compatibility-patch) | `gravestone_sable_compat-1.0.0.jar` |
+| Jade Sable Compat | `client` | [Modrinth](https://modrinth.com/mod/jade-sable-compat) | `sablejade-1.2.1.jar` |
 | Sable | `both` | [Modrinth](https://modrinth.com/mod/sable) | `sable-neoforge-1.21.1-2.0.2.jar` |
 
 ## Контент
@@ -61,7 +65,6 @@
 | Farmer's Delight | `both` | [Modrinth](https://modrinth.com/mod/farmers-delight) | `FarmersDelight-1.21.1-1.3.2.jar` |
 | Hostile Mobs Improve Over Time | `both` | [Modrinth](https://modrinth.com/datapack/hostile-mobs-improve-over-time) | `hostile-mobs-improve-over-time-1.10.1b.jar` |
 | Rechiseled | `both` | [Modrinth](https://modrinth.com/mod/rechiseled) | `rechiseled-1.2.4-neoforge-mc1.21.jar` |
-| Super Bosses | `server` | [Modrinth](https://modrinth.com/mod/super-bosses) | `superbosses-2.0.0-1.21.1.jar` |
 
 ## Генерация мира и структуры
 
@@ -89,7 +92,8 @@
 
 | Мод | Сторона | Источник | Файл |
 | --- | --- | --- | --- |
-| Chunky | `both` | [Modrinth](https://modrinth.com/plugin/chunky) | `Chunky-NeoForge-1.4.23.jar` |
+| Chunky | `server` | [Modrinth](https://modrinth.com/plugin/chunky) | `Chunky-NeoForge-1.4.23.jar` |
+| Chunky Border | `server` | [Modrinth](https://modrinth.com/plugin/chunkyborder) | `ChunkyBorder-1.2.18.jar` |
 | Clumps | `both` | [Modrinth](https://modrinth.com/mod/clumps) | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
 | Concurrent Chunk Management Engine (NeoForge) | `both` | [Modrinth](https://modrinth.com/mod/c2me-neoforge) | `c2me-neoforge-mc1.21.1-0.3.0+alpha.0.93.jar` |
 | FerriteCore | `both` | [Modrinth](https://modrinth.com/mod/ferrite-core) | `ferritecore-7.0.3-neoforge.jar` |
