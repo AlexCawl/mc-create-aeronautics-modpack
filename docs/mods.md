@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 112.
+Всего модов: 109.
 
 ## Create и его аддоны
 
@@ -51,7 +51,6 @@
 | Create: Radars | `both` | [Modrinth](https://modrinth.com/mod/create-radars) | `create_radar-0.4.9.4-1.21.1.jar` |
 | Drive-By-Wire with Sable | `both` | [Modrinth](https://modrinth.com/mod/drive-by-wire-sable) | `drivebywire-0.2.9.jar` |
 | Gravestone and Sable Compatibility Patch | `both` | [Modrinth](https://modrinth.com/mod/gravestone-and-sable-compatibility-patch) | `gravestone_sable_compat-1.0.0.jar` |
-| Jade Sable Compat | `client` | [Modrinth](https://modrinth.com/mod/jade-sable-compat) | `sablejade-1.2.1.jar` |
 | Sable | `both` | [Modrinth](https://modrinth.com/mod/sable) | `sable-neoforge-1.21.1-2.0.2.jar` |
 
 ## Контент
@@ -94,16 +93,16 @@
 | --- | --- | --- | --- |
 | Chunky | `server` | [Modrinth](https://modrinth.com/plugin/chunky) | `Chunky-NeoForge-1.4.23.jar` |
 | Chunky Border | `server` | [Modrinth](https://modrinth.com/plugin/chunkyborder) | `ChunkyBorder-1.2.18.jar` |
-| Clumps | `both` | [Modrinth](https://modrinth.com/mod/clumps) | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
-| Concurrent Chunk Management Engine (NeoForge) | `both` | [Modrinth](https://modrinth.com/mod/c2me-neoforge) | `c2me-neoforge-mc1.21.1-0.3.0+alpha.0.93.jar` |
+| Clumps | `server` | [Modrinth](https://modrinth.com/mod/clumps) | `Clumps-neoforge-1.21.1-19.0.0.1.jar` |
+| Concurrent Chunk Management Engine (NeoForge) | `server` | [Modrinth](https://modrinth.com/mod/c2me-neoforge) | `c2me-neoforge-mc1.21.1-0.3.0+alpha.0.93.jar` |
 | FerriteCore | `both` | [Modrinth](https://modrinth.com/mod/ferrite-core) | `ferritecore-7.0.3-neoforge.jar` |
-| Lithium | `both` | [Modrinth](https://modrinth.com/mod/lithium) | `lithium-neoforge-0.15.3+mc1.21.1.jar` |
+| Lithium | `server` | [Modrinth](https://modrinth.com/mod/lithium) | `lithium-neoforge-0.15.3+mc1.21.1.jar` |
 | Load My F***ing Tags | `server` | [Modrinth](https://modrinth.com/mod/lmft) | `lmft-1.1.1+1.21.9-neoforge.jar` |
 | ModernFix | `both` | [Modrinth](https://modrinth.com/mod/modernfix) | `modernfix-neoforge-5.27.14+mc1.21.1.jar` |
-| Neruina - Ticking Entity Fixer | `both` | [Modrinth](https://modrinth.com/mod/neruina) | `neruina-3.3.2+1.21.1-neoforge.jar` |
+| Neruina - Ticking Entity Fixer | `server` | [Modrinth](https://modrinth.com/mod/neruina) | `neruina-3.3.2+1.21.1-neoforge.jar` |
 | Packet Fixer | `both` | [Modrinth](https://modrinth.com/mod/packet-fixer) | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` |
 | ServerCore | `server` | [Modrinth](https://modrinth.com/mod/servercore) | `servercore-neoforge-1.5.17+1.21.1.jar` |
-| spark | `both` | [Modrinth](https://modrinth.com/mod/spark) | `spark-1.10.124-neoforge.jar` |
+| spark | `server` | [Modrinth](https://modrinth.com/mod/spark) | `spark-1.10.124-neoforge.jar` |
 
 ## Оптимизация клиента
 
@@ -141,8 +140,6 @@
 | Configured | `client` | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/configured) | `configured-neoforge-1.21.1-2.6.3.jar` |
 | Customizable Player Models | `both` | [Modrinth](https://modrinth.com/mod/custom-player-models) | `CustomPlayerModels-1.21-0.6.26a.jar` |
 | GraveStone Mod | `both` | [Modrinth](https://modrinth.com/mod/gravestone-mod) | `gravestone-neoforge-1.21.1-1.0.37.jar` |
-| Jade 🔍 | `both` | [Modrinth](https://modrinth.com/mod/jade) | `Jade-1.21.1-NeoForge-15.10.5.jar` |
-| Jade Addons (Neo/Forge) | `both` | [Modrinth](https://modrinth.com/mod/jade-addons-forge) | `JadeAddons-1.21.1-NeoForge-6.1.0.jar` |
 | Just Enough Items | `both` | [Modrinth](https://modrinth.com/mod/jei) | `jei-1.21.1-neoforge-19.27.0.340.jar` |
 | LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.9+1.21.1.jar` |
 | Ok Zoomer - It's Zoom! | `client` | [Modrinth](https://modrinth.com/mod/ok-zoomer) | `ok_zoomer-neo-10.0.0-beta.13.jar` |

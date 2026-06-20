@@ -47,7 +47,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-neoforge.pw.toml"
-hash = "17cf45aaab6d4964d4d851cfcbe4b5e6db539a2329216392bec4aea1c90b83a7"
+hash = "9bb8dcf147bcf9d9ceb0d7e3d94d5bf5613d97b2050748aad2ce9885fadb9a5a"
 metafile = true
 
 [[files]]
@@ -77,7 +77,7 @@ metafile = true
 
 [[files]]
 file = "mods/clumps.pw.toml"
-hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
+hash = "c7f15ebcab95f04c71940715f09ced4caad2775a91ef34389431f91bc1c7be71"
 metafile = true
 
 [[files]]
@@ -346,21 +346,6 @@ hash = "6221154a0872c156032adccca907d603fc3b35b757cd926ae6913adb12bed9cb"
 metafile = true
 
 [[files]]
-file = "mods/jade-addons-forge.pw.toml"
-hash = "8cd8400cb4e2c5ba60c8a359a7b6ff501078d2056eab0aba7f6b0ac77b7a0694"
-metafile = true
-
-[[files]]
-file = "mods/jade-sable-compat.pw.toml"
-hash = "9728776375b66d2b4a450238373072873ed0e50596e95fca857368726f38ecb3"
-metafile = true
-
-[[files]]
-file = "mods/jade.pw.toml"
-hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
-metafile = true
-
-[[files]]
 file = "mods/jei.pw.toml"
 hash = "bdfcde80743d8e03ecfdc9b63895c5c447c925cc4b58e0d5d993124a217850d9"
 metafile = true
@@ -382,7 +367,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "58e0bebd41fa44f3f0dd6c053ec3eb1529d4bfe0c054c0741ba6e2e1b8e4523e"
+hash = "cc244fd35012f737a2c4e08693e81a3d851d7d976a22baff4530af81acb8a6fa"
 metafile = true
 
 [[files]]
@@ -407,7 +392,7 @@ metafile = true
 
 [[files]]
 file = "mods/neruina.pw.toml"
-hash = "8995c7dc69d3be56300278059e8ad5779050d3f1dadc341f069ecb401aa6c757"
+hash = "32765d624cfa80c4f7772b01aa7238c2c1cca380c5e7566e55e3459c765b0258"
 metafile = true
 
 [[files]]
@@ -467,7 +452,7 @@ metafile = true
 
 [[files]]
 file = "mods/spark.pw.toml"
-hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
+hash = "5995decc8738d7ddccec218dfa1ed95db9eca5bb64c98fd2cede8bf9bbc837c2"
 metafile = true
 
 [[files]]
