@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 109.
+Всего модов: 112.
 
 ## Create и его аддоны
 
@@ -15,6 +15,7 @@
 | Create: Bits 'n' Bobs | `both` | [Modrinth](https://modrinth.com/mod/create-bits-n-bobs) | `bits_n_bobs-0.0.44.jar` |
 | Create Cobblestone | `both` | [Modrinth](https://modrinth.com/mod/create-cobblestone) | `createcobblestone-1.4.10+neoforge-1.21.1-139.jar` |
 | Create Deco | `both` | [Modrinth](https://modrinth.com/mod/create-deco) | `createdeco-2.1.3.jar` |
+| Create: Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/create-dynamic-lights) | `create-dyn-light-forge-1.21.1-2.0.1.jar` |
 | Create Slice & Dice | `both` | [Modrinth](https://modrinth.com/mod/slice-and-dice) | `sliceanddice-forge-4.2.4.jar` |
 | Create Stuff 'N Additions | `both` | [Modrinth](https://modrinth.com/mod/create-stuff-additions) | `create-stuff-additions1.21.1_v2.1.3.jar` |
 | Create: Bells & Whistles | `both` | [Modrinth](https://modrinth.com/mod/bellsandwhistles) | `bellsandwhistles-0.4.7-1.21.1.jar` |
@@ -45,13 +46,14 @@
 | Create: Crafts & Additions and Aeronautics Compat | `server` | [Modrinth](https://modrinth.com/mod/create-crafts-additions-and-aeronautics-compat) | `aeroadditionbridge-1.0.0.jar` |
 | Create Propulsion: Simulated | `both` | [Modrinth](https://modrinth.com/mod/create-propulsion-simulated) | `createpropulsion-1.1.4.jar` |
 | Create Simulated Additions | `both` | [Modrinth](https://modrinth.com/mod/create-simulated-additions) | `create_simulated_additions-0.2.3-neoforge-1.21.1.jar` |
+| Create Sable Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/create-sable-dynamic-lights) | `create-dyn-light-2.3.1-sodium-sable.jar` |
 | Create Stuff 'N Additions x Sable & Aeronautics Compat | `both` | [Modrinth](https://modrinth.com/mod/create-stuff-n-additions-x-sable-aeronautics-compat) | `SableStuffAdditionsCompat v1.0.3-1.21.1.jar` |
 | Create: Aeroworks | `both` | [Modrinth](https://modrinth.com/mod/create-aeroworks) | `aeroworks-1.2.11.jar` |
 | Create: Avionics — ComputerCraft for Aeronautics | `both` | [Modrinth](https://modrinth.com/mod/create-avionics) | `create_avionics-neoforge-1.21.1-0.5.1.jar` |
 | Create: Radars | `both` | [Modrinth](https://modrinth.com/mod/create-radars) | `create_radar-0.4.9.4-1.21.1.jar` |
 | Drive-By-Wire with Sable | `both` | [Modrinth](https://modrinth.com/mod/drive-by-wire-sable) | `drivebywire-0.2.9.jar` |
 | Gravestone and Sable Compatibility Patch | `both` | [Modrinth](https://modrinth.com/mod/gravestone-and-sable-compatibility-patch) | `gravestone_sable_compat-1.0.0.jar` |
-| Sable | `both` | [Modrinth](https://modrinth.com/mod/sable) | `sable-neoforge-1.21.1-2.0.2.jar` |
+| Sable | `both` | [Modrinth](https://modrinth.com/mod/sable) | `sable-neoforge-1.21.1-2.0.0.jar` |
 
 ## Контент
 
@@ -110,6 +112,7 @@
 | --- | --- | --- | --- |
 | Create: Nowheel | `client` | [Modrinth](https://modrinth.com/mod/create-nowheel) | `nowheel-1.0.6+1.21.1neoforge.jar` |
 | Entity Culling | `client` | [Modrinth](https://modrinth.com/mod/entityculling) | `entityculling-neoforge-1.10.3-mc1.21.1.jar` |
+| Sodium | `client` | [Modrinth](https://modrinth.com/mod/sodium) | `sodium-neoforge-0.8.12-beta.1+mc1.21.1.jar` |
 
 ## Библиотеки
 
@@ -141,10 +144,10 @@
 | Customizable Player Models | `both` | [Modrinth](https://modrinth.com/mod/custom-player-models) | `CustomPlayerModels-1.21-0.6.26a.jar` |
 | GraveStone Mod | `both` | [Modrinth](https://modrinth.com/mod/gravestone-mod) | `gravestone-neoforge-1.21.1-1.0.37.jar` |
 | Just Enough Items | `both` | [Modrinth](https://modrinth.com/mod/jei) | `jei-1.21.1-neoforge-19.27.0.340.jar` |
-| LambDynamicLights - Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/lambdynamiclights) | `lambdynamiclights-4.8.9+1.21.1.jar` |
 | Ok Zoomer - It's Zoom! | `client` | [Modrinth](https://modrinth.com/mod/ok-zoomer) | `ok_zoomer-neo-10.0.0-beta.13.jar` |
 | Polymorph | `both` | [Modrinth](https://modrinth.com/mod/polymorph) | `polymorph-neoforge-1.1.0+1.21.1.jar` |
 | Simple Voice Chat | `both` | [Modrinth](https://modrinth.com/mod/simple-voice-chat) | `voicechat-neoforge-1.21.1-2.6.18.jar` |
+| Sodium Dynamic Lights | `client` | [Modrinth](https://modrinth.com/mod/sodium-dynamic-lights) | `sodiumdynamiclights-neoforge-1.0.10-1.21.1.jar` |
 | Traveler's Backpack | `both` | [Modrinth](https://modrinth.com/mod/travelersbackpack) | `travelersbackpack-neoforge-1.21.1-10.1.36.jar` |
 | Xaero's Minimap | `both` | [Modrinth](https://modrinth.com/mod/xaeros-minimap) | `xaerominimap-neoforge-1.21.1-26.1.0.jar` |
 | Xaero's World Map | `both` | [Modrinth](https://modrinth.com/mod/xaeros-world-map) | `xaeroworldmap-neoforge-1.21.1-1.41.0.jar` |

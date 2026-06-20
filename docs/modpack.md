@@ -6,15 +6,7 @@
 
 ## Distant Horizons
 
-`modpack/config/DistantHorizons.toml`:
-
-- оставляет основной DH terrain renderer включенным через `rendererMode = "DEFAULT"`;
-- отключает DH generic rendering для clouds/beacons, потому что на macOS с OpenGL этот путь может падать в native Apple Metal/OpenGL renderer;
-- снижает GPU-нагрузку LOD-профилем `HALF_CHUNK`, `LOW`, `128` chunks и `FAKE` transparency, сохраняя дальние LOD-чанки;
-- отключает DH SSAO, LOD dithering, far-clip fade, LOD biome blending и LOD side shading, чтобы уменьшить объем LOD-геометрии и shader-работы на macOS OpenGL;
-- отключает auto-updater DH, чтобы версия мода управлялась packwiz-метаданными.
-
-Modrinth-релиз DH `3.0.3-b` уже содержит macOS workaround для загрузки больших VBO через OpenGL: большие буферы отправляются в GPU чанками по `256 KiB`. Поэтому packwiz остается на стабильном Modrinth metadata, а клиентский конфиг дополнительно уменьшает размер и частоту проблемных OpenGL upload-путей.
+Клиентский DH-конфиг сейчас не фиксируется в сборке: настройки меняются игроком в игре. Для macOS с Apple OpenGL стоит вручную снижать LOD render distance, LOD quality, число DH worker threads и отключать DH generic rendering для clouds/beacons, если появляются native crash или сильные фризы.
 
 ## BlueMap
 
