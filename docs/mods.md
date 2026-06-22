@@ -66,6 +66,7 @@
 | Farmer's Delight | `both` | [Modrinth](https://modrinth.com/mod/farmers-delight) | `FarmersDelight-1.21.1-1.3.2.jar` |
 | Hostile Mobs Improve Over Time | `both` | [Modrinth](https://modrinth.com/datapack/hostile-mobs-improve-over-time) | `hostile-mobs-improve-over-time-1.10.1b.jar` |
 | Rechiseled | `both` | [Modrinth](https://modrinth.com/mod/rechiseled) | `rechiseled-1.2.4-neoforge-mc1.21.jar` |
+| Server-Side Horror | `server` | [Modrinth](https://modrinth.com/mod/server-side-horror) | `serversidehorror-1.21.1-neoforge-4.2.jar` |
 
 ## Генерация мира и структуры
 
@@ -162,5 +163,4 @@
 | BlueMap | `server` | [Modrinth](https://modrinth.com/mod/bluemap) | `bluemap-5.7-neoforge.jar` |
 | Distant Horizons | `both` | [Modrinth](https://modrinth.com/mod/distanthorizons) | `DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar` |
 | Prometheus Exporter | `server` | [GitHub](https://github.com/cpburnz/minecraft-prometheus-exporter) | `Prometheus-Exporter-1.21.1-neoforge-1.2.1.jar` |
-| Server-Side Horror | `server` | [Modrinth](https://modrinth.com/mod/server-side-horror) | `serversidehorror-1.21.1-neoforge-4.2.jar` |
 | vanutp's Telegram Bridge | `server` | [Modrinth](https://modrinth.com/mod/tgbridge) | `tgbridge-0.9.8-neoforge-1.21.jar` |
