@@ -281,6 +281,11 @@ hash = "aa675b16bedfe10aaa4c77bf4e05c1425118637eef13bf7ed466597e6aa2afd7"
 metafile = true
 
 [[files]]
+file = "mods/deimos.pw.toml"
+hash = "174bc0b0a90cf6f76998d2cfdfe653cd589227081723fe3a22cf583eac81c85f"
+metafile = true
+
+[[files]]
 file = "mods/deployer.pw.toml"
 hash = "34f20675ca26ae05670def8d9d84faf42009fabd1113d1739cea6fd380420aac"
 metafile = true
@@ -438,6 +443,11 @@ metafile = true
 [[files]]
 file = "mods/sable.pw.toml"
 hash = "14dd933b66ac458d9fcf4cdee8752231537307dd8de568107aea4dbb0a5fdf24"
+metafile = true
+
+[[files]]
+file = "mods/server-side-horror.pw.toml"
+hash = "73c05f1eb335a2c3c71f66a77f92fa1cb2feab5afb1c3d80467df8463a4444ec"
 metafile = true
 
 [[files]]

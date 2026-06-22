@@ -4,7 +4,7 @@
 
 Когда мод добавляется, удаляется, обновляется или переносится между сторонами, обновляйте эту таблицу в том же коммите.
 
-Всего модов: 112.
+Всего модов: 114.
 
 ## Create и его аддоны
 
@@ -124,6 +124,7 @@
 | Create: Deployer API | `both` | [Modrinth](https://modrinth.com/mod/deployer) | `deployer-0.1.2.jar` |
 | Cristel Lib | `both` | [Modrinth](https://modrinth.com/mod/cristel-lib) | `cristellib-neoforge-1.21.1-3.1.7.jar` |
 | Curios API | `both` | [Modrinth](https://modrinth.com/mod/curios) | `curios-neoforge-9.5.1+1.21.1.jar` |
+| Deimos | `server` | [Modrinth](https://modrinth.com/mod/deimos) | `deimos-1.21.1-neoforge-2.7.jar` |
 | DragonLib | `both` | [Modrinth](https://modrinth.com/mod/dragonlib) | `dragonlib-neoforge-1.21.1-beta-3.0.28.jar` |
 | Fusion (Connected Textures) | `client` | [Modrinth](https://modrinth.com/mod/fusion-connected-textures) | `fusion-1.2.12-neoforge-mc1.21.1.jar` |
 | Kotlin for Forge | `both` | [Modrinth](https://modrinth.com/mod/kotlin-for-forge) | `kotlinforforge-5.11.0-all.jar` |
@@ -161,4 +162,5 @@
 | BlueMap | `server` | [Modrinth](https://modrinth.com/mod/bluemap) | `bluemap-5.7-neoforge.jar` |
 | Distant Horizons | `both` | [Modrinth](https://modrinth.com/mod/distanthorizons) | `DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar` |
 | Prometheus Exporter | `server` | [GitHub](https://github.com/cpburnz/minecraft-prometheus-exporter) | `Prometheus-Exporter-1.21.1-neoforge-1.2.1.jar` |
+| Server-Side Horror | `server` | [Modrinth](https://modrinth.com/mod/server-side-horror) | `serversidehorror-1.21.1-neoforge-4.2.jar` |
 | vanutp's Telegram Bridge | `server` | [Modrinth](https://modrinth.com/mod/tgbridge) | `tgbridge-0.9.8-neoforge-1.21.jar` |

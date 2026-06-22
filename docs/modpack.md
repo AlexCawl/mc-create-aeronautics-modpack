@@ -40,6 +40,15 @@ BlueMap webserver работает на порту `8100`; публикация 
 
 - включает official optimized-настройки ServerCore для chunk, command block, biome lookup и fluid tick оптимизаций.
 
+## Server-Side Horror
+
+`modconfig/serversidehorror.json`:
+
+- включает `traps_enable` и `setting_up_new_traps_enable`, чтобы работали структуры-ловушки и событие с расстановкой новых ловушек;
+- отключает `joining_in_dungeon_enable`, чтобы игроки не попадали в dungeon-сценарий при входе;
+- включает `removing_leaves_enable`, чтобы оставить мягкие ambient-события без прямого урона базе;
+- русифицирует тексты табличек и fake joiner-сообщений, добавляет `Oplayer1337`, `gragotor`, `alexcawl` и `NachosAG` в списки fake joiner, starer и heads.
+
 ## TGBridge
 
 `modconfig/tgbridge/config.yml`:
